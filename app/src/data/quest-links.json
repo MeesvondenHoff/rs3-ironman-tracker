@@ -1,0 +1,1472 @@
+{
+  "checked": "2026-11-03",
+  "source": "2026-11-03 runemetrics quests.json",
+  "mapped": {
+    "Raksha, the Shadow Colossus": "Raksha, the Shadow Colossus (quest)",
+    "Tears of Guthix": "Tears of Guthix (quest)"
+  },
+  "quests": {
+    "Cook's Assistant": {
+      "wiki": "https://runescape.wiki/w/Cook's_Assistant",
+      "quickGuide": "https://runescape.wiki/w/Cook's_Assistant/Quick_guide"
+    },
+    "Death Plateau": {
+      "wiki": "https://runescape.wiki/w/Death_Plateau",
+      "quickGuide": "https://runescape.wiki/w/Death_Plateau/Quick_guide"
+    },
+    "Demon Slayer": {
+      "wiki": "https://runescape.wiki/w/Demon_Slayer",
+      "quickGuide": "https://runescape.wiki/w/Demon_Slayer/Quick_guide"
+    },
+    "Druidic Ritual": {
+      "wiki": "https://runescape.wiki/w/Druidic_Ritual",
+      "quickGuide": "https://runescape.wiki/w/Druidic_Ritual/Quick_guide"
+    },
+    "Ernest the Chicken": {
+      "wiki": "https://runescape.wiki/w/Ernest_the_Chicken",
+      "quickGuide": "https://runescape.wiki/w/Ernest_the_Chicken/Quick_guide"
+    },
+    "Gunnar's Ground": {
+      "wiki": "https://runescape.wiki/w/Gunnar's_Ground",
+      "quickGuide": "https://runescape.wiki/w/Gunnar's_Ground/Quick_guide"
+    },
+    "Kili Row": {
+      "wiki": "https://runescape.wiki/w/Kili_Row",
+      "quickGuide": "https://runescape.wiki/w/Kili_Row/Quick_guide"
+    },
+    "Learning the Ropes": {
+      "wiki": "https://runescape.wiki/w/Learning_the_Ropes",
+      "quickGuide": "https://runescape.wiki/w/Learning_the_Ropes/Quick_guide"
+    },
+    "Necromancy!": {
+      "wiki": "https://runescape.wiki/w/Necromancy!",
+      "quickGuide": "https://runescape.wiki/w/Necromancy!/Quick_guide"
+    },
+    "New Foundations": {
+      "wiki": "https://runescape.wiki/w/New_Foundations",
+      "quickGuide": "https://runescape.wiki/w/New_Foundations/Quick_guide"
+    },
+    "Once Upon a Slime": {
+      "wiki": "https://runescape.wiki/w/Once_Upon_a_Slime",
+      "quickGuide": "https://runescape.wiki/w/Once_Upon_a_Slime/Quick_guide"
+    },
+    "One Piercing Note": {
+      "wiki": "https://runescape.wiki/w/One_Piercing_Note",
+      "quickGuide": "https://runescape.wiki/w/One_Piercing_Note/Quick_guide"
+    },
+    "Rune Mythos": {
+      "wiki": "https://runescape.wiki/w/Rune_Mythos",
+      "quickGuide": "https://runescape.wiki/w/Rune_Mythos/Quick_guide"
+    },
+    "Swept Away": {
+      "wiki": "https://runescape.wiki/w/Swept_Away",
+      "quickGuide": "https://runescape.wiki/w/Swept_Away/Quick_guide"
+    },
+    "The Blood Pact": {
+      "wiki": "https://runescape.wiki/w/The_Blood_Pact",
+      "quickGuide": "https://runescape.wiki/w/The_Blood_Pact/Quick_guide"
+    },
+    "The Knight's Sword": {
+      "wiki": "https://runescape.wiki/w/The_Knight's_Sword",
+      "quickGuide": "https://runescape.wiki/w/The_Knight's_Sword/Quick_guide"
+    },
+    "The Restless Ghost": {
+      "wiki": "https://runescape.wiki/w/The_Restless_Ghost",
+      "quickGuide": "https://runescape.wiki/w/The_Restless_Ghost/Quick_guide"
+    },
+    "There's No Place Like Home...": {
+      "wiki": "https://runescape.wiki/w/There's_No_Place_Like_Home...",
+      "quickGuide": "https://runescape.wiki/w/There's_No_Place_Like_Home.../Quick_guide"
+    },
+    "Unstable Foundations": {
+      "wiki": "https://runescape.wiki/w/Unstable_Foundations"
+    },
+    "Violet is Blue": {
+      "wiki": "https://runescape.wiki/w/Violet_is_Blue",
+      "quickGuide": "https://runescape.wiki/w/Violet_is_Blue/Quick_guide"
+    },
+    "Violet is Blue Too": {
+      "wiki": "https://runescape.wiki/w/Violet_is_Blue_Too",
+      "quickGuide": "https://runescape.wiki/w/Violet_is_Blue_Too/Quick_guide"
+    },
+    "What's Mine is Yours": {
+      "wiki": "https://runescape.wiki/w/What's_Mine_is_Yours",
+      "quickGuide": "https://runescape.wiki/w/What's_Mine_is_Yours/Quick_guide"
+    },
+    "Wolf Whistle": {
+      "wiki": "https://runescape.wiki/w/Wolf_Whistle",
+      "quickGuide": "https://runescape.wiki/w/Wolf_Whistle/Quick_guide"
+    },
+    "'Phite Club": {
+      "wiki": "https://runescape.wiki/w/'Phite_Club",
+      "quickGuide": "https://runescape.wiki/w/'Phite_Club/Quick_guide"
+    },
+    "A Christmas Reunion": {
+      "wiki": "https://runescape.wiki/w/A_Christmas_Reunion",
+      "quickGuide": "https://runescape.wiki/w/A_Christmas_Reunion/Quick_guide"
+    },
+    "A Clockwork Syringe": {
+      "wiki": "https://runescape.wiki/w/A_Clockwork_Syringe",
+      "quickGuide": "https://runescape.wiki/w/A_Clockwork_Syringe/Quick_guide"
+    },
+    "A Fairy Tale I - Growing Pains": {
+      "wiki": "https://runescape.wiki/w/A_Fairy_Tale_I_-_Growing_Pains",
+      "quickGuide": "https://runescape.wiki/w/A_Fairy_Tale_I_-_Growing_Pains/Quick_guide"
+    },
+    "A Fairy Tale II - Cure a Queen": {
+      "wiki": "https://runescape.wiki/w/A_Fairy_Tale_II_-_Cure_a_Queen",
+      "quickGuide": "https://runescape.wiki/w/A_Fairy_Tale_II_-_Cure_a_Queen/Quick_guide"
+    },
+    "A Fairy Tale III - Battle at Ork's Rift": {
+      "wiki": "https://runescape.wiki/w/A_Fairy_Tale_III_-_Battle_at_Ork's_Rift",
+      "quickGuide": "https://runescape.wiki/w/A_Fairy_Tale_III_-_Battle_at_Ork's_Rift/Quick_guide"
+    },
+    "A Guild of Our Own (miniquest)": {
+      "wiki": "https://runescape.wiki/w/A_Guild_of_Our_Own_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/A_Guild_of_Our_Own_(miniquest)/Quick_guide"
+    },
+    "A Shadow over Ashdale": {
+      "wiki": "https://runescape.wiki/w/A_Shadow_over_Ashdale",
+      "quickGuide": "https://runescape.wiki/w/A_Shadow_over_Ashdale/Quick_guide"
+    },
+    "A Soul's Bane": {
+      "wiki": "https://runescape.wiki/w/A_Soul's_Bane",
+      "quickGuide": "https://runescape.wiki/w/A_Soul's_Bane/Quick_guide"
+    },
+    "A Tail of Two Cats": {
+      "wiki": "https://runescape.wiki/w/A_Tail_of_Two_Cats",
+      "quickGuide": "https://runescape.wiki/w/A_Tail_of_Two_Cats/Quick_guide"
+    },
+    "A Void Dance": {
+      "wiki": "https://runescape.wiki/w/A_Void_Dance",
+      "quickGuide": "https://runescape.wiki/w/A_Void_Dance/Quick_guide"
+    },
+    "Aftermath": {
+      "wiki": "https://runescape.wiki/w/Aftermath",
+      "quickGuide": "https://runescape.wiki/w/Aftermath/Quick_guide"
+    },
+    "All Fired Up": {
+      "wiki": "https://runescape.wiki/w/All_Fired_Up",
+      "quickGuide": "https://runescape.wiki/w/All_Fired_Up/Quick_guide"
+    },
+    "All Souls' Eve": {
+      "wiki": "https://runescape.wiki/w/All_Souls'_Eve",
+      "quickGuide": "https://runescape.wiki/w/All_Souls'_Eve/Quick_guide"
+    },
+    "Alpha vs Omega": {
+      "wiki": "https://runescape.wiki/w/Alpha_vs_Omega",
+      "quickGuide": "https://runescape.wiki/w/Alpha_vs_Omega/Quick_guide"
+    },
+    "Ancient Awakening": {
+      "wiki": "https://runescape.wiki/w/Ancient_Awakening",
+      "quickGuide": "https://runescape.wiki/w/Ancient_Awakening/Quick_guide"
+    },
+    "Animal Magnetism": {
+      "wiki": "https://runescape.wiki/w/Animal_Magnetism",
+      "quickGuide": "https://runescape.wiki/w/Animal_Magnetism/Quick_guide"
+    },
+    "Another Slice of H.A.M.": {
+      "wiki": "https://runescape.wiki/w/Another_Slice_of_H.A.M.",
+      "quickGuide": "https://runescape.wiki/w/Another_Slice_of_H.A.M./Quick_guide"
+    },
+    "As a First Resort": {
+      "wiki": "https://runescape.wiki/w/As_a_First_Resort",
+      "quickGuide": "https://runescape.wiki/w/As_a_First_Resort/Quick_guide"
+    },
+    "Azzanadra's Quest": {
+      "wiki": "https://runescape.wiki/w/Azzanadra's_Quest",
+      "quickGuide": "https://runescape.wiki/w/Azzanadra's_Quest/Quick_guide"
+    },
+    "Back to my Roots": {
+      "wiki": "https://runescape.wiki/w/Back_to_my_Roots",
+      "quickGuide": "https://runescape.wiki/w/Back_to_my_Roots/Quick_guide"
+    },
+    "Back to the Freezer": {
+      "wiki": "https://runescape.wiki/w/Back_to_the_Freezer",
+      "quickGuide": "https://runescape.wiki/w/Back_to_the_Freezer/Quick_guide"
+    },
+    "Bar Crawl (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Bar_Crawl_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Bar_Crawl_(miniquest)/Quick_guide"
+    },
+    "Battle of Forinthry": {
+      "wiki": "https://runescape.wiki/w/Battle_of_Forinthry",
+      "quickGuide": "https://runescape.wiki/w/Battle_of_Forinthry/Quick_guide"
+    },
+    "Battle of the Monolith": {
+      "wiki": "https://runescape.wiki/w/Battle_of_the_Monolith",
+      "quickGuide": "https://runescape.wiki/w/Battle_of_the_Monolith/Quick_guide"
+    },
+    "Beneath Cursed Tides": {
+      "wiki": "https://runescape.wiki/w/Beneath_Cursed_Tides",
+      "quickGuide": "https://runescape.wiki/w/Beneath_Cursed_Tides/Quick_guide"
+    },
+    "Beneath Scabaras' Sands": {
+      "wiki": "https://runescape.wiki/w/Beneath_Scabaras'_Sands",
+      "quickGuide": "https://runescape.wiki/w/Beneath_Scabaras'_Sands/Quick_guide"
+    },
+    "Benedict's World Tour (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Benedict's_World_Tour_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Benedict's_World_Tour_(miniquest)/Quick_guide"
+    },
+    "Between a Rock...": {
+      "wiki": "https://runescape.wiki/w/Between_a_Rock...",
+      "quickGuide": "https://runescape.wiki/w/Between_a_Rock.../Quick_guide"
+    },
+    "Big Chompy Bird Hunting": {
+      "wiki": "https://runescape.wiki/w/Big_Chompy_Bird_Hunting",
+      "quickGuide": "https://runescape.wiki/w/Big_Chompy_Bird_Hunting/Quick_guide"
+    },
+    "Biohazard": {
+      "wiki": "https://runescape.wiki/w/Biohazard",
+      "quickGuide": "https://runescape.wiki/w/Biohazard/Quick_guide"
+    },
+    "Birthright of the Dwarves": {
+      "wiki": "https://runescape.wiki/w/Birthright_of_the_Dwarves",
+      "quickGuide": "https://runescape.wiki/w/Birthright_of_the_Dwarves/Quick_guide"
+    },
+    "Blood Runs Deep": {
+      "wiki": "https://runescape.wiki/w/Blood_Runs_Deep",
+      "quickGuide": "https://runescape.wiki/w/Blood_Runs_Deep/Quick_guide"
+    },
+    "Boric's Task I (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Boric's_Task_I_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Boric's_Task_I_(miniquest)/Quick_guide"
+    },
+    "Boric's Task II (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Boric's_Task_II_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Boric's_Task_II_(miniquest)/Quick_guide"
+    },
+    "Boric's Task III (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Boric's_Task_III_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Boric's_Task_III_(miniquest)/Quick_guide"
+    },
+    "Bringing Home the Bacon": {
+      "wiki": "https://runescape.wiki/w/Bringing_Home_the_Bacon",
+      "quickGuide": "https://runescape.wiki/w/Bringing_Home_the_Bacon/Quick_guide"
+    },
+    "Broken Home": {
+      "wiki": "https://runescape.wiki/w/Broken_Home",
+      "quickGuide": "https://runescape.wiki/w/Broken_Home/Quick_guide"
+    },
+    "Buyers and Cellars": {
+      "wiki": "https://runescape.wiki/w/Buyers_and_Cellars",
+      "quickGuide": "https://runescape.wiki/w/Buyers_and_Cellars/Quick_guide"
+    },
+    "Cabin Fever": {
+      "wiki": "https://runescape.wiki/w/Cabin_Fever",
+      "quickGuide": "https://runescape.wiki/w/Cabin_Fever/Quick_guide"
+    },
+    "Call of the Ancestors": {
+      "wiki": "https://runescape.wiki/w/Call_of_the_Ancestors",
+      "quickGuide": "https://runescape.wiki/w/Call_of_the_Ancestors/Quick_guide"
+    },
+    "Carnillean Rising": {
+      "wiki": "https://runescape.wiki/w/Carnillean_Rising",
+      "quickGuide": "https://runescape.wiki/w/Carnillean_Rising/Quick_guide"
+    },
+    "Catapult Construction": {
+      "wiki": "https://runescape.wiki/w/Catapult_Construction",
+      "quickGuide": "https://runescape.wiki/w/Catapult_Construction/Quick_guide"
+    },
+    "Chef's Assistant": {
+      "wiki": "https://runescape.wiki/w/Chef's_Assistant",
+      "quickGuide": "https://runescape.wiki/w/Chef's_Assistant/Quick_guide"
+    },
+    "Children of Mah": {
+      "wiki": "https://runescape.wiki/w/Children_of_Mah",
+      "quickGuide": "https://runescape.wiki/w/Children_of_Mah/Quick_guide"
+    },
+    "City of Senntisten": {
+      "wiki": "https://runescape.wiki/w/City_of_Senntisten",
+      "quickGuide": "https://runescape.wiki/w/City_of_Senntisten/Quick_guide"
+    },
+    "Civil War I (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Civil_War_I_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Civil_War_I_(miniquest)/Quick_guide"
+    },
+    "Civil War II (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Civil_War_II_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Civil_War_II_(miniquest)/Quick_guide"
+    },
+    "Civil War III (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Civil_War_III_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Civil_War_III_(miniquest)/Quick_guide"
+    },
+    "Clock Tower": {
+      "wiki": "https://runescape.wiki/w/Clock_Tower",
+      "quickGuide": "https://runescape.wiki/w/Clock_Tower/Quick_guide"
+    },
+    "Cold Front": {
+      "wiki": "https://runescape.wiki/w/Cold_Front",
+      "quickGuide": "https://runescape.wiki/w/Cold_Front/Quick_guide"
+    },
+    "Cold War": {
+      "wiki": "https://runescape.wiki/w/Cold_War",
+      "quickGuide": "https://runescape.wiki/w/Cold_War/Quick_guide"
+    },
+    "Contact!": {
+      "wiki": "https://runescape.wiki/w/Contact!",
+      "quickGuide": "https://runescape.wiki/w/Contact!/Quick_guide"
+    },
+    "Corporate Egg-spionage": {
+      "wiki": "https://runescape.wiki/w/Corporate_Egg-spionage",
+      "quickGuide": "https://runescape.wiki/w/Corporate_Egg-spionage/Quick_guide"
+    },
+    "Creature of Fenkenstrain": {
+      "wiki": "https://runescape.wiki/w/Creature_of_Fenkenstrain",
+      "quickGuide": "https://runescape.wiki/w/Creature_of_Fenkenstrain/Quick_guide"
+    },
+    "Crocodile Tears": {
+      "wiki": "https://runescape.wiki/w/Crocodile_Tears",
+      "quickGuide": "https://runescape.wiki/w/Crocodile_Tears/Quick_guide"
+    },
+    "Curse of the Black Stone": {
+      "wiki": "https://runescape.wiki/w/Curse_of_the_Black_Stone",
+      "quickGuide": "https://runescape.wiki/w/Curse_of_the_Black_Stone/Quick_guide"
+    },
+    "Curse of the Empty Lord (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Curse_of_the_Empty_Lord_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Curse_of_the_Empty_Lord_(miniquest)/Quick_guide"
+    },
+    "Damage Control (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Damage_Control_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Damage_Control_(miniquest)/Quick_guide"
+    },
+    "Daughter of Chaos": {
+      "wiki": "https://runescape.wiki/w/Daughter_of_Chaos",
+      "quickGuide": "https://runescape.wiki/w/Daughter_of_Chaos/Quick_guide"
+    },
+    "Dead and Buried": {
+      "wiki": "https://runescape.wiki/w/Dead_and_Buried",
+      "quickGuide": "https://runescape.wiki/w/Dead_and_Buried/Quick_guide"
+    },
+    "Deadliest Catch": {
+      "wiki": "https://runescape.wiki/w/Deadliest_Catch",
+      "quickGuide": "https://runescape.wiki/w/Deadliest_Catch/Quick_guide"
+    },
+    "Dealing with Scabaras": {
+      "wiki": "https://runescape.wiki/w/Dealing_with_Scabaras",
+      "quickGuide": "https://runescape.wiki/w/Dealing_with_Scabaras/Quick_guide"
+    },
+    "Death to the Dorgeshuun": {
+      "wiki": "https://runescape.wiki/w/Death_to_the_Dorgeshuun",
+      "quickGuide": "https://runescape.wiki/w/Death_to_the_Dorgeshuun/Quick_guide"
+    },
+    "Defender of Varrock": {
+      "wiki": "https://runescape.wiki/w/Defender_of_Varrock",
+      "quickGuide": "https://runescape.wiki/w/Defender_of_Varrock/Quick_guide"
+    },
+    "Desert Slayer Dungeon (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Desert_Slayer_Dungeon_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Desert_Slayer_Dungeon_(miniquest)/Quick_guide"
+    },
+    "Desert Treasure": {
+      "wiki": "https://runescape.wiki/w/Desert_Treasure",
+      "quickGuide": "https://runescape.wiki/w/Desert_Treasure/Quick_guide"
+    },
+    "Desperate Creatures": {
+      "wiki": "https://runescape.wiki/w/Desperate_Creatures",
+      "quickGuide": "https://runescape.wiki/w/Desperate_Creatures/Quick_guide"
+    },
+    "Desperate Measures": {
+      "wiki": "https://runescape.wiki/w/Desperate_Measures",
+      "quickGuide": "https://runescape.wiki/w/Desperate_Measures/Quick_guide"
+    },
+    "Desperate Times": {
+      "wiki": "https://runescape.wiki/w/Desperate_Times",
+      "quickGuide": "https://runescape.wiki/w/Desperate_Times/Quick_guide"
+    },
+    "Devious Minds": {
+      "wiki": "https://runescape.wiki/w/Devious_Minds",
+      "quickGuide": "https://runescape.wiki/w/Devious_Minds/Quick_guide"
+    },
+    "Diamond in the Rough": {
+      "wiki": "https://runescape.wiki/w/Diamond_in_the_Rough",
+      "quickGuide": "https://runescape.wiki/w/Diamond_in_the_Rough/Quick_guide"
+    },
+    "Dimension of Disaster": {
+      "wiki": "https://runescape.wiki/w/Dimension_of_Disaster",
+      "quickGuide": "https://runescape.wiki/w/Dimension_of_Disaster/Quick_guide"
+    },
+    "Dimension of Disaster: Coin of the Realm": {
+      "wiki": "https://runescape.wiki/w/Dimension_of_Disaster:_Coin_of_the_Realm",
+      "quickGuide": "https://runescape.wiki/w/Dimension_of_Disaster:_Coin_of_the_Realm/Quick_guide"
+    },
+    "Dimension of Disaster: Curse of Arrav": {
+      "wiki": "https://runescape.wiki/w/Dimension_of_Disaster:_Curse_of_Arrav",
+      "quickGuide": "https://runescape.wiki/w/Dimension_of_Disaster:_Curse_of_Arrav/Quick_guide"
+    },
+    "Dimension of Disaster: Defender of Varrock": {
+      "wiki": "https://runescape.wiki/w/Dimension_of_Disaster:_Defender_of_Varrock",
+      "quickGuide": "https://runescape.wiki/w/Dimension_of_Disaster:_Defender_of_Varrock/Quick_guide"
+    },
+    "Dimension of Disaster: Demon Slayer": {
+      "wiki": "https://runescape.wiki/w/Dimension_of_Disaster:_Demon_Slayer",
+      "quickGuide": "https://runescape.wiki/w/Dimension_of_Disaster:_Demon_Slayer/Quick_guide"
+    },
+    "Dimension of Disaster: Shield of Arrav": {
+      "wiki": "https://runescape.wiki/w/Dimension_of_Disaster:_Shield_of_Arrav",
+      "quickGuide": "https://runescape.wiki/w/Dimension_of_Disaster:_Shield_of_Arrav/Quick_guide"
+    },
+    "Dishonour among Thieves": {
+      "wiki": "https://runescape.wiki/w/Dishonour_among_Thieves",
+      "quickGuide": "https://runescape.wiki/w/Dishonour_among_Thieves/Quick_guide"
+    },
+    "Do No Evil": {
+      "wiki": "https://runescape.wiki/w/Do_No_Evil",
+      "quickGuide": "https://runescape.wiki/w/Do_No_Evil/Quick_guide"
+    },
+    "Doric's Task I (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Doric's_Task_I_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Doric's_Task_I_(miniquest)/Quick_guide"
+    },
+    "Doric's Task II (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Doric's_Task_II_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Doric's_Task_II_(miniquest)/Quick_guide"
+    },
+    "Doric's Task III (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Doric's_Task_III_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Doric's_Task_III_(miniquest)/Quick_guide"
+    },
+    "Doric's Task IV (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Doric's_Task_IV_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Doric's_Task_IV_(miniquest)/Quick_guide"
+    },
+    "Doric's Task V (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Doric's_Task_V_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Doric's_Task_V_(miniquest)/Quick_guide"
+    },
+    "Doric's Task VI (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Doric's_Task_VI_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Doric's_Task_VI_(miniquest)/Quick_guide"
+    },
+    "Doric's Task VII (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Doric's_Task_VII_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Doric's_Task_VII_(miniquest)/Quick_guide"
+    },
+    "Doric's Task VIII (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Doric's_Task_VIII_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Doric's_Task_VIII_(miniquest)/Quick_guide"
+    },
+    "Dragon Slayer": {
+      "wiki": "https://runescape.wiki/w/Dragon_Slayer",
+      "quickGuide": "https://runescape.wiki/w/Dragon_Slayer/Quick_guide"
+    },
+    "Dream Mentor": {
+      "wiki": "https://runescape.wiki/w/Dream_Mentor",
+      "quickGuide": "https://runescape.wiki/w/Dream_Mentor/Quick_guide"
+    },
+    "Duck Quest": {
+      "wiki": "https://runescape.wiki/w/Duck_Quest",
+      "quickGuide": "https://runescape.wiki/w/Duck_Quest/Quick_guide"
+    },
+    "Dwarf Cannon": {
+      "wiki": "https://runescape.wiki/w/Dwarf_Cannon",
+      "quickGuide": "https://runescape.wiki/w/Dwarf_Cannon/Quick_guide"
+    },
+    "Eadgar's Ruse": {
+      "wiki": "https://runescape.wiki/w/Eadgar's_Ruse",
+      "quickGuide": "https://runescape.wiki/w/Eadgar's_Ruse/Quick_guide"
+    },
+    "Eagles' Peak": {
+      "wiki": "https://runescape.wiki/w/Eagles'_Peak",
+      "quickGuide": "https://runescape.wiki/w/Eagles'_Peak/Quick_guide"
+    },
+    "Eclipse of the Heart": {
+      "wiki": "https://runescape.wiki/w/Eclipse_of_the_Heart",
+      "quickGuide": "https://runescape.wiki/w/Eclipse_of_the_Heart/Quick_guide"
+    },
+    "Elemental Workshop I": {
+      "wiki": "https://runescape.wiki/w/Elemental_Workshop_I",
+      "quickGuide": "https://runescape.wiki/w/Elemental_Workshop_I/Quick_guide"
+    },
+    "Elemental Workshop II": {
+      "wiki": "https://runescape.wiki/w/Elemental_Workshop_II",
+      "quickGuide": "https://runescape.wiki/w/Elemental_Workshop_II/Quick_guide"
+    },
+    "Elemental Workshop III": {
+      "wiki": "https://runescape.wiki/w/Elemental_Workshop_III",
+      "quickGuide": "https://runescape.wiki/w/Elemental_Workshop_III/Quick_guide"
+    },
+    "Elemental Workshop IV": {
+      "wiki": "https://runescape.wiki/w/Elemental_Workshop_IV",
+      "quickGuide": "https://runescape.wiki/w/Elemental_Workshop_IV/Quick_guide"
+    },
+    "Enakhra's Lament": {
+      "wiki": "https://runescape.wiki/w/Enakhra's_Lament",
+      "quickGuide": "https://runescape.wiki/w/Enakhra's_Lament/Quick_guide"
+    },
+    "Enlightened Journey": {
+      "wiki": "https://runescape.wiki/w/Enlightened_Journey",
+      "quickGuide": "https://runescape.wiki/w/Enlightened_Journey/Quick_guide"
+    },
+    "Enter the Abyss (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Enter_the_Abyss_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Enter_the_Abyss_(miniquest)/Quick_guide"
+    },
+    "Evil Dave's Big Day Out": {
+      "wiki": "https://runescape.wiki/w/Evil_Dave's_Big_Day_Out",
+      "quickGuide": "https://runescape.wiki/w/Evil_Dave's_Big_Day_Out/Quick_guide"
+    },
+    "Extinction": {
+      "wiki": "https://runescape.wiki/w/Extinction",
+      "quickGuide": "https://runescape.wiki/w/Extinction/Quick_guide"
+    },
+    "Eye for an Eye (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Eye_for_an_Eye_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Eye_for_an_Eye_(miniquest)/Quick_guide"
+    },
+    "Eye of Het I": {
+      "wiki": "https://runescape.wiki/w/Eye_of_Het_I",
+      "quickGuide": "https://runescape.wiki/w/Eye_of_Het_I/Quick_guide"
+    },
+    "Eye of Het II": {
+      "wiki": "https://runescape.wiki/w/Eye_of_Het_II",
+      "quickGuide": "https://runescape.wiki/w/Eye_of_Het_II/Quick_guide"
+    },
+    "Family Crest": {
+      "wiki": "https://runescape.wiki/w/Family_Crest",
+      "quickGuide": "https://runescape.wiki/w/Family_Crest/Quick_guide"
+    },
+    "Fate of the Gods": {
+      "wiki": "https://runescape.wiki/w/Fate_of_the_Gods",
+      "quickGuide": "https://runescape.wiki/w/Fate_of_the_Gods/Quick_guide"
+    },
+    "Father and Son": {
+      "wiki": "https://runescape.wiki/w/Father_and_Son_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Father_and_Son_(miniquest)/Quick_guide"
+    },
+    "Field of Screams": {
+      "wiki": "https://runescape.wiki/w/Field_of_Screams",
+      "quickGuide": "https://runescape.wiki/w/Field_of_Screams/Quick_guide"
+    },
+    "Fight Arena": {
+      "wiki": "https://runescape.wiki/w/Fight_Arena",
+      "quickGuide": "https://runescape.wiki/w/Fight_Arena/Quick_guide"
+    },
+    "Final Destination (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Final_Destination_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Final_Destination_(miniquest)/Quick_guide"
+    },
+    "Finale": {
+      "wiki": "https://runescape.wiki/w/Once_Upon_a_Time_in_Gielinor:_Finale",
+      "quickGuide": "https://runescape.wiki/w/Once_Upon_a_Time_in_Gielinor:_Finale/Quick_guide"
+    },
+    "Fishing Contest": {
+      "wiki": "https://runescape.wiki/w/Fishing_Contest",
+      "quickGuide": "https://runescape.wiki/w/Fishing_Contest/Quick_guide"
+    },
+    "Flag Fall (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Flag_Fall_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Flag_Fall_(miniquest)/Quick_guide"
+    },
+    "Flashback": {
+      "wiki": "https://runescape.wiki/w/Once_Upon_a_Time_in_Gielinor:_Flashback",
+      "quickGuide": "https://runescape.wiki/w/Once_Upon_a_Time_in_Gielinor:_Flashback/Quick_guide"
+    },
+    "Flesh and Bone": {
+      "wiki": "https://runescape.wiki/w/That_Old_Black_Magic:_Flesh_and_Bone",
+      "quickGuide": "https://runescape.wiki/w/That_Old_Black_Magic:_Flesh_and_Bone/Quick_guide"
+    },
+    "Foreshadowing": {
+      "wiki": "https://runescape.wiki/w/Once_Upon_a_Time_in_Gielinor:_Foreshadowing",
+      "quickGuide": "https://runescape.wiki/w/Once_Upon_a_Time_in_Gielinor:_Foreshadowing/Quick_guide"
+    },
+    "Forgettable Tale of a Drunken Dwarf": {
+      "wiki": "https://runescape.wiki/w/Forgettable_Tale_of_a_Drunken_Dwarf",
+      "quickGuide": "https://runescape.wiki/w/Forgettable_Tale_of_a_Drunken_Dwarf/Quick_guide"
+    },
+    "Forgiveness of a Chaos Dwarf": {
+      "wiki": "https://runescape.wiki/w/Forgiveness_of_a_Chaos_Dwarf",
+      "quickGuide": "https://runescape.wiki/w/Forgiveness_of_a_Chaos_Dwarf/Quick_guide"
+    },
+    "Fortunes": {
+      "wiki": "https://runescape.wiki/w/Once_Upon_a_Time_in_Gielinor:_Fortunes",
+      "quickGuide": "https://runescape.wiki/w/Once_Upon_a_Time_in_Gielinor:_Fortunes/Quick_guide"
+    },
+    "From Tiny Acorns (miniquest)": {
+      "wiki": "https://runescape.wiki/w/From_Tiny_Acorns_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/From_Tiny_Acorns_(miniquest)/Quick_guide"
+    },
+    "Fur 'n Seek": {
+      "wiki": "https://runescape.wiki/w/Fur_'n_Seek",
+      "quickGuide": "https://runescape.wiki/w/Fur_'n_Seek/Quick_guide"
+    },
+    "Garden of Tranquillity": {
+      "wiki": "https://runescape.wiki/w/Garden_of_Tranquillity",
+      "quickGuide": "https://runescape.wiki/w/Garden_of_Tranquillity/Quick_guide"
+    },
+    "Gertrude's Cat": {
+      "wiki": "https://runescape.wiki/w/Gertrude's_Cat",
+      "quickGuide": "https://runescape.wiki/w/Gertrude's_Cat/Quick_guide"
+    },
+    "Ghosts Ahoy": {
+      "wiki": "https://runescape.wiki/w/Ghosts_Ahoy",
+      "quickGuide": "https://runescape.wiki/w/Ghosts_Ahoy/Quick_guide"
+    },
+    "Ghosts from the Past (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Ghosts_from_the_Past_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Ghosts_from_the_Past_(miniquest)/Quick_guide"
+    },
+    "Glorious Memories": {
+      "wiki": "https://runescape.wiki/w/Glorious_Memories",
+      "quickGuide": "https://runescape.wiki/w/Glorious_Memories/Quick_guide"
+    },
+    "Goblin Diplomacy": {
+      "wiki": "https://runescape.wiki/w/Goblin_Diplomacy",
+      "quickGuide": "https://runescape.wiki/w/Goblin_Diplomacy/Quick_guide"
+    },
+    "Gower Quest": {
+      "wiki": "https://runescape.wiki/w/Gower_Quest",
+      "quickGuide": "https://runescape.wiki/w/Gower_Quest/Quick_guide"
+    },
+    "Great Egg-spectations": {
+      "wiki": "https://runescape.wiki/w/Great_Egg-spectations",
+      "quickGuide": "https://runescape.wiki/w/Great_Egg-spectations/Quick_guide"
+    },
+    "Grim Tales": {
+      "wiki": "https://runescape.wiki/w/Grim_Tales",
+      "quickGuide": "https://runescape.wiki/w/Grim_Tales/Quick_guide"
+    },
+    "Guys and Dolls": {
+      "wiki": "https://runescape.wiki/w/Guys_and_Dolls",
+      "quickGuide": "https://runescape.wiki/w/Guys_and_Dolls/Quick_guide"
+    },
+    "Harbinger (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Harbinger_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Harbinger_(miniquest)/Quick_guide"
+    },
+    "Haunted Mine": {
+      "wiki": "https://runescape.wiki/w/Haunted_Mine",
+      "quickGuide": "https://runescape.wiki/w/Haunted_Mine/Quick_guide"
+    },
+    "Hazeel Cult": {
+      "wiki": "https://runescape.wiki/w/Hazeel_Cult",
+      "quickGuide": "https://runescape.wiki/w/Hazeel_Cult/Quick_guide"
+    },
+    "Head of the Family (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Head_of_the_Family_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Head_of_the_Family_(miniquest)/Quick_guide"
+    },
+    "Heart of Stone": {
+      "wiki": "https://runescape.wiki/w/Heart_of_Stone",
+      "quickGuide": "https://runescape.wiki/w/Heart_of_Stone/Quick_guide"
+    },
+    "Hearts of Sanguine": {
+      "wiki": "https://runescape.wiki/w/Hearts_of_Sanguine",
+      "quickGuide": "https://runescape.wiki/w/Hearts_of_Sanguine/Quick_guide"
+    },
+    "Heartstealer": {
+      "wiki": "https://runescape.wiki/w/Heartstealer",
+      "quickGuide": "https://runescape.wiki/w/Heartstealer/Quick_guide"
+    },
+    "Helping Laniakea": {
+      "wiki": "https://runescape.wiki/w/Helping_Laniakea_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Helping_Laniakea_(miniquest)/Quick_guide"
+    },
+    "Heralds of Crimson": {
+      "wiki": "https://runescape.wiki/w/Heralds_of_Crimson",
+      "quickGuide": "https://runescape.wiki/w/Heralds_of_Crimson/Quick_guide"
+    },
+    "Hermit Permits": {
+      "wiki": "https://runescape.wiki/w/Hermit_Permits",
+      "quickGuide": "https://runescape.wiki/w/Hermit_Permits/Quick_guide"
+    },
+    "Hermy and Bass": {
+      "wiki": "https://runescape.wiki/w/That_Old_Black_Magic:_Hermy_and_Bass",
+      "quickGuide": "https://runescape.wiki/w/That_Old_Black_Magic:_Hermy_and_Bass/Quick_guide"
+    },
+    "Hero's Welcome": {
+      "wiki": "https://runescape.wiki/w/Hero's_Welcome",
+      "quickGuide": "https://runescape.wiki/w/Hero's_Welcome/Quick_guide"
+    },
+    "Heroes' Quest": {
+      "wiki": "https://runescape.wiki/w/Heroes'_Quest",
+      "quickGuide": "https://runescape.wiki/w/Heroes'_Quest/Quick_guide"
+    },
+    "Holy Grail": {
+      "wiki": "https://runescape.wiki/w/Holy_Grail",
+      "quickGuide": "https://runescape.wiki/w/Holy_Grail/Quick_guide"
+    },
+    "Hopespear's Will (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Hopespear's_Will_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Hopespear's_Will_(miniquest)/Quick_guide"
+    },
+    "Horror from the Deep": {
+      "wiki": "https://runescape.wiki/w/Horror_from_the_Deep",
+      "quickGuide": "https://runescape.wiki/w/Horror_from_the_Deep/Quick_guide"
+    },
+    "Housing of Parliament": {
+      "wiki": "https://runescape.wiki/w/Housing_of_Parliament",
+      "quickGuide": "https://runescape.wiki/w/Housing_of_Parliament/Quick_guide"
+    },
+    "Hunt for Red Raktuber": {
+      "wiki": "https://runescape.wiki/w/Hunt_for_Red_Raktuber",
+      "quickGuide": "https://runescape.wiki/w/Hunt_for_Red_Raktuber/Quick_guide"
+    },
+    "Icthlarin's Little Helper": {
+      "wiki": "https://runescape.wiki/w/Icthlarin's_Little_Helper",
+      "quickGuide": "https://runescape.wiki/w/Icthlarin's_Little_Helper/Quick_guide"
+    },
+    "Imp Catcher": {
+      "wiki": "https://runescape.wiki/w/Imp_Catcher",
+      "quickGuide": "https://runescape.wiki/w/Imp_Catcher/Quick_guide"
+    },
+    "Impressing the Locals": {
+      "wiki": "https://runescape.wiki/w/Impressing_the_Locals",
+      "quickGuide": "https://runescape.wiki/w/Impressing_the_Locals/Quick_guide"
+    },
+    "In Aid of the Myreque": {
+      "wiki": "https://runescape.wiki/w/In_Aid_of_the_Myreque",
+      "quickGuide": "https://runescape.wiki/w/In_Aid_of_the_Myreque/Quick_guide"
+    },
+    "In Memory of the Myreque (miniquest)": {
+      "wiki": "https://runescape.wiki/w/In_Memory_of_the_Myreque_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/In_Memory_of_the_Myreque_(miniquest)/Quick_guide"
+    },
+    "In Pyre Need": {
+      "wiki": "https://runescape.wiki/w/In_Pyre_Need",
+      "quickGuide": "https://runescape.wiki/w/In_Pyre_Need/Quick_guide"
+    },
+    "In Search of the Myreque": {
+      "wiki": "https://runescape.wiki/w/In_Search_of_the_Myreque",
+      "quickGuide": "https://runescape.wiki/w/In_Search_of_the_Myreque/Quick_guide"
+    },
+    "It's Snow Bother": {
+      "wiki": "https://runescape.wiki/w/It's_Snow_Bother",
+      "quickGuide": "https://runescape.wiki/w/It's_Snow_Bother/Quick_guide"
+    },
+    "Jed Hunter (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Jed_Hunter_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Jed_Hunter_(miniquest)/Quick_guide"
+    },
+    "Jungle Potion": {
+      "wiki": "https://runescape.wiki/w/Jungle_Potion",
+      "quickGuide": "https://runescape.wiki/w/Jungle_Potion/Quick_guide"
+    },
+    "Kennith's Concerns": {
+      "wiki": "https://runescape.wiki/w/Kennith's_Concerns",
+      "quickGuide": "https://runescape.wiki/w/Kennith's_Concerns/Quick_guide"
+    },
+    "Kindred Spirits": {
+      "wiki": "https://runescape.wiki/w/Kindred_Spirits",
+      "quickGuide": "https://runescape.wiki/w/Kindred_Spirits/Quick_guide"
+    },
+    "King of the Dwarves": {
+      "wiki": "https://runescape.wiki/w/King_of_the_Dwarves",
+      "quickGuide": "https://runescape.wiki/w/King_of_the_Dwarves/Quick_guide"
+    },
+    "King's Ransom": {
+      "wiki": "https://runescape.wiki/w/King's_Ransom",
+      "quickGuide": "https://runescape.wiki/w/King's_Ransom/Quick_guide"
+    },
+    "Koschei's Troubles (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Koschei's_Troubles_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Koschei's_Troubles_(miniquest)/Quick_guide"
+    },
+    "Lair of Tarn Razorlor (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Lair_of_Tarn_Razorlor_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Lair_of_Tarn_Razorlor_(miniquest)/Quick_guide"
+    },
+    "Land of the Goblins": {
+      "wiki": "https://runescape.wiki/w/Land_of_the_Goblins",
+      "quickGuide": "https://runescape.wiki/w/Land_of_the_Goblins/Quick_guide"
+    },
+    "Legacy of Seergaze": {
+      "wiki": "https://runescape.wiki/w/Legacy_of_Seergaze",
+      "quickGuide": "https://runescape.wiki/w/Legacy_of_Seergaze/Quick_guide"
+    },
+    "Legends' Quest": {
+      "wiki": "https://runescape.wiki/w/Legends'_Quest",
+      "quickGuide": "https://runescape.wiki/w/Legends'_Quest/Quick_guide"
+    },
+    "Let Them Eat Pie": {
+      "wiki": "https://runescape.wiki/w/Let_Them_Eat_Pie",
+      "quickGuide": "https://runescape.wiki/w/Let_Them_Eat_Pie/Quick_guide"
+    },
+    "Lost City": {
+      "wiki": "https://runescape.wiki/w/Lost_City",
+      "quickGuide": "https://runescape.wiki/w/Lost_City/Quick_guide"
+    },
+    "Lost Her Marbles (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Lost_Her_Marbles_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Lost_Her_Marbles_(miniquest)/Quick_guide"
+    },
+    "Love Story": {
+      "wiki": "https://runescape.wiki/w/Love_Story",
+      "quickGuide": "https://runescape.wiki/w/Love_Story/Quick_guide"
+    },
+    "Lunar Diplomacy": {
+      "wiki": "https://runescape.wiki/w/Lunar_Diplomacy",
+      "quickGuide": "https://runescape.wiki/w/Lunar_Diplomacy/Quick_guide"
+    },
+    "Mahjarrat Memories (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Mahjarrat_Memories_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Mahjarrat_Memories_(miniquest)/Quick_guide"
+    },
+    "Making History": {
+      "wiki": "https://runescape.wiki/w/Making_History",
+      "quickGuide": "https://runescape.wiki/w/Making_History/Quick_guide"
+    },
+    "Meeting History": {
+      "wiki": "https://runescape.wiki/w/Meeting_History",
+      "quickGuide": "https://runescape.wiki/w/Meeting_History/Quick_guide"
+    },
+    "Merlin's Crystal": {
+      "wiki": "https://runescape.wiki/w/Merlin's_Crystal",
+      "quickGuide": "https://runescape.wiki/w/Merlin's_Crystal/Quick_guide"
+    },
+    "Missing My Mummy": {
+      "wiki": "https://runescape.wiki/w/Missing_My_Mummy",
+      "quickGuide": "https://runescape.wiki/w/Missing_My_Mummy/Quick_guide"
+    },
+    "Missing, Presumed Death": {
+      "wiki": "https://runescape.wiki/w/Missing,_Presumed_Death",
+      "quickGuide": "https://runescape.wiki/w/Missing,_Presumed_Death/Quick_guide"
+    },
+    "Monk's Friend": {
+      "wiki": "https://runescape.wiki/w/Monk's_Friend",
+      "quickGuide": "https://runescape.wiki/w/Monk's_Friend/Quick_guide"
+    },
+    "Monkey Madness": {
+      "wiki": "https://runescape.wiki/w/Monkey_Madness",
+      "quickGuide": "https://runescape.wiki/w/Monkey_Madness/Quick_guide"
+    },
+    "Mountain Daughter": {
+      "wiki": "https://runescape.wiki/w/Mountain_Daughter",
+      "quickGuide": "https://runescape.wiki/w/Mountain_Daughter/Quick_guide"
+    },
+    "Mourning's End Part I": {
+      "wiki": "https://runescape.wiki/w/Mourning's_End_Part_I",
+      "quickGuide": "https://runescape.wiki/w/Mourning's_End_Part_I/Quick_guide"
+    },
+    "Mourning's End Part II": {
+      "wiki": "https://runescape.wiki/w/Mourning's_End_Part_II",
+      "quickGuide": "https://runescape.wiki/w/Mourning's_End_Part_II/Quick_guide"
+    },
+    "Murder Mystery": {
+      "wiki": "https://runescape.wiki/w/Murder_Mystery",
+      "quickGuide": "https://runescape.wiki/w/Murder_Mystery/Quick_guide"
+    },
+    "Murder on the Border": {
+      "wiki": "https://runescape.wiki/w/Murder_on_the_Border",
+      "quickGuide": "https://runescape.wiki/w/Murder_on_the_Border/Quick_guide"
+    },
+    "My Arm's Big Adventure": {
+      "wiki": "https://runescape.wiki/w/My_Arm's_Big_Adventure",
+      "quickGuide": "https://runescape.wiki/w/My_Arm's_Big_Adventure/Quick_guide"
+    },
+    "My One and Only Lute": {
+      "wiki": "https://runescape.wiki/w/That_Old_Black_Magic:_My_One_and_Only_Lute",
+      "quickGuide": "https://runescape.wiki/w/That_Old_Black_Magic:_My_One_and_Only_Lute/Quick_guide"
+    },
+    "Myths of the White Lands": {
+      "wiki": "https://runescape.wiki/w/Myths_of_the_White_Lands",
+      "quickGuide": "https://runescape.wiki/w/Myths_of_the_White_Lands/Quick_guide"
+    },
+    "Nadir (saga)": {
+      "wiki": "https://runescape.wiki/w/Nadir_(saga)",
+      "quickGuide": "https://runescape.wiki/w/Nadir_(saga)/Quick_guide"
+    },
+    "Nature Spirit": {
+      "wiki": "https://runescape.wiki/w/Nature_Spirit",
+      "quickGuide": "https://runescape.wiki/w/Nature_Spirit/Quick_guide"
+    },
+    "Nomad's Elegy": {
+      "wiki": "https://runescape.wiki/w/Nomad's_Elegy",
+      "quickGuide": "https://runescape.wiki/w/Nomad's_Elegy/Quick_guide"
+    },
+    "Nomad's Requiem": {
+      "wiki": "https://runescape.wiki/w/Nomad's_Requiem",
+      "quickGuide": "https://runescape.wiki/w/Nomad's_Requiem/Quick_guide"
+    },
+    "Observatory Quest": {
+      "wiki": "https://runescape.wiki/w/Observatory_Quest",
+      "quickGuide": "https://runescape.wiki/w/Observatory_Quest/Quick_guide"
+    },
+    "Ode of the Devourer": {
+      "wiki": "https://runescape.wiki/w/Ode_of_the_Devourer",
+      "quickGuide": "https://runescape.wiki/w/Ode_of_the_Devourer/Quick_guide"
+    },
+    "Olaf's Quest": {
+      "wiki": "https://runescape.wiki/w/Olaf's_Quest",
+      "quickGuide": "https://runescape.wiki/w/Olaf's_Quest/Quick_guide"
+    },
+    "Once Upon a Time in Gielinor": {
+      "wiki": "https://runescape.wiki/w/Once_Upon_a_Time_in_Gielinor"
+    },
+    "One Foot in the Grave (miniquest)": {
+      "wiki": "https://runescape.wiki/w/One_Foot_in_the_Grave_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/One_Foot_in_the_Grave_(miniquest)/Quick_guide"
+    },
+    "One of a Kind": {
+      "wiki": "https://runescape.wiki/w/One_of_a_Kind",
+      "quickGuide": "https://runescape.wiki/w/One_of_a_Kind/Quick_guide"
+    },
+    "One Small Favour": {
+      "wiki": "https://runescape.wiki/w/One_Small_Favour",
+      "quickGuide": "https://runescape.wiki/w/One_Small_Favour/Quick_guide"
+    },
+    "Osseous Rex": {
+      "wiki": "https://runescape.wiki/w/Osseous_Rex",
+      "quickGuide": "https://runescape.wiki/w/Osseous_Rex/Quick_guide"
+    },
+    "Our Man in the North": {
+      "wiki": "https://runescape.wiki/w/Our_Man_in_the_North",
+      "quickGuide": "https://runescape.wiki/w/Our_Man_in_the_North/Quick_guide"
+    },
+    "Perils of Ice Mountain": {
+      "wiki": "https://runescape.wiki/w/Perils_of_Ice_Mountain",
+      "quickGuide": "https://runescape.wiki/w/Perils_of_Ice_Mountain/Quick_guide"
+    },
+    "Pharaoh's Folly": {
+      "wiki": "https://runescape.wiki/w/Pharaoh's_Folly",
+      "quickGuide": "https://runescape.wiki/w/Pharaoh's_Folly/Quick_guide"
+    },
+    "Pieces of Hate": {
+      "wiki": "https://runescape.wiki/w/Pieces_of_Hate",
+      "quickGuide": "https://runescape.wiki/w/Pieces_of_Hate/Quick_guide"
+    },
+    "Pirate's Treasure": {
+      "wiki": "https://runescape.wiki/w/Pirate's_Treasure",
+      "quickGuide": "https://runescape.wiki/w/Pirate's_Treasure/Quick_guide"
+    },
+    "Plague City": {
+      "wiki": "https://runescape.wiki/w/Plague_City",
+      "quickGuide": "https://runescape.wiki/w/Plague_City/Quick_guide"
+    },
+    "Plague's End": {
+      "wiki": "https://runescape.wiki/w/Plague's_End",
+      "quickGuide": "https://runescape.wiki/w/Plague's_End/Quick_guide"
+    },
+    "Priest in Peril": {
+      "wiki": "https://runescape.wiki/w/Priest_in_Peril",
+      "quickGuide": "https://runescape.wiki/w/Priest_in_Peril/Quick_guide"
+    },
+    "Princess and the Pauper": {
+      "wiki": "https://runescape.wiki/w/Princess_and_the_Pauper",
+      "quickGuide": "https://runescape.wiki/w/Princess_and_the_Pauper/Quick_guide"
+    },
+    "Purple Cat (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Purple_Cat_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Purple_Cat_(miniquest)/Quick_guide"
+    },
+    "Quiet Before the Swarm": {
+      "wiki": "https://runescape.wiki/w/Quiet_Before_the_Swarm",
+      "quickGuide": "https://runescape.wiki/w/Quiet_Before_the_Swarm/Quick_guide"
+    },
+    "Rag and Bone Man": {
+      "wiki": "https://runescape.wiki/w/Rag_and_Bone_Man",
+      "quickGuide": "https://runescape.wiki/w/Rag_and_Bone_Man/Quick_guide"
+    },
+    "Raksha, the Shadow Colossus": {
+      "wiki": "https://runescape.wiki/w/Raksha,_the_Shadow_Colossus_(quest)",
+      "quickGuide": "https://runescape.wiki/w/Raksha,_the_Shadow_Colossus_(quest)/Quick_guide"
+    },
+    "Rat Catchers": {
+      "wiki": "https://runescape.wiki/w/Rat_Catchers",
+      "quickGuide": "https://runescape.wiki/w/Rat_Catchers/Quick_guide"
+    },
+    "Rebuilding Edgeville (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Rebuilding_Edgeville_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Rebuilding_Edgeville_(miniquest)/Quick_guide"
+    },
+    "Recipe for Disaster": {
+      "wiki": "https://runescape.wiki/w/Recipe_for_Disaster",
+      "quickGuide": "https://runescape.wiki/w/Recipe_for_Disaster/Quick_guide"
+    },
+    "Recipe for Disaster: Another Cook's Quest": {
+      "wiki": "https://runescape.wiki/w/Recipe_for_Disaster:_Another_Cook's_Quest",
+      "quickGuide": "https://runescape.wiki/w/Recipe_for_Disaster:_Another_Cook's_Quest/Quick_guide"
+    },
+    "Recipe for Disaster: Defeating the Culinaromancer": {
+      "wiki": "https://runescape.wiki/w/Recipe_for_Disaster:_Defeating_the_Culinaromancer",
+      "quickGuide": "https://runescape.wiki/w/Recipe_for_Disaster:_Defeating_the_Culinaromancer/Quick_guide"
+    },
+    "Recipe for Disaster: Freeing Evil Dave": {
+      "wiki": "https://runescape.wiki/w/Recipe_for_Disaster:_Freeing_Evil_Dave",
+      "quickGuide": "https://runescape.wiki/w/Recipe_for_Disaster:_Freeing_Evil_Dave/Quick_guide"
+    },
+    "Recipe for Disaster: Freeing King Awowogei": {
+      "wiki": "https://runescape.wiki/w/Recipe_for_Disaster:_Freeing_King_Awowogei",
+      "quickGuide": "https://runescape.wiki/w/Recipe_for_Disaster:_Freeing_King_Awowogei/Quick_guide"
+    },
+    "Recipe for Disaster: Freeing Pirate Pete": {
+      "wiki": "https://runescape.wiki/w/Recipe_for_Disaster:_Freeing_Pirate_Pete",
+      "quickGuide": "https://runescape.wiki/w/Recipe_for_Disaster:_Freeing_Pirate_Pete/Quick_guide"
+    },
+    "Recipe for Disaster: Freeing Sir Amik Varze": {
+      "wiki": "https://runescape.wiki/w/Recipe_for_Disaster:_Freeing_Sir_Amik_Varze",
+      "quickGuide": "https://runescape.wiki/w/Recipe_for_Disaster:_Freeing_Sir_Amik_Varze/Quick_guide"
+    },
+    "Recipe for Disaster: Freeing Skrach Uglogwee": {
+      "wiki": "https://runescape.wiki/w/Recipe_for_Disaster:_Freeing_Skrach_Uglogwee",
+      "quickGuide": "https://runescape.wiki/w/Recipe_for_Disaster:_Freeing_Skrach_Uglogwee/Quick_guide"
+    },
+    "Recipe for Disaster: Freeing the Goblin Generals": {
+      "wiki": "https://runescape.wiki/w/Recipe_for_Disaster:_Freeing_the_Goblin_Generals",
+      "quickGuide": "https://runescape.wiki/w/Recipe_for_Disaster:_Freeing_the_Goblin_Generals/Quick_guide"
+    },
+    "Recipe for Disaster: Freeing the Lumbridge Sage": {
+      "wiki": "https://runescape.wiki/w/Recipe_for_Disaster:_Freeing_the_Lumbridge_Sage",
+      "quickGuide": "https://runescape.wiki/w/Recipe_for_Disaster:_Freeing_the_Lumbridge_Sage/Quick_guide"
+    },
+    "Recipe for Disaster: Freeing the Mountain Dwarf": {
+      "wiki": "https://runescape.wiki/w/Recipe_for_Disaster:_Freeing_the_Mountain_Dwarf",
+      "quickGuide": "https://runescape.wiki/w/Recipe_for_Disaster:_Freeing_the_Mountain_Dwarf/Quick_guide"
+    },
+    "Recruitment Drive": {
+      "wiki": "https://runescape.wiki/w/Recruitment_Drive",
+      "quickGuide": "https://runescape.wiki/w/Recruitment_Drive/Quick_guide"
+    },
+    "Regicide": {
+      "wiki": "https://runescape.wiki/w/Regicide",
+      "quickGuide": "https://runescape.wiki/w/Regicide/Quick_guide"
+    },
+    "Remains of the Necrolord": {
+      "wiki": "https://runescape.wiki/w/Remains_of_the_Necrolord",
+      "quickGuide": "https://runescape.wiki/w/Remains_of_the_Necrolord/Quick_guide"
+    },
+    "Requiem for a Dragon": {
+      "wiki": "https://runescape.wiki/w/Requiem_for_a_Dragon",
+      "quickGuide": "https://runescape.wiki/w/Requiem_for_a_Dragon/Quick_guide"
+    },
+    "Ritual of the Mahjarrat": {
+      "wiki": "https://runescape.wiki/w/Ritual_of_the_Mahjarrat",
+      "quickGuide": "https://runescape.wiki/w/Ritual_of_the_Mahjarrat/Quick_guide"
+    },
+    "River of Blood": {
+      "wiki": "https://runescape.wiki/w/River_of_Blood",
+      "quickGuide": "https://runescape.wiki/w/River_of_Blood/Quick_guide"
+    },
+    "Rocking Out": {
+      "wiki": "https://runescape.wiki/w/Rocking_Out",
+      "quickGuide": "https://runescape.wiki/w/Rocking_Out/Quick_guide"
+    },
+    "Roving Elves": {
+      "wiki": "https://runescape.wiki/w/Roving_Elves",
+      "quickGuide": "https://runescape.wiki/w/Roving_Elves/Quick_guide"
+    },
+    "Royal Trouble": {
+      "wiki": "https://runescape.wiki/w/Royal_Trouble",
+      "quickGuide": "https://runescape.wiki/w/Royal_Trouble/Quick_guide"
+    },
+    "Rum Deal": {
+      "wiki": "https://runescape.wiki/w/Rum_Deal",
+      "quickGuide": "https://runescape.wiki/w/Rum_Deal/Quick_guide"
+    },
+    "Rune Mechanics": {
+      "wiki": "https://runescape.wiki/w/Rune_Mechanics",
+      "quickGuide": "https://runescape.wiki/w/Rune_Mechanics/Quick_guide"
+    },
+    "Rune Memories": {
+      "wiki": "https://runescape.wiki/w/Rune_Memories",
+      "quickGuide": "https://runescape.wiki/w/Rune_Memories/Quick_guide"
+    },
+    "Rune Mysteries": {
+      "wiki": "https://runescape.wiki/w/Rune_Mysteries",
+      "quickGuide": "https://runescape.wiki/w/Rune_Mysteries/Quick_guide"
+    },
+    "Salt in the Wound": {
+      "wiki": "https://runescape.wiki/w/Salt_in_the_Wound",
+      "quickGuide": "https://runescape.wiki/w/Salt_in_the_Wound/Quick_guide"
+    },
+    "Scorpion Catcher": {
+      "wiki": "https://runescape.wiki/w/Scorpion_Catcher",
+      "quickGuide": "https://runescape.wiki/w/Scorpion_Catcher/Quick_guide"
+    },
+    "Sea Slug": {
+      "wiki": "https://runescape.wiki/w/Sea_Slug",
+      "quickGuide": "https://runescape.wiki/w/Sea_Slug/Quick_guide"
+    },
+    "Secrets of Amberfell": {
+      "wiki": "https://runescape.wiki/w/Secrets_of_Amberfell",
+      "quickGuide": "https://runescape.wiki/w/Secrets_of_Amberfell/Quick_guide"
+    },
+    "Shades of Mort'ton": {
+      "wiki": "https://runescape.wiki/w/Shades_of_Mort'ton",
+      "quickGuide": "https://runescape.wiki/w/Shades_of_Mort'ton/Quick_guide"
+    },
+    "Shadow of the Storm": {
+      "wiki": "https://runescape.wiki/w/Shadow_of_the_Storm",
+      "quickGuide": "https://runescape.wiki/w/Shadow_of_the_Storm/Quick_guide"
+    },
+    "Sheep Herder": {
+      "wiki": "https://runescape.wiki/w/Sheep_Herder",
+      "quickGuide": "https://runescape.wiki/w/Sheep_Herder/Quick_guide"
+    },
+    "Sheep Shearer (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Sheep_Shearer_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Sheep_Shearer_(miniquest)/Quick_guide"
+    },
+    "Shield of Arrav": {
+      "wiki": "https://runescape.wiki/w/Shield_of_Arrav",
+      "quickGuide": "https://runescape.wiki/w/Shield_of_Arrav/Quick_guide"
+    },
+    "Shilo Village": {
+      "wiki": "https://runescape.wiki/w/Shilo_Village",
+      "quickGuide": "https://runescape.wiki/w/Shilo_Village/Quick_guide"
+    },
+    "Sins of the Father": {
+      "wiki": "https://runescape.wiki/w/Sins_of_the_Father",
+      "quickGuide": "https://runescape.wiki/w/Sins_of_the_Father/Quick_guide"
+    },
+    "Skelly By Everlight": {
+      "wiki": "https://runescape.wiki/w/That_Old_Black_Magic:_Skelly_By_Everlight",
+      "quickGuide": "https://runescape.wiki/w/That_Old_Black_Magic:_Skelly_By_Everlight/Quick_guide"
+    },
+    "Sliske's Endgame": {
+      "wiki": "https://runescape.wiki/w/Sliske's_Endgame",
+      "quickGuide": "https://runescape.wiki/w/Sliske's_Endgame/Quick_guide"
+    },
+    "Smoking Kills": {
+      "wiki": "https://runescape.wiki/w/Smoking_Kills",
+      "quickGuide": "https://runescape.wiki/w/Smoking_Kills/Quick_guide"
+    },
+    "Some Like It Cold": {
+      "wiki": "https://runescape.wiki/w/Some_Like_It_Cold",
+      "quickGuide": "https://runescape.wiki/w/Some_Like_It_Cold/Quick_guide"
+    },
+    "Song from the Depths": {
+      "wiki": "https://runescape.wiki/w/Song_from_the_Depths",
+      "quickGuide": "https://runescape.wiki/w/Song_from_the_Depths/Quick_guide"
+    },
+    "Soul Searching": {
+      "wiki": "https://runescape.wiki/w/Soul_Searching",
+      "quickGuide": "https://runescape.wiki/w/Soul_Searching/Quick_guide"
+    },
+    "Spirit of Summer": {
+      "wiki": "https://runescape.wiki/w/Spirit_of_Summer",
+      "quickGuide": "https://runescape.wiki/w/Spirit_of_Summer/Quick_guide"
+    },
+    "Spirits of the Elid": {
+      "wiki": "https://runescape.wiki/w/Spirits_of_the_Elid",
+      "quickGuide": "https://runescape.wiki/w/Spirits_of_the_Elid/Quick_guide"
+    },
+    "Spiritual Enlightenment (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Spiritual_Enlightenment_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Spiritual_Enlightenment_(miniquest)/Quick_guide"
+    },
+    "Stellar Born": {
+      "wiki": "https://runescape.wiki/w/Stellar_Born",
+      "quickGuide": "https://runescape.wiki/w/Stellar_Born/Quick_guide"
+    },
+    "Stolen Hearts": {
+      "wiki": "https://runescape.wiki/w/Stolen_Hearts",
+      "quickGuide": "https://runescape.wiki/w/Stolen_Hearts/Quick_guide"
+    },
+    "Succession": {
+      "wiki": "https://runescape.wiki/w/Succession",
+      "quickGuide": "https://runescape.wiki/w/Succession/Quick_guide"
+    },
+    "Summer's End": {
+      "wiki": "https://runescape.wiki/w/Summer's_End",
+      "quickGuide": "https://runescape.wiki/w/Summer's_End/Quick_guide"
+    },
+    "Swan Song": {
+      "wiki": "https://runescape.wiki/w/Swan_Song",
+      "quickGuide": "https://runescape.wiki/w/Swan_Song/Quick_guide"
+    },
+    "Tai Bwo Wannai Trio": {
+      "wiki": "https://runescape.wiki/w/Tai_Bwo_Wannai_Trio",
+      "quickGuide": "https://runescape.wiki/w/Tai_Bwo_Wannai_Trio/Quick_guide"
+    },
+    "Tales of Nomad (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Tales_of_Nomad_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Tales_of_Nomad_(miniquest)/Quick_guide"
+    },
+    "Tales of the God Wars (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Tales_of_the_God_Wars_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Tales_of_the_God_Wars_(miniquest)/Quick_guide"
+    },
+    "Tears of Guthix": {
+      "wiki": "https://runescape.wiki/w/Tears_of_Guthix_(quest)",
+      "quickGuide": "https://runescape.wiki/w/Tears_of_Guthix_(quest)/Quick_guide"
+    },
+    "Temple of Ikov": {
+      "wiki": "https://runescape.wiki/w/Temple_of_Ikov",
+      "quickGuide": "https://runescape.wiki/w/Temple_of_Ikov/Quick_guide"
+    },
+    "That Old Black Magic": {
+      "wiki": "https://runescape.wiki/w/That_Old_Black_Magic",
+      "quickGuide": "https://runescape.wiki/w/That_Old_Black_Magic/Quick_guide"
+    },
+    "The Branches of Darkmeyer": {
+      "wiki": "https://runescape.wiki/w/The_Branches_of_Darkmeyer",
+      "quickGuide": "https://runescape.wiki/w/The_Branches_of_Darkmeyer/Quick_guide"
+    },
+    "The Brink of Extinction": {
+      "wiki": "https://runescape.wiki/w/The_Brink_of_Extinction",
+      "quickGuide": "https://runescape.wiki/w/The_Brink_of_Extinction/Quick_guide"
+    },
+    "The Chosen Commander": {
+      "wiki": "https://runescape.wiki/w/The_Chosen_Commander",
+      "quickGuide": "https://runescape.wiki/w/The_Chosen_Commander/Quick_guide"
+    },
+    "The Curse of Arrav": {
+      "wiki": "https://runescape.wiki/w/The_Curse_of_Arrav",
+      "quickGuide": "https://runescape.wiki/w/The_Curse_of_Arrav/Quick_guide"
+    },
+    "The Darkness of Hallowvale": {
+      "wiki": "https://runescape.wiki/w/The_Darkness_of_Hallowvale",
+      "quickGuide": "https://runescape.wiki/w/The_Darkness_of_Hallowvale/Quick_guide"
+    },
+    "The Death of Chivalry": {
+      "wiki": "https://runescape.wiki/w/The_Death_of_Chivalry",
+      "quickGuide": "https://runescape.wiki/w/The_Death_of_Chivalry/Quick_guide"
+    },
+    "The Dig Site": {
+      "wiki": "https://runescape.wiki/w/The_Dig_Site",
+      "quickGuide": "https://runescape.wiki/w/The_Dig_Site/Quick_guide"
+    },
+    "The Elder Kiln": {
+      "wiki": "https://runescape.wiki/w/The_Elder_Kiln",
+      "quickGuide": "https://runescape.wiki/w/The_Elder_Kiln/Quick_guide"
+    },
+    "The Eyes of Glouphrie": {
+      "wiki": "https://runescape.wiki/w/The_Eyes_of_Glouphrie",
+      "quickGuide": "https://runescape.wiki/w/The_Eyes_of_Glouphrie/Quick_guide"
+    },
+    "The Feud": {
+      "wiki": "https://runescape.wiki/w/The_Feud",
+      "quickGuide": "https://runescape.wiki/w/The_Feud/Quick_guide"
+    },
+    "The Firemaker's Curse": {
+      "wiki": "https://runescape.wiki/w/The_Firemaker's_Curse",
+      "quickGuide": "https://runescape.wiki/w/The_Firemaker's_Curse/Quick_guide"
+    },
+    "The Fremennik Isles": {
+      "wiki": "https://runescape.wiki/w/The_Fremennik_Isles",
+      "quickGuide": "https://runescape.wiki/w/The_Fremennik_Isles/Quick_guide"
+    },
+    "The Fremennik Trials": {
+      "wiki": "https://runescape.wiki/w/The_Fremennik_Trials",
+      "quickGuide": "https://runescape.wiki/w/The_Fremennik_Trials/Quick_guide"
+    },
+    "The General's Shadow (miniquest)": {
+      "wiki": "https://runescape.wiki/w/The_General's_Shadow_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/The_General's_Shadow_(miniquest)/Quick_guide"
+    },
+    "The Giant Dwarf": {
+      "wiki": "https://runescape.wiki/w/The_Giant_Dwarf",
+      "quickGuide": "https://runescape.wiki/w/The_Giant_Dwarf/Quick_guide"
+    },
+    "The Golem": {
+      "wiki": "https://runescape.wiki/w/The_Golem",
+      "quickGuide": "https://runescape.wiki/w/The_Golem/Quick_guide"
+    },
+    "The Grand Tree": {
+      "wiki": "https://runescape.wiki/w/The_Grand_Tree",
+      "quickGuide": "https://runescape.wiki/w/The_Grand_Tree/Quick_guide"
+    },
+    "The Great Brain Robbery": {
+      "wiki": "https://runescape.wiki/w/The_Great_Brain_Robbery",
+      "quickGuide": "https://runescape.wiki/w/The_Great_Brain_Robbery/Quick_guide"
+    },
+    "The Hand in the Sand": {
+      "wiki": "https://runescape.wiki/w/The_Hand_in_the_Sand",
+      "quickGuide": "https://runescape.wiki/w/The_Hand_in_the_Sand/Quick_guide"
+    },
+    "The Hunt for Surok (miniquest)": {
+      "wiki": "https://runescape.wiki/w/The_Hunt_for_Surok_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/The_Hunt_for_Surok_(miniquest)/Quick_guide"
+    },
+    "The Jack of Spades": {
+      "wiki": "https://runescape.wiki/w/The_Jack_of_Spades",
+      "quickGuide": "https://runescape.wiki/w/The_Jack_of_Spades/Quick_guide"
+    },
+    "The Light Within": {
+      "wiki": "https://runescape.wiki/w/The_Light_Within",
+      "quickGuide": "https://runescape.wiki/w/The_Light_Within/Quick_guide"
+    },
+    "The Lord of Vampyrium": {
+      "wiki": "https://runescape.wiki/w/The_Lord_of_Vampyrium",
+      "quickGuide": "https://runescape.wiki/w/The_Lord_of_Vampyrium/Quick_guide"
+    },
+    "The Lost Toys (miniquest)": {
+      "wiki": "https://runescape.wiki/w/The_Lost_Toys_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/The_Lost_Toys_(miniquest)/Quick_guide"
+    },
+    "The Lost Tribe": {
+      "wiki": "https://runescape.wiki/w/The_Lost_Tribe",
+      "quickGuide": "https://runescape.wiki/w/The_Lost_Tribe/Quick_guide"
+    },
+    "The Mighty Fall": {
+      "wiki": "https://runescape.wiki/w/The_Mighty_Fall",
+      "quickGuide": "https://runescape.wiki/w/The_Mighty_Fall/Quick_guide"
+    },
+    "The Needle Skips": {
+      "wiki": "https://runescape.wiki/w/The_Needle_Skips",
+      "quickGuide": "https://runescape.wiki/w/The_Needle_Skips/Quick_guide"
+    },
+    "The Path of Glouphrie": {
+      "wiki": "https://runescape.wiki/w/The_Path_of_Glouphrie",
+      "quickGuide": "https://runescape.wiki/w/The_Path_of_Glouphrie/Quick_guide"
+    },
+    "The Prisoner of Glouphrie": {
+      "wiki": "https://runescape.wiki/w/The_Prisoner_of_Glouphrie",
+      "quickGuide": "https://runescape.wiki/w/The_Prisoner_of_Glouphrie/Quick_guide"
+    },
+    "The Slug Menace": {
+      "wiki": "https://runescape.wiki/w/The_Slug_Menace",
+      "quickGuide": "https://runescape.wiki/w/The_Slug_Menace/Quick_guide"
+    },
+    "The Spirit of War": {
+      "wiki": "https://runescape.wiki/w/The_Spirit_of_War",
+      "quickGuide": "https://runescape.wiki/w/The_Spirit_of_War/Quick_guide"
+    },
+    "The Tale of the Muspah": {
+      "wiki": "https://runescape.wiki/w/The_Tale_of_the_Muspah",
+      "quickGuide": "https://runescape.wiki/w/The_Tale_of_the_Muspah/Quick_guide"
+    },
+    "The Temple at Senntisten": {
+      "wiki": "https://runescape.wiki/w/The_Temple_at_Senntisten",
+      "quickGuide": "https://runescape.wiki/w/The_Temple_at_Senntisten/Quick_guide"
+    },
+    "The Tourist Trap": {
+      "wiki": "https://runescape.wiki/w/The_Tourist_Trap",
+      "quickGuide": "https://runescape.wiki/w/The_Tourist_Trap/Quick_guide"
+    },
+    "The Vault of Shadows": {
+      "wiki": "https://runescape.wiki/w/The_Vault_of_Shadows",
+      "quickGuide": "https://runescape.wiki/w/The_Vault_of_Shadows/Quick_guide"
+    },
+    "The Void Stares Back": {
+      "wiki": "https://runescape.wiki/w/The_Void_Stares_Back",
+      "quickGuide": "https://runescape.wiki/w/The_Void_Stares_Back/Quick_guide"
+    },
+    "The World Wakes": {
+      "wiki": "https://runescape.wiki/w/The_World_Wakes",
+      "quickGuide": "https://runescape.wiki/w/The_World_Wakes/Quick_guide"
+    },
+    "Thok It To 'Em (saga)": {
+      "wiki": "https://runescape.wiki/w/Thok_It_To_'Em_(saga)",
+      "quickGuide": "https://runescape.wiki/w/Thok_It_To_'Em_(saga)/Quick_guide"
+    },
+    "Thok Your Block Off (saga)": {
+      "wiki": "https://runescape.wiki/w/Thok_Your_Block_Off_(saga)",
+      "quickGuide": "https://runescape.wiki/w/Thok_Your_Block_Off_(saga)/Quick_guide"
+    },
+    "Three's Company (saga)": {
+      "wiki": "https://runescape.wiki/w/Three's_Company_(saga)",
+      "quickGuide": "https://runescape.wiki/w/Three's_Company_(saga)/Quick_guide"
+    },
+    "Throne of Miscellania": {
+      "wiki": "https://runescape.wiki/w/Throne_of_Miscellania",
+      "quickGuide": "https://runescape.wiki/w/Throne_of_Miscellania/Quick_guide"
+    },
+    "TokTz-Ket-Dill": {
+      "wiki": "https://runescape.wiki/w/TokTz-Ket-Dill",
+      "quickGuide": "https://runescape.wiki/w/TokTz-Ket-Dill/Quick_guide"
+    },
+    "Tomes of the Warlock": {
+      "wiki": "https://runescape.wiki/w/Tomes_of_the_Warlock",
+      "quickGuide": "https://runescape.wiki/w/Tomes_of_the_Warlock/Quick_guide"
+    },
+    "Tortle Combat (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Tortle_Combat_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Tortle_Combat_(miniquest)/Quick_guide"
+    },
+    "Tower of Life": {
+      "wiki": "https://runescape.wiki/w/Tower_of_Life",
+      "quickGuide": "https://runescape.wiki/w/Tower_of_Life/Quick_guide"
+    },
+    "Tree Gnome Village": {
+      "wiki": "https://runescape.wiki/w/Tree_Gnome_Village",
+      "quickGuide": "https://runescape.wiki/w/Tree_Gnome_Village/Quick_guide"
+    },
+    "Tribal Totem": {
+      "wiki": "https://runescape.wiki/w/Tribal_Totem",
+      "quickGuide": "https://runescape.wiki/w/Tribal_Totem/Quick_guide"
+    },
+    "Troll Romance": {
+      "wiki": "https://runescape.wiki/w/Troll_Romance",
+      "quickGuide": "https://runescape.wiki/w/Troll_Romance/Quick_guide"
+    },
+    "Troll Stronghold": {
+      "wiki": "https://runescape.wiki/w/Troll_Stronghold",
+      "quickGuide": "https://runescape.wiki/w/Troll_Stronghold/Quick_guide"
+    },
+    "Tuai Leit's Own (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Tuai_Leit's_Own_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Tuai_Leit's_Own_(miniquest)/Quick_guide"
+    },
+    "Twilight of the Gods": {
+      "wiki": "https://runescape.wiki/w/Twilight_of_the_Gods",
+      "quickGuide": "https://runescape.wiki/w/Twilight_of_the_Gods/Quick_guide"
+    },
+    "Underground Pass": {
+      "wiki": "https://runescape.wiki/w/Underground_Pass",
+      "quickGuide": "https://runescape.wiki/w/Underground_Pass/Quick_guide"
+    },
+    "Unwelcome Guests": {
+      "wiki": "https://runescape.wiki/w/Unwelcome_Guests",
+      "quickGuide": "https://runescape.wiki/w/Unwelcome_Guests/Quick_guide"
+    },
+    "Vampyre Slayer": {
+      "wiki": "https://runescape.wiki/w/Vampyre_Slayer",
+      "quickGuide": "https://runescape.wiki/w/Vampyre_Slayer/Quick_guide"
+    },
+    "Vengeance (saga)": {
+      "wiki": "https://runescape.wiki/w/Vengeance_(saga)",
+      "quickGuide": "https://runescape.wiki/w/Vengeance_(saga)/Quick_guide"
+    },
+    "Vessel of the Harbinger": {
+      "wiki": "https://runescape.wiki/w/Vessel_of_the_Harbinger",
+      "quickGuide": "https://runescape.wiki/w/Vessel_of_the_Harbinger/Quick_guide"
+    },
+    "Visions of Havenhythe": {
+      "wiki": "https://runescape.wiki/w/Visions_of_Havenhythe",
+      "quickGuide": "https://runescape.wiki/w/Visions_of_Havenhythe/Quick_guide"
+    },
+    "Wandering Ga'al (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Wandering_Ga'al_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Wandering_Ga'al_(miniquest)/Quick_guide"
+    },
+    "Wanted!": {
+      "wiki": "https://runescape.wiki/w/Wanted!",
+      "quickGuide": "https://runescape.wiki/w/Wanted!/Quick_guide"
+    },
+    "Watchtower": {
+      "wiki": "https://runescape.wiki/w/Watchtower",
+      "quickGuide": "https://runescape.wiki/w/Watchtower/Quick_guide"
+    },
+    "Waterfall Quest": {
+      "wiki": "https://runescape.wiki/w/Waterfall_Quest",
+      "quickGuide": "https://runescape.wiki/w/Waterfall_Quest/Quick_guide"
+    },
+    "What Lies Below": {
+      "wiki": "https://runescape.wiki/w/What_Lies_Below",
+      "quickGuide": "https://runescape.wiki/w/What_Lies_Below/Quick_guide"
+    },
+    "While Guthix Sleeps": {
+      "wiki": "https://runescape.wiki/w/While_Guthix_Sleeps",
+      "quickGuide": "https://runescape.wiki/w/While_Guthix_Sleeps/Quick_guide"
+    },
+    "Witch's House": {
+      "wiki": "https://runescape.wiki/w/Witch's_House",
+      "quickGuide": "https://runescape.wiki/w/Witch's_House/Quick_guide"
+    },
+    "Witch's Potion (miniquest)": {
+      "wiki": "https://runescape.wiki/w/Witch's_Potion_(miniquest)",
+      "quickGuide": "https://runescape.wiki/w/Witch's_Potion_(miniquest)/Quick_guide"
+    },
+    "Within the Light": {
+      "wiki": "https://runescape.wiki/w/Within_the_Light",
+      "quickGuide": "https://runescape.wiki/w/Within_the_Light/Quick_guide"
+    },
+    "Wiz Kid": {
+      "wiki": "https://runescape.wiki/w/Wiz_Kid",
+      "quickGuide": "https://runescape.wiki/w/Wiz_Kid/Quick_guide"
+    },
+    "You Are It": {
+      "wiki": "https://runescape.wiki/w/You_Are_It",
+      "quickGuide": "https://runescape.wiki/w/You_Are_It/Quick_guide"
+    },
+    "Zogre Flesh Eaters": {
+      "wiki": "https://runescape.wiki/w/Zogre_Flesh_Eaters",
+      "quickGuide": "https://runescape.wiki/w/Zogre_Flesh_Eaters/Quick_guide"
+    }
+  }
+}

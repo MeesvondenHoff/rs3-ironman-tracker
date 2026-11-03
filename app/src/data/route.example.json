@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "account": "Ons Pap",
+    "goal": "VOORBEELDROUTE voor ontwikkeling: combat-klaar mid game",
+    "playstyle": "Afwisselend actief/AFK, 7-15 uur per week",
+    "updated": "2026-11-03",
+    "sources": [
+      { "id": "src-wiki-ironman", "title": "RS Wiki: Ironman guide", "url": "https://runescape.wiki/w/Ironman_Mode/Strategies", "weight": "hoog", "note": "Voorbeeldbron" },
+      { "id": "src-wiki-quests", "title": "RS Wiki: Optimal quest guide", "url": "https://runescape.wiki/w/Optimal_quest_guide", "weight": "midden", "note": "Voorbeeldbron" }
+    ]
+  },
+  "phases": [
+    {
+      "id": "p1",
+      "title": "Basis op orde",
+      "summary": "Eerste quests en travel-unlocks. Dit is een **voorbeeldfase**; de echte route komt in route.json.",
+      "estHours": 6,
+      "targets": [{ "skill": "Agility", "level": 30 }],
+      "steps": [
+        {
+          "id": "ex-p1-01",
+          "title": "Druidic Ritual",
+          "type": "quest",
+          "style": "active",
+          "estHours": 0.3,
+          "location": "Taverley",
+          "detail": "Doe **Druidic Ritual** in Taverley om Herblore te ontgrendelen.",
+          "why": "Herblore is nodig voor potions en bijna alle latere stappen.",
+          "completeWhen": { "quests": ["Druidic Ritual"] },
+          "sources": ["src-wiki-quests"]
+        },
+        {
+          "id": "ex-p1-02",
+          "title": "Agility naar 30",
+          "type": "skill",
+          "style": "mixed",
+          "estHours": 2,
+          "detail": "Train op de volgende courses:\n\n- Burthorpe course tot 20\n- Gnome Stronghold tot 30\n\nZie [de wiki](https://runescape.wiki/w/Agility_training) voor details.",
+          "why": "Shortcuts en run-energie maken alle volgende stappen sneller.",
+          "completeWhen": { "skills": { "Agility": 30 } },
+          "sources": ["src-wiki-ironman"]
+        },
+        {
+          "id": "ex-p1-03",
+          "title": "Bank en toolbelt opruimen",
+          "type": "misc",
+          "style": "afk",
+          "estHours": 0.5,
+          "detail": "Handmatige stap: zet je *tools* op de toolbelt en maak bank-presets.",
+          "why": "Geen automatische controle mogelijk, daarom handmatig afvinken.",
+          "sources": []
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "Eerste combat-quests",
+      "summary": "Quests met nuttige combat-XP en unlocks.",
+      "estHours": 8,
+      "targets": [{ "skill": "Attack", "level": 40 }, { "skill": "Strength", "level": 40 }],
+      "steps": [
+        {
+          "id": "ex-p2-01",
+          "title": "Waterfall Quest",
+          "type": "quest",
+          "style": "active",
+          "estHours": 0.7,
+          "location": "Baxtorian Falls",
+          "detail": "Snelle quest met veel Attack- en Strength-XP.",
+          "why": "Goede XP-boost voor lage combat.",
+          "completeWhen": { "quests": ["Waterfall Quest"] },
+          "sources": ["src-wiki-quests"]
+        },
+        {
+          "id": "ex-p2-02",
+          "title": "Priest in Peril",
+          "type": "quest",
+          "style": "active",
+          "estHours": 0.6,
+          "detail": "Opent toegang tot Morytania.",
+          "why": "Voorwaarde voor veel Morytania-content.",
+          "requires": { "skills": { "Attack": 15 } },
+          "completeWhen": { "quests": ["Priest in Peril"] },
+          "sources": ["src-wiki-quests"]
+        },
+        {
+          "id": "ex-p2-03",
+          "title": "Attack en Strength naar 40",
+          "type": "skill",
+          "style": "afk",
+          "estHours": 5,
+          "detail": "AFK op rock crabs of met de combat academy.",
+          "why": "40 melee opent betere wapens.",
+          "requires": { "skills": { "Attack": 20 }, "quests": ["Waterfall Quest"] },
+          "completeWhen": { "skills": { "Attack": 40, "Strength": 40 } },
+          "sources": ["src-wiki-ironman"]
+        }
+      ]
+    }
+  ]
+}

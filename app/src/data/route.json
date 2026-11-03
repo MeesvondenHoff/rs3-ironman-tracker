@@ -1,0 +1,2055 @@
+{
+  "meta": {
+    "account": "Ons Pap",
+    "goal": "Combat-klaar mid game: combat 100+, T70-T80 gear, Slayer en eerste bosses",
+    "playstyle": "Afwisselend actief/AFK, 7-15 uur per week",
+    "updated": "2026-11-03",
+    "sources": [
+      {
+        "id": "src-wiki-eipg",
+        "title": "RS Wiki: Efficient Ironman Pathway Guide",
+        "url": "https://runescape.wiki/w/Ironman_Mode/Guide/Efficient_Ironman_Pathway_Guide",
+        "weight": "hoog",
+        "note": "Meest gebruikte bossing-ready route; ruggengraat voor volgorde, maar eisen zelf controleren."
+      },
+      {
+        "id": "src-wiki-eipg-talk",
+        "title": "RS Wiki: overlegpagina Efficient Ironman Pathway Guide",
+        "url": "https://runescape.wiki/w/Talk:Ironman_Mode/Guide/Efficient_Ironman_Pathway_Guide",
+        "weight": "midden",
+        "note": "Spelersfeedback 2024-2026: Necromancy-meta, gemiste Defence/Smithing/Crafting-eisen, verouderde stappen."
+      },
+      {
+        "id": "src-wiki-ironman",
+        "title": "RS Wiki: Ironman Mode guide (Strategies)",
+        "url": "https://runescape.wiki/w/Ironman_Mode/Strategies",
+        "weight": "hoog",
+        "note": "Algemene ironman-strategie: geld, eten, quests, bossminima."
+      },
+      {
+        "id": "src-wiki-rsguy",
+        "title": "RS Wiki: The RS Guy's Updated 2026 Ironman Progression Guide",
+        "url": "https://runescape.wiki/w/Guide:The_RS_Guy's_Updated_Ironman_Progression_Guide",
+        "weight": "midden",
+        "note": "Quest-gedreven route met prioriteiten voor dailies; mist combat-modernisatie en Invention."
+      },
+      {
+        "id": "src-wiki-necro-iron",
+        "title": "RS Wiki: Ironman-strategie Necromancy",
+        "url": "https://runescape.wiki/w/Ironman_Mode/Strategies/Necromancy",
+        "weight": "hoog",
+        "note": "Rituals plus combat, Kili's Knowledge-taken per tier, Underworld Grimoire."
+      },
+      {
+        "id": "src-wiki-necro-training",
+        "title": "RS Wiki: Necromancy training",
+        "url": "https://runescape.wiki/w/Necromancy_training",
+        "weight": "hoog",
+        "note": "Trainingsplekken per levelband met AFK-geschiktheid en XP per kill."
+      },
+      {
+        "id": "src-wiki-gear-t70",
+        "title": "RS Wiki: Death guard (tier 70) en Deathwarden robe top (tier 70)",
+        "url": "https://runescape.wiki/w/Death_guard_(tier_70)",
+        "weight": "hoog",
+        "note": "Harde eisen: Smithing 65 (wapen), Crafting 65 en Defence 70 (armour)."
+      },
+      {
+        "id": "src-wiki-gear-t80",
+        "title": "RS Wiki: Skull lantern (tier 80)",
+        "url": "https://runescape.wiki/w/Skull_lantern_(tier_80)",
+        "weight": "hoog",
+        "note": "Harde eisen: Necromancy 80, Smithing 75, Kili's Knowledge VI."
+      },
+      {
+        "id": "src-pvme-necro",
+        "title": "PvME: Necromancy upgrade order",
+        "url": "https://pvme.io/pvme-guides/upgrading-info/upgrade-order/necromancy",
+        "weight": "laag",
+        "note": "Prioriteit tank-armour voor power; gericht op mains met GE, deels verouderd na maart 2026."
+      },
+      {
+        "id": "src-wiki-slayer-iron",
+        "title": "RS Wiki: Ironman-strategie Slayer",
+        "url": "https://runescape.wiki/w/Ironman_Mode/Strategies/Slayer",
+        "weight": "hoog",
+        "note": "Jacquelyn-truc voor punten, Smoking Kills, puntenvolgorde, masters."
+      },
+      {
+        "id": "src-wiki-summoning-iron",
+        "title": "RS Wiki: Ironman-strategie Summoning",
+        "url": "https://runescape.wiki/w/Ironman_Mode/Strategies/Summoning",
+        "weight": "midden",
+        "note": "Pouches per levelband; charms en shards."
+      },
+      {
+        "id": "src-wiki-pof",
+        "title": "RS Wiki: Player-owned farm",
+        "url": "https://runescape.wiki/w/Player-owned_farm",
+        "weight": "midden",
+        "note": "Eisen en dierlevels; AFK Farming-XP voor ironmen."
+      },
+      {
+        "id": "src-wiki-csm",
+        "title": "RS Wiki: Combat Style Modernisation (2 maart 2026)",
+        "url": "https://runescape.wiki/w/Combat_Style_Modernisation",
+        "weight": "hoog",
+        "note": "Bepaalt welke oude combat-adviezen verouderd zijn."
+      },
+      {
+        "id": "src-wiki-spirit-of-war",
+        "title": "RS Wiki: The Spirit of War",
+        "url": "https://runescape.wiki/w/The_Spirit_of_War",
+        "weight": "hoog",
+        "note": "Verplicht voor T70+ Necromancy-gear; 45k XP-lamp."
+      },
+      {
+        "id": "src-wiki-vessel",
+        "title": "RS Wiki: Vessel of the Harbinger",
+        "url": "https://runescape.wiki/w/Vessel_of_the_Harbinger",
+        "weight": "hoog",
+        "note": "Voorquest van The Spirit of War; Necromancy 46, Prayer 40."
+      },
+      {
+        "id": "src-wiki-ghosts-ahoy",
+        "title": "RS Wiki: Ghosts Ahoy",
+        "url": "https://runescape.wiki/w/Ghosts_Ahoy",
+        "weight": "midden",
+        "note": "Ectophial en voorquest; Agility 25, Cooking 20."
+      },
+      {
+        "id": "src-wiki-troll-stronghold",
+        "title": "RS Wiki: Troll Stronghold",
+        "url": "https://runescape.wiki/w/Troll_Stronghold",
+        "weight": "midden",
+        "note": "GWD1-toegang en twee lampen van 10k XP."
+      },
+      {
+        "id": "src-wiki-smoking-kills",
+        "title": "RS Wiki: Smoking Kills",
+        "url": "https://runescape.wiki/w/Smoking_Kills",
+        "weight": "hoog",
+        "note": "Volle Slayer-punten en Sumona; Slayer 35, Crafting 25."
+      },
+      {
+        "id": "src-wiki-ilh",
+        "title": "RS Wiki: Icthlarin's Little Helper",
+        "url": "https://runescape.wiki/w/Icthlarin%27s_Little_Helper",
+        "weight": "midden",
+        "note": "Voorketen van Smoking Kills; geeft ook Thieving/Agility/Woodcutting-XP."
+      },
+      {
+        "id": "src-wiki-gwd",
+        "title": "RS Wiki: God Wars Dungeon",
+        "url": "https://runescape.wiki/w/God_Wars_Dungeon",
+        "weight": "hoog",
+        "note": "Toegangseisen per gebied; boulder Strength of Agility 60 (boostbaar); Zamorak vraagt Constitution 70."
+      },
+      {
+        "id": "src-wiki-qbd",
+        "title": "RS Wiki: Queen Black Dragon/Strategies",
+        "url": "https://runescape.wiki/w/Queen_Black_Dragon/Strategies",
+        "weight": "hoog",
+        "note": "Summoning 60 (instance), aanbevolen Necromancy/Defence 75, T80-wapen, dragonfire-bescherming verplicht. Uitgesteld tot na fase 1 (2026-11-03)."
+      },
+      {
+        "id": "src-wiki-antifire",
+        "title": "RS Wiki: Antifire en Super antifire",
+        "url": "https://runescape.wiki/w/Antifire",
+        "weight": "hoog",
+        "note": "Antifire: Herblore 69 (clean lantadyme + dragon scale dust), alleen volledig met anti-dragon shield of dragonfire shield; super antifire: Herblore 85 (phoenix feather), volledig op zichzelf."
+      },
+      {
+        "id": "src-wiki-heart",
+        "title": "RS Wiki: Heart of Gielinor (God Wars Dungeon 2)",
+        "url": "https://runescape.wiki/w/Heart_of_Gielinor",
+        "weight": "hoog",
+        "note": "Hoofdgebied zonder eisen; Zaros's Bastion vraagt Attack 80 (boostbaar) en 40 Zarosian killcount, 20 met 2.000 reputatie of War's Blessing 2."
+      },
+      {
+        "id": "src-wiki-vindicta",
+        "title": "RS Wiki: Vindicta & Gorvek en /Strategies",
+        "url": "https://runescape.wiki/w/Vindicta_%26_Gorvek/Strategies",
+        "weight": "hoog",
+        "note": "Aanbevolen normal mode: combat 80, Defence 80, tier 80-wapen en -armour, Prayer 71 met Ancient Curses, overloads; killcount bewaard tot 200."
+      },
+      {
+        "id": "src-wiki-super-attack",
+        "title": "RS Wiki: Super attack en Temporary skill boost",
+        "url": "https://runescape.wiki/w/Super_attack",
+        "weight": "hoog",
+        "note": "Super attack (Herblore 45) geeft 2 + 12% Attack: Attack 70 wordt 80. Extreme attack (Herblore 88) 3 + 15%."
+      },
+      {
+        "id": "src-wiki-tales-god-wars",
+        "title": "RS Wiki: Tales of the God Wars (miniquest)",
+        "url": "https://runescape.wiki/w/Tales_of_the_God_Wars_(miniquest)",
+        "weight": "midden",
+        "note": "Constitution 70, Strength of Agility 60; vraagt o.a. een K'ril-kill; beloning 25 Heart-teleports, anima crystal (+500 reputatie) en een lamp van 30.000 XP."
+      },
+      {
+        "id": "src-wiki-kili-7",
+        "title": "RS Wiki: Kili's Knowledge VII",
+        "url": "https://runescape.wiki/w/Kili%27s_Knowledge_VII",
+        "weight": "midden",
+        "note": "T90 Necromancy-gear: 10 powered necromantic seals van elke GWD2-general, Necromancy 90, Attack/Magic/Ranged 80 (boostbaar), Prayer 80."
+      },
+      {
+        "id": "src-wiki-plagues-end",
+        "title": "RS Wiki: Plague's End",
+        "url": "https://runescape.wiki/w/Plague%27s_End",
+        "weight": "midden",
+        "note": "Tien skills op 75; reden om Prifddinas na fase 1 te plannen."
+      },
+      {
+        "id": "src-wiki-invention",
+        "title": "RS Wiki: Invention",
+        "url": "https://runescape.wiki/w/Invention",
+        "weight": "midden",
+        "note": "Crafting, Divination en Smithing 80, niet boostbaar."
+      },
+      {
+        "id": "src-wiki-arc",
+        "title": "RS Wiki: The Arc",
+        "url": "https://runescape.wiki/w/The_Arc",
+        "weight": "laag",
+        "note": "Alleen Impressing the Locals; contracten geven extra combat-XP. Fase 2."
+      },
+      {
+        "id": "src-wiki-arch-iron",
+        "title": "RS Wiki: Ironman-strategie Archaeology",
+        "url": "https://runescape.wiki/w/Ironman_Mode/Strategies/Archaeology",
+        "weight": "laag",
+        "note": "Lange termijn; relics en Tetracompass, weinig rendement in fase 1."
+      },
+      {
+        "id": "src-wiki-shattered",
+        "title": "RS Wiki: Shattered Worlds",
+        "url": "https://runescape.wiki/w/Shattered_Worlds",
+        "weight": "laag",
+        "note": "Nog actief volgens de pagina, maar anima-status omstreden; niet in de kern."
+      },
+      {
+        "id": "src-wiki-combat-xp",
+        "title": "RS Wiki: Combat experience",
+        "url": "https://runescape.wiki/w/Combat_experience",
+        "weight": "hoog",
+        "note": "Necromancy kan XP delen met Defence (37,5% elk); basis voor Defence-training in deze route."
+      },
+      {
+        "id": "src-wiki-slayer-masters",
+        "title": "RS Wiki: Slayer Master",
+        "url": "https://runescape.wiki/w/Slayer_Master",
+        "weight": "hoog",
+        "note": "RS3-masters met locatie en eisen (Vannaka 30 combat, Mazchna 50, Chaeldar via Lost City, Sumona 90 + Smoking Kills)."
+      },
+      {
+        "id": "src-wiki-raptor",
+        "title": "RS Wiki: The Raptor",
+        "url": "https://runescape.wiki/w/The_Raptor",
+        "weight": "midden",
+        "note": "Slayer-master van Fort Forinthry; wiki raadt hem af voor lage levels."
+      },
+      {
+        "id": "src-wiki-myths",
+        "title": "RS Wiki: Myths of the White Lands",
+        "url": "https://runescape.wiki/w/Myths_of_the_White_Lands",
+        "weight": "hoog",
+        "note": "Quest geeft 2 QP, een antique lamp (500 XP) en 5.000 coins; de 10.000 Agility-XP (Agility 55), 2.000 Crafting-XP (Crafting 30) en 20.000 Woodcutting-XP (Woodcutting 80) zijn grot-beloningen na de quest."
+      },
+      {
+        "id": "src-wiki-grand-tree",
+        "title": "RS Wiki: The Grand Tree",
+        "url": "https://runescape.wiki/w/The_Grand_Tree",
+        "weight": "hoog",
+        "note": "Vereist Agility 25; lampen van 18.400 XP (combatskill naar keuze), 7.900 Agility-XP en 2.150 Magic-XP."
+      },
+      {
+        "id": "src-wiki-recruitment-drive",
+        "title": "RS Wiki: Recruitment Drive",
+        "url": "https://runescape.wiki/w/Recruitment_Drive",
+        "weight": "midden",
+        "note": "Drie lampen van 1.000,5 XP: Prayer, Herblore en Agility."
+      },
+      {
+        "id": "src-wiki-mpd",
+        "title": "RS Wiki: Missing, Presumed Death",
+        "url": "https://runescape.wiki/w/Missing,_Presumed_Death",
+        "weight": "hoog",
+        "note": "Lampen van 500 (Prayer), 1.000 (Agility) en 1.500 XP (combat); bij de Statue of Death lampen van 50.000 Thieving-XP (Thieving 75), 50.000 Constitution-XP (Constitution 75) en 30.000 XP (75 in de gekozen skill)."
+      },
+      {
+        "id": "src-wiki-agility-training",
+        "title": "RS Wiki: Agility training",
+        "url": "https://runescape.wiki/w/Agility_training",
+        "weight": "hoog",
+        "note": "Course-volgorde en de tabel met quest-XP voor Agility; Myths of the White Lands 10.000, The Grand Tree 7.900 (Agility 25)."
+      },
+      {
+        "id": "src-wiki-mr-ex",
+        "title": "RS Wiki: Mr Ex",
+        "url": "https://runescape.wiki/w/Mr_Ex",
+        "weight": "hoog",
+        "note": "De-iron-wachttijd verlengen tot 90 dagen; de optie 'boek nooit verkopen' werkt niet op een Jagex Account."
+      },
+      {
+        "id": "src-wiki-fort",
+        "title": "RS Wiki: Fort Forinthry",
+        "url": "https://runescape.wiki/w/Fort_Forinthry",
+        "weight": "midden",
+        "note": "Chapel T1 (Construction 15) 200% en T2 (55) 250% Prayer-XP; Town Hall rested XP."
+      },
+      {
+        "id": "src-wiki-murder-border",
+        "title": "RS Wiki: Murder on the Border",
+        "url": "https://runescape.wiki/w/Murder_on_the_Border",
+        "weight": "midden",
+        "note": "Fort-quest met Construction- en prismatische lamp; Kitchen-unlock."
+      },
+      {
+        "id": "src-wiki-thieving-training",
+        "title": "RS Wiki: Thieving training",
+        "url": "https://runescape.wiki/w/Thieving_training",
+        "weight": "hoog",
+        "note": "Pickpocket-doelen voor coins: Menaphite marketeer (46, Jack of Spades), Knight of Ardougne (55)."
+      },
+      {
+        "id": "src-wiki-jack-of-spades",
+        "title": "RS Wiki: The Jack of Spades",
+        "url": "https://runescape.wiki/w/The_Jack_of_Spades",
+        "weight": "midden",
+        "note": "Opent Menaphos; vereist Stolen Hearts en Diamond in the Rough."
+      },
+      {
+        "id": "src-wiki-holy-grail",
+        "title": "RS Wiki: Holy Grail",
+        "url": "https://runescape.wiki/w/Holy_Grail",
+        "weight": "midden",
+        "note": "11.000 Prayer- en 15.300 Defence-XP; vereist Merlin's Crystal en Attack 30."
+      },
+      {
+        "id": "src-wiki-waterfall",
+        "title": "RS Wiki: Waterfall Quest",
+        "url": "https://runescape.wiki/w/Waterfall_Quest",
+        "weight": "midden",
+        "note": "13.750 Attack- en Strength-XP, precies genoeg voor Attack 30."
+      },
+      {
+        "id": "src-wiki-haunted-mine",
+        "title": "RS Wiki: Haunted Mine en Lair of Tarn Razorlor",
+        "url": "https://runescape.wiki/w/Haunted_Mine",
+        "weight": "hoog",
+        "note": "Salve amulet (Crafting 35, Agility 15) en via Tarn (Slayer 40) salve amulet (e)."
+      },
+      {
+        "id": "src-wiki-artisans",
+        "title": "RS Wiki: Artisans' Workshop",
+        "url": "https://runescape.wiki/w/Artisans%27_Workshop",
+        "weight": "midden",
+        "note": "Burial sets: adamant (40), rune (50), necronium (70) als Smithing-methode uit de EIPG-miniguide."
+      },
+      {
+        "id": "src-upd-dailyscape",
+        "title": "RS-update 16 maart 2026: Patch Notes: Dailyscape Overhaul",
+        "url": "https://runescape.wiki/w/Update:Patch_Notes:_Dailyscape_Overhaul",
+        "weight": "hoog",
+        "note": "Daily Challenges zonder weektrack/reroll; shopvoorraad bouwt 7 dagen op; Reaper zonder dagcap, wekelijks 300 punten, eis Slayer 45 + combat 50; Guthixian Caches spelergestuurd vanaf Divination 35."
+      },
+      {
+        "id": "src-upd-early-game",
+        "title": "RS-update 16 februari 2026: Patch Notes: Early-Game Rebalance",
+        "url": "https://runescape.wiki/w/Update:Patch_Notes:_Early-Game_Rebalance",
+        "weight": "hoog",
+        "note": "Nieuw pickpocket-model (75% bij unlock, +1%/level, fresh-target-boost), Fort Chapel-bonus verlaagd, POH-altaren beste XP/u, Chaos altar +50% per Wilderness-takenset."
+      },
+      {
+        "id": "src-upd-pickpocket",
+        "title": "RS-update 23 februari 2026: February Patch Week",
+        "url": "https://runescape.wiki/w/Update:February_Patch_Week",
+        "weight": "midden",
+        "note": "Pickpocketen: succes daalt na een aantal gegarandeerde pogingen op hetzelfde doelwit; wissel van doelwit."
+      },
+      {
+        "id": "src-upd-mid-game",
+        "title": "RS-update 20 juli 2026: Patch Notes: Mid-Game Rebalance",
+        "url": "https://runescape.wiki/w/Update:Patch_Notes:_Mid-Game_Rebalance",
+        "weight": "hoog",
+        "note": "Agility-courses flink meer XP, Dive op Agility 30, GWD1-killcount blijft bewaard (max 200), geen instance-kosten meer bij bosses."
+      },
+      {
+        "id": "src-upd-csm",
+        "title": "RS-update 2 en 9 maart 2026: Combat Style Modernisation en Refinements",
+        "url": "https://runescape.wiki/w/Update:Patch_Notes:_Part_2_-_Combat_Style_Modernisation",
+        "weight": "hoog",
+        "note": "Magic-abilities kosten runes (sinds 9 maart 15% kans per cast); Necromancy is de maatstaf."
+      },
+      {
+        "id": "src-upd-poh",
+        "title": "RS-update 13 en 20 juli 2026: Player Owned Housing Rework en Construction-rebalance",
+        "url": "https://runescape.wiki/w/Update:Mid-Game_Rebalance_is_Live!",
+        "weight": "midden",
+        "note": "Construction via meubels maken; minder AFK-XP in Fort Forinthry; There's No Place Like Home is de nieuwe intro-quest."
+      },
+      {
+        "id": "src-upd-havenhythe",
+        "title": "RS-update 23 maart 2026: Welcome to Havenhythe",
+        "url": "https://runescape.wiki/w/Update:Welcome_to_Havenhythe",
+        "weight": "midden",
+        "note": "Ivar, King of Bones (vroege boss die protect-prayers leert), spirit moths (charms via Hunter), sanguine crawlers (Slayer 35)."
+      },
+      {
+        "id": "src-upd-dungeoneering",
+        "title": "RS-update 11 mei 2026: Patch Notes: Dungeoneering Remastered",
+        "url": "https://runescape.wiki/w/Update:Patch_Notes:_Dungeoneering_Remastered",
+        "weight": "laag",
+        "note": "Tokens 20% van floor-XP; ironmen mogen met niet-ironmen dungeonen. Relevant voor Bonecrusher/Charming imp na fase 1."
+      },
+      {
+        "id": "src-wiki-ivar",
+        "title": "RS Wiki: Ivar, King of Bones",
+        "url": "https://runescape.wiki/w/Ivar,_King_of_Bones",
+        "weight": "midden",
+        "note": "Vereist Visions of Havenhythe; leert defensieve prayers; dropt altijd een colossal bone."
+      },
+      {
+        "id": "src-wiki-havenhythe",
+        "title": "RS Wiki: Visions of Havenhythe",
+        "url": "https://runescape.wiki/w/Visions_of_Havenhythe",
+        "weight": "laag",
+        "note": "Korte quest zonder eisen; Wendlewick-lodestone; EIPG koppelt hem aan Reaper-taken."
+      },
+      {
+        "id": "src-wiki-nh-quiz",
+        "title": "RS Wiki: Natural history quiz",
+        "url": "https://runescape.wiki/w/Natural_history_quiz",
+        "weight": "hoog",
+        "note": "Kelder van het Varrock Museum; beloning 1.000 Slayer- en 1.000 Hunter-XP; eerste Slayer-XP hier betekent 1 coin voor de enchanted gem."
+      },
+      {
+        "id": "src-wiki-scarab",
+        "title": "RS Wiki: Corrupted Scarab (Menaphos)",
+        "url": "https://runescape.wiki/w/Corrupted_Scarab_(Menaphos)",
+        "weight": "hoog",
+        "note": "Event van 5 minuten, elke 60-120 minuten per wereld; Slayer-XP (1/5 small XP lamp) en reputatie, gehalveerd vanaf scarab 24 per dag; gemiddeld 1.232 coins per burst; elke stamp kost circa 1/16 van je LP."
+      },
+      {
+        "id": "src-wiki-death-store",
+        "title": "RS Wiki: Death's Store",
+        "url": "https://runescape.wiki/w/Death%27s_Store",
+        "weight": "hoog",
+        "note": "Reaper Scroll (+50% Slayer-XP uit Reaper-taken) en Reaper's choice (10% kans om je taak te kiezen), elk 250 Reaper-punten."
+      },
+      {
+        "id": "src-wiki-colossal-bone",
+        "title": "RS Wiki: Colossal bone",
+        "url": "https://runescape.wiki/w/Colossal_bone",
+        "weight": "hoog",
+        "note": "Gegarandeerde drop van Ivar; begraven geeft 400 Prayer-XP; kan niet op altaren, bonfires of de Ectofuntus en niet door een bonecrusher."
+      },
+      {
+        "id": "src-wiki-slayer-helmet",
+        "title": "RS Wiki: Slayer helmet, Black mask en Spectral lens",
+        "url": "https://runescape.wiki/w/Slayer_helmet",
+        "weight": "hoog",
+        "note": "Helmbonus (Slayer Spirit) geldt alleen voor melee; ironman haalt de black mask bij sea horrors of bij cave horrors (Slayer 58 + Cabin Fever); de spectral lens (Profane Scabarites, Slayer 87) is de Necromancy-variant."
+      },
+      {
+        "id": "src-wiki-burial",
+        "title": "RS Wiki: Burial equipment en burial gauntlets",
+        "url": "https://runescape.wiki/w/Burial_equipment",
+        "weight": "midden",
+        "note": "Burial-items geven alleen XP en verbruiken het maximaal geüpgradede item; ook losse stukken zoals burial gauntlets (adamant 40, rune 50, necronium 70)."
+      },
+      {
+        "id": "src-wiki-thalmund",
+        "title": "RS Wiki: Thalmund's Wares",
+        "url": "https://runescape.wiki/w/Thalmund%27s_Wares",
+        "weight": "midden",
+        "note": "Elke woensdag in de smithy van City of Um, vier wisselende Necromancy-items; vraagt Kili Row."
+      },
+      {
+        "id": "src-wiki-town-hall",
+        "title": "RS Wiki: Town Hall (Fort Forinthry)",
+        "url": "https://runescape.wiki/w/Town_Hall_(Fort_Forinthry)",
+        "weight": "midden",
+        "note": "Rested XP ruil je bij Aster in voor bonus-XP in één skill naar keuze, altijd in één keer."
+      },
+      {
+        "id": "src-site-thersguide",
+        "title": "thersguide.com: Recurring Activities en Skill Training",
+        "url": "https://thersguide.com/extras/recurring-activities",
+        "weight": "laag",
+        "note": "Prioriteit en stoppunt per repeatable, Natural history quiz, burial gauntlets als AFK-Smithing en de Slayer helmet-pagina; getoetst in research/Site-review thersguide.md."
+      },
+      {
+        "id": "src-site-rs3ironman",
+        "title": "rs3ironman.com: walkthrough voor een verse ironman",
+        "url": "https://rs3ironman.com/",
+        "weight": "laag",
+        "note": "Corrupted scarabs na The Jack of Spades, Ivar-bones begraven, rested XP op Herblore; getoetst in research/Site-review rs3ironman.md."
+      }
+    ]
+  },
+  "phases": [
+    {
+      "id": "p1",
+      "title": "Startmotor: ritme, geld en snelle unlocks",
+      "summary": "Zet een licht weekritme neer, open Menaphos en bouw daar een geldbuffer met je Thieving 73, en doe de korte quests die Morytania, de Ectophial, GWD-toegang en de Smoking Kills-keten openen. Een korte Gnome-course-sessie brengt Agility naar 25 voor The Grand Tree, waarvan de Agility-lamp (7.900 XP) je over de 30 tilt; Missing, Presumed Death legt een lamp van 50.000 Thieving-XP klaar voor Thieving 75. Waterfall Quest en Holy Grail geven gratis Attack-, Prayer- en Defence-XP, de Natural history quiz en de corrupted scarabs in Menaphos de eerste Slayer-XP zonder combat. Alles hierna leunt op deze unlocks, en ze kosten weinig uren.",
+      "estHours": 22,
+      "targets": [
+        {
+          "skill": "Agility",
+          "level": 30
+        },
+        {
+          "skill": "Cooking",
+          "level": 20
+        },
+        {
+          "skill": "Attack",
+          "level": 30
+        },
+        {
+          "skill": "Slayer",
+          "level": 10
+        }
+      ],
+      "steps": [
+        {
+          "id": "p1-01",
+          "title": "Licht weekritme opzetten",
+          "type": "misc",
+          "style": "mixed",
+          "estHours": 0.5,
+          "detail": "Vaste set na de DailyScape Overhaul (16 maart 2026): **Daily Challenges** alleen als ze passen bij wat je toch doet (de wekelijkse beloningstrack en extend/reroll zijn weg, dus overslaan kost weinig); **Herby Werby** en **Penguin Hide and Seek** (wekelijks, ongewijzigd; Penguin-lampen op Agility tot 56, daarna Herblore); **Troll Invasion** (maandelijks, ongewijzigd); **Rune shop run** één keer per week: winkelvoorraad reset niet meer dagelijks maar bouwt over 7 dagen op tot een hoger maximum (Aubury in Varrock en andere runewinkels). Koop in deze volgorde: **air, water, earth, fire** (Magic-abilities kosten sinds maart 2026 runes), later **blood, soul en astral**. **Thalmund's Wares** elke woensdag in de smithy van City of Um (vraagt Kili Row, heb je): kijk wat hij heeft voor Necromancy en stop met deze check zodra je **4 uncut moonstone** hebt. Reaper-taken komen later (fase 5). Laat Player-Owned Ports en de verdwenen dailies (Travelling Merchant, Vis wax, Wicked hood, Wilderness Flash Events) los.",
+          "why": "Beide guides beginnen met repeatables. Sinds de DailyScape Overhaul zijn er minder dagelijkse verplichtingen: weeklies en monthlies zijn ongewijzigd, winkels kun je wekelijks leegkopen en Daily Challenges hebben geen streak-beloning meer. Dat past precies bij 7-15 u/week. De Penguin-lampen op Agility volgen het RS Guy-advies. De rune-volgorde en het moonstone-stoppunt komen uit de repeatables-tracker van thersguide.com; welke runewinkel na de DailyScape-maxima het meest oplevert, is nog onzeker.",
+          "sources": [
+            "src-wiki-rsguy",
+            "src-wiki-eipg",
+            "src-upd-dailyscape",
+            "src-wiki-thalmund",
+            "src-site-thersguide"
+          ]
+        },
+        {
+          "id": "p1-03",
+          "title": "Rune Mysteries",
+          "type": "quest",
+          "style": "active",
+          "estHours": 0.3,
+          "location": "Wizards' Tower, Ariane in de lobby",
+          "detail": "Korte quest vanuit Lumbridge/Wizards' Tower.",
+          "why": "Voorwaarde voor veel latere quests en Runecrafting-toegang; vrijwel gratis.",
+          "completeWhen": {
+            "quests": [
+              "Rune Mysteries"
+            ]
+          },
+          "sources": [
+            "src-wiki-eipg"
+          ]
+        },
+        {
+          "id": "p1-04",
+          "title": "Priest in Peril",
+          "type": "quest",
+          "style": "active",
+          "estHours": 1,
+          "location": "Varrock Palace, King Roald",
+          "detail": "Opent Morytania (Canifis, Slayer Tower, ghouls).",
+          "why": "Morytania is nodig voor Ghosts Ahoy, Vessel of the Harbinger en dus The Spirit of War (T70+ gear). Ghouls bij Canifis zijn ook een Necromancy-plek voor 40-60.",
+          "completeWhen": {
+            "quests": [
+              "Priest in Peril"
+            ]
+          },
+          "sources": [
+            "src-wiki-vessel",
+            "src-wiki-necro-training"
+          ]
+        },
+        {
+          "id": "p1-18",
+          "title": "Recruitment Drive en Missing, Presumed Death",
+          "type": "quest",
+          "style": "active",
+          "estHours": 1.2,
+          "location": "White Knights' Castle (Falador) en Silvarea",
+          "detail": "Twee korte quests zonder eisen. **Recruitment Drive** start bij Sir Amik Varze op de bovenste verdieping van het White Knights' Castle in Falador (geen items meenemen) en geeft drie lampen van 1.000,5 XP: Prayer, Herblore en Agility. **Missing, Presumed Death** start bij Brother Samwell in Silvarea, tussen Varrock en Paterdomus, en geeft lampen van 500 (Prayer), 1.000 (Agility) en 1.500 XP (combat). Daarna kun je bij de **Statue of Death** in de Empyrean Citadel (teleport met de invitation box) extra lampen claimen: **50.000 Thieving-XP zodra je Thieving 75 hebt**, 50.000 Constitution-XP bij Constitution 75 en 30.000 XP in een skill die op 75 staat. Ga daar dus terug zodra Thieving 75 is (je zit er net onder) en later bij Constitution 75 (fase 5). Samen 3 QP.",
+          "why": "Twee keer 1.000 Agility-XP helpt richting de Agility 25 voor The Grand Tree (p1-05, p1-17). Missing, Presumed Death is bovendien veel meer waard dan de questlampen: 50.000 Thieving-XP is voor Ons Pap ruim een level, en de Constitution-lamp valt vanzelf vrij in fase 5. Hij is ook de ingang van de Sliske-verhaallijn die later nodig is.",
+          "completeWhen": {
+            "quests": [
+              "Recruitment Drive",
+              "Missing, Presumed Death"
+            ]
+          },
+          "sources": [
+            "src-wiki-recruitment-drive",
+            "src-wiki-mpd"
+          ]
+        },
+        {
+          "id": "p1-16",
+          "title": "Myths of the White Lands (2 QP, grotten later)",
+          "type": "quest",
+          "style": "active",
+          "estHours": 0.5,
+          "location": "Lumbridge, Explorer Jack (bij de General Store)",
+          "detail": "Korte quest zonder eisen, start bij Explorer Jack in Lumbridge. De quest zelf geeft **2 QP**, een antique lamp van 500 XP, 5.000 coins (praat later nog eens met Explorer Jack) en toegang tot de Land of Snow. De grote XP zit in de grotten **na** de quest en vraagt eigen levels (boostbaar): 2.000 Crafting-XP in de tweede grot (Crafting 30), **10.000 Agility-XP in de vierde grot (Agility 55)** en 20.000 Woodcutting-XP in de zesde grot (Woodcutting 80). Claim die later; zie 'Na fase 1'.",
+          "why": "Goedkope questpunten voor een half uur. Eerder stond hier 10.000 Agility-XP als questbeloning; dat is een grot-beloning met een eigen eis van Agility 55, dus niet bruikbaar in fase 1. De Agility-grot claim je zodra je in fase 5 boven 55 komt (p5-08).",
+          "completeWhen": {
+            "quests": [
+              "Myths of the White Lands"
+            ]
+          },
+          "sources": [
+            "src-wiki-myths"
+          ]
+        },
+        {
+          "id": "p1-05",
+          "title": "Agility naar 25 en Cooking naar 20",
+          "type": "skill",
+          "style": "active",
+          "estHours": 1,
+          "location": "Tree Gnome Stronghold, Gnome Stronghold Agility Course",
+          "detail": "Agility 13 naar 25 op de **Gnome Stronghold Agility Course** (kan niet mislukken); de lampen uit Recruitment Drive en Missing, Presumed Death (p1-18) doen al 2.000 XP. Agility-courses geven sinds februari en juli 2026 meer XP dan de oude wiki-tabel toont. Cooking 19 naar 20 met een paar vissen of taarten.",
+          "why": "The Grand Tree vraagt Agility 25, Ghosts Ahoy Agility 25 en Cooking 20, Troll Stronghold Agility 15. Er is geen questroute meer die dit zonder laps oplost: de 10.000 Agility-XP van Myths of the White Lands vraagt zelf Agility 55.",
+          "completeWhen": {
+            "skills": {
+              "Agility": 25,
+              "Cooking": 20
+            }
+          },
+          "sources": [
+            "src-wiki-agility-training",
+            "src-wiki-grand-tree",
+            "src-wiki-ghosts-ahoy",
+            "src-wiki-troll-stronghold",
+            "src-upd-early-game",
+            "src-upd-mid-game"
+          ]
+        },
+        {
+          "id": "p1-17",
+          "title": "The Grand Tree (7.900 Agility-XP)",
+          "type": "quest",
+          "style": "active",
+          "estHours": 1,
+          "location": "Tree Gnome Stronghold, King Narnode Shareen",
+          "detail": "Vraagt Agility 25 (p1-05). Start bij King Narnode Shareen in de Tree Gnome Stronghold. Eindbaas: Black demon (level 98), met Necromancy; neem eten mee. Beloning 5 QP en drie lampen: **18.400 XP in een combatskill naar keuze** (Attack, Strength, Defence, Constitution, Ranged, Magic of Necromancy), **7.900 Agility-XP** en 2.150 Magic-XP. Zet de combatlamp op Necromancy of Defence, de skills waar de route op leunt.",
+          "why": "De Agility-lamp brengt je van 25 naar ruim 30 zonder extra laps, en de quest opent gnome gliders en de spirit tree in de Stronghold.",
+          "requires": {
+            "skills": {
+              "Agility": 25
+            }
+          },
+          "completeWhen": {
+            "quests": [
+              "The Grand Tree"
+            ]
+          },
+          "sources": [
+            "src-wiki-grand-tree",
+            "src-wiki-agility-training"
+          ]
+        },
+        {
+          "id": "p1-06",
+          "title": "Ghosts Ahoy",
+          "type": "quest",
+          "style": "active",
+          "estHours": 1.2,
+          "location": "Port Phasmatys, Velorina",
+          "detail": "Levert de Ectophial (teleport naar de Ectofuntus) en Prayer-XP.",
+          "why": "Directe voorquest van Vessel of the Harbinger. De Ectophial is een handige teleport naar Morytania (Slayer Tower, ghouls).",
+          "requires": {
+            "skills": {
+              "Agility": 25,
+              "Cooking": 20
+            },
+            "quests": [
+              "Priest in Peril"
+            ]
+          },
+          "completeWhen": {
+            "quests": [
+              "Ghosts Ahoy"
+            ]
+          },
+          "sources": [
+            "src-wiki-ghosts-ahoy",
+            "src-wiki-vessel"
+          ]
+        },
+        {
+          "id": "p1-07",
+          "title": "Troll Stronghold",
+          "type": "quest",
+          "style": "active",
+          "estHours": 1.5,
+          "location": "Burthorpe training camp, Commander Denulth",
+          "detail": "Safespot Dad met Necromancy. Zet beide lampen van 10k XP op **Smithing** (34, moet naar 65 en 75).",
+          "why": "Opent God Wars Dungeon 1 voor fase 6. Lampen gaan naar Smithing omdat T70- en T80-wapens Smithing 65/75 vragen; Prayer en Crafting zitten nog onder de lamp-eis van 30.",
+          "requires": {
+            "skills": {
+              "Agility": 15,
+              "Thieving": 30
+            },
+            "quests": [
+              "Death Plateau"
+            ]
+          },
+          "completeWhen": {
+            "quests": [
+              "Troll Stronghold"
+            ]
+          },
+          "sources": [
+            "src-wiki-troll-stronghold",
+            "src-wiki-gear-t70",
+            "src-wiki-gwd"
+          ]
+        },
+        {
+          "id": "p1-08",
+          "title": "Keten naar Smoking Kills (deel 1)",
+          "type": "quest",
+          "style": "active",
+          "estHours": 2.5,
+          "location": "Draynor Village, Ozan (Stolen Hearts)",
+          "detail": "Stolen Hearts, Diamond in the Rough, Gertrude's Cat en Icthlarin's Little Helper. Smoking Kills zelf volgt in fase 5 bij Slayer 35.",
+          "why": "Zonder Smoking Kills krijg je maar de helft van de Slayer-punten. Door de keten nu af te ronden, staat Smoking Kills klaar zodra Slayer 35 is. Icthlarin's Little Helper geeft er Thieving-, Agility- en Woodcutting-XP bij.",
+          "completeWhen": {
+            "quests": [
+              "Stolen Hearts",
+              "Diamond in the Rough",
+              "Gertrude's Cat",
+              "Icthlarin's Little Helper"
+            ]
+          },
+          "sources": [
+            "src-wiki-slayer-iron",
+            "src-wiki-smoking-kills",
+            "src-wiki-ilh"
+          ]
+        },
+        {
+          "id": "p1-11",
+          "title": "The Jack of Spades (Menaphos)",
+          "type": "quest",
+          "style": "active",
+          "estHours": 1,
+          "location": "Al Kharid palace, Ali Mirza",
+          "detail": "Korte quest na Stolen Hearts en Diamond in the Rough. Opent Menaphos en de Menaphos-lodestone.",
+          "why": "Beide guides doen hem direct na de Ozan-quests. Voor Ons Pap is de belangrijkste reden geld: de Menaphite marketeer is volgens de wiki het meest AFK-vriendelijke pickpocket-doel met stapelbare loot.",
+          "requires": {
+            "quests": [
+              "Stolen Hearts",
+              "Diamond in the Rough"
+            ]
+          },
+          "completeWhen": {
+            "quests": [
+              "The Jack of Spades"
+            ]
+          },
+          "sources": [
+            "src-wiki-jack-of-spades",
+            "src-wiki-thieving-training",
+            "src-wiki-eipg",
+            "src-wiki-rsguy"
+          ]
+        },
+        {
+          "id": "p1-20",
+          "title": "Corrupted scarabs in Menaphos",
+          "type": "skill",
+          "style": "active",
+          "estHours": 1,
+          "location": "Menaphos, Shifting Tombs-ingangen",
+          "detail": "Na The Jack of Spades verschijnen er in Menaphos af en toe **corrupted scarabs**: bij elke Shifting Tombs-ingang, in de zandsteenmijn in het Worker district en buiten de Sophanem Slayer Dungeon. Een event duurt 5 minuten en komt per wereld elke 60-120 minuten terug; in Menaphos krijg je er een melding van, en de friends chat 'Soulobby' roept spawns om. Burst ze (meerdere keren per scarab kan) en zet **eten op je action bar**: elke stamp kost circa 1/16 van je LP. Tot 23 scarabs per dag geven volle beloning, daarna halveert de XP. Doe het als je toch in Menaphos bent (p1-02). Vink handmatig af; reken op circa 1 uur, verspreid over een paar sessies.",
+          "why": "Slayer-XP zonder combat en gemiddeld 1.232 coins per burst, op dezelfde plek als de marketeers. De Slayer-XP per burst is 1/5 van een small XP lamp, dus bij een laag Slayer-level klein; hoeveel levels het oplevert is onzeker, de coins zijn het zekere deel. rs3ironman.com zet dit direct na The Jack of Spades.",
+          "requires": {
+            "quests": [
+              "The Jack of Spades"
+            ]
+          },
+          "sources": [
+            "src-wiki-scarab",
+            "src-site-rs3ironman",
+            "src-wiki-jack-of-spades"
+          ]
+        },
+        {
+          "id": "p1-02",
+          "title": "Geldbuffer via pickpocketen",
+          "type": "skill",
+          "style": "afk",
+          "estHours": 2,
+          "location": "Menaphos, Merchant district",
+          "detail": "Pickpocket **Menaphite marketeers** in Menaphos (Thieving 46, stapelbare loot, nauwelijks banken). Alternatief zonder quest: **Knight of Ardougne** (Thieving 55). Sinds februari 2026 werkt pickpocketen met een nieuw model: hoog basissucces, een 'fresh target'-boost, en na een aantal gegarandeerde pogingen daalt je kans; de game meldt wanneer je gezien kunt worden. Wissel dan van marketeer. Doel: een buffer van 2-3M voor spirit shards, runes en Kili-materialen. Alch alchbare drops zodra je Magic 55 hebt.",
+          "why": "Ironmen hebben geen GE; coins zijn de bottleneck voor Summoning-shards en runes. Eerder stond hier druids; de wiki-trainingspagina wijst erop dat de druid-loot je inventaris vult, dus minder AFK. Met Thieving 73 is dit de goedkoopste manier om je enige hoge skill te laten renderen.",
+          "sources": [
+            "src-wiki-thieving-training",
+            "src-wiki-ironman",
+            "src-upd-early-game",
+            "src-upd-pickpocket"
+          ]
+        },
+        {
+          "id": "p1-12",
+          "title": "Waterfall Quest",
+          "type": "quest",
+          "style": "active",
+          "estHours": 1,
+          "location": "Almera's huis, bij de Baxtorian Falls",
+          "detail": "Neem 6 air-, 6 earth- en 6 water-runes en een touw mee. Beloning: 13.750 Attack- en 13.750 Strength-XP.",
+          "why": "Beide guides doen hem vroeg. Voor Ons Pap brengt de beloning Attack van 5 precies naar 30, de eis voor Holy Grail. Ook voorquest van Roving Elves en dus Plague's End.",
+          "completeWhen": {
+            "quests": [
+              "Waterfall Quest"
+            ],
+            "skills": {
+              "Attack": 30
+            }
+          },
+          "sources": [
+            "src-wiki-waterfall",
+            "src-wiki-eipg",
+            "src-wiki-rsguy"
+          ]
+        },
+        {
+          "id": "p1-13",
+          "title": "Merlin's Crystal en Holy Grail",
+          "type": "quest",
+          "style": "active",
+          "estHours": 2,
+          "location": "Camelot, King Arthur",
+          "detail": "Merlin's Crystal (Sir Mordred, level 23) en daarna Holy Grail. Holy Grail geeft 11.000 Prayer- en 15.300 Defence-XP.",
+          "why": "RS Guy noemt Holy Grail 'zeer goede vroege Prayer- en Defence-XP'. Voor dit account tilt hij Prayer van 11 naar circa 29 en Defence van 21 naar circa 36, dus juist de twee zwakke skills die de route nodig heeft.",
+          "requires": {
+            "skills": {
+              "Attack": 30
+            },
+            "quests": [
+              "Merlin's Crystal"
+            ]
+          },
+          "completeWhen": {
+            "quests": [
+              "Merlin's Crystal",
+              "Holy Grail"
+            ]
+          },
+          "sources": [
+            "src-wiki-holy-grail",
+            "src-wiki-rsguy",
+            "src-wiki-eipg"
+          ]
+        },
+        {
+          "id": "p1-09",
+          "title": "Dragon Slayer",
+          "type": "quest",
+          "style": "active",
+          "estHours": 1.5,
+          "location": "Champions' Guild, Guildmaster",
+          "detail": "Elvarg met Necromancy (T30-gear plus eten). Levert de anti-dragon shield.",
+          "why": "EIPG en RS Guy plaatsen hem vroeg. De shield maakt drakentaken (Slayer, botten voor Prayer) mogelijk.",
+          "completeWhen": {
+            "quests": [
+              "Dragon Slayer"
+            ]
+          },
+          "sources": [
+            "src-wiki-eipg",
+            "src-wiki-rsguy"
+          ]
+        },
+        {
+          "id": "p1-14",
+          "title": "Visions of Havenhythe",
+          "type": "quest",
+          "style": "active",
+          "estHours": 0.5,
+          "location": "Port Sarim, bartender van The Rusty Anchor",
+          "detail": "Korte quest vanuit The Rusty Anchor in Port Sarim, zonder eisen. Bouw de Wendlewick-lodestone.",
+          "why": "Opent Havenhythe (maart 2026): de vroege boss Ivar, King of Bones (stap p2-09), spirit moths als charmbron en sanguine crawlers voor Slayer. EIPG koppelde de quest ook aan Reaper-taken; sinds de DailyScape Overhaul vragen Reaper-taken Slayer 45 en combat 50, dus dat argument is minder belangrijk. Kost een half uur.",
+          "completeWhen": {
+            "quests": [
+              "Visions of Havenhythe"
+            ]
+          },
+          "sources": [
+            "src-wiki-havenhythe",
+            "src-wiki-eipg",
+            "src-upd-havenhythe",
+            "src-upd-dailyscape"
+          ]
+        },
+        {
+          "id": "p1-19",
+          "title": "Natural history quiz (Slayer en Hunter 9)",
+          "type": "misc",
+          "style": "active",
+          "estHours": 0.5,
+          "location": "Varrock Museum, kelder",
+          "detail": "Praat met Orlando Smith (of Mark Brodie na The World Wakes) midden in de kelder van het Varrock Museum en beantwoord bij elk van de 14 vitrines 3 vragen. Beloning: **1.000 Slayer-XP en 1.000 Hunter-XP** (allebei van 1 naar 9) en 28 kudos. Let op: is dit je eerste Slayer-XP, dan krijg je bij je eerste taak geen gratis enchanted gem en betaal je er 1 coin voor. Vink handmatig af: Slayer 9 kan ook uit andere XP komen.",
+          "why": "Snelste Slayer- en Hunter-XP zonder combat; EIPG en RS Guy noemen hem ook, en thersguide zet hem als methode voor Slayer 1-9. Hunter 9 brengt de spirit moths (Hunter 15, p3-03) dichterbij. Kost circa een half uur.",
+          "sources": [
+            "src-wiki-nh-quiz",
+            "src-site-thersguide",
+            "src-wiki-eipg",
+            "src-wiki-rsguy"
+          ]
+        },
+        {
+          "id": "p1-10",
+          "title": "Slayer starten bij Jacquelyn",
+          "type": "unlock",
+          "style": "mixed",
+          "estHours": 1.5,
+          "location": "Lumbridge, Jacquelyn",
+          "detail": "Haal taken bij Jacquelyn in Lumbridge (of Turael in Burthorpe) en doe ze met Necromancy. Koop earmuffs en een face mask bij hen. Elke 10e taak bij de hoogste beschikbare master (Vannaka in Edgeville, vanaf combat 30).",
+          "why": "De Slayer-gids raadt dit aan voor snelle punten; EIPG doet Slayer 10 ook bij Turael of Jacquelyn. Punten heb je in fase 5 nodig voor Ring of slaying en Killing blow, en daarna voor Reaper- of helm-unlocks; vroeg sparen voorkomt wachten.",
+          "completeWhen": {
+            "skills": {
+              "Slayer": 10
+            }
+          },
+          "sources": [
+            "src-wiki-slayer-iron",
+            "src-wiki-slayer-masters",
+            "src-wiki-eipg"
+          ]
+        },
+        {
+          "id": "p1-15",
+          "title": "De-iron-bescherming bij Mr Ex op 90 dagen",
+          "type": "misc",
+          "style": "active",
+          "estHours": 0.2,
+          "location": "Edgeville, Mr Ex (bij de bank)",
+          "detail": "Ga naar Mr Ex in Edgeville (bij de bank) en kies de optie om de wachttijd voor het Book of diplomacy te verlengen van 7 naar 90 dagen. De optie om het boek nooit te verkopen bestaat niet op een Jagex Account. Vink handmatig af.",
+          "why": "Mees wil hoe dan ook ironman blijven. Op een Jagex Account is de verlenging tot 90 dagen de enige bescherming tegen een impulsieve of gekaapte de-iron; de-ironing is onomkeerbaar. Kost vijf minuten.",
+          "sources": [
+            "src-wiki-mr-ex"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "Necromancy 50, Prayer 43 en Defence 50",
+      "summary": "Necromancy gaat van 32 naar 50 op AFK-plekken, Defence loopt mee door XP met Necromancy te delen, en Prayer gaat naar 43 (Ectofuntus of Fort-altaar) voor protect-prayers, Vessel of the Harbinger en een eerste boss-oefening bij Ivar, King of Bones. Na deze fase heb je je eerste stuk Necromancy-questketen af en een veilige basis voor Slayer.",
+      "estHours": 23,
+      "targets": [
+        {
+          "skill": "Necromancy",
+          "level": 50
+        },
+        {
+          "skill": "Prayer",
+          "level": 43
+        },
+        {
+          "skill": "Defence",
+          "level": 50
+        },
+        {
+          "skill": "Slayer",
+          "level": 20
+        }
+      ],
+      "steps": [
+        {
+          "id": "p2-01",
+          "title": "Necromancy 32 naar 50",
+          "type": "skill",
+          "style": "afk",
+          "estHours": 6,
+          "location": "City of Um troll cave, daarna Canifis (ghouls)",
+          "detail": "30-40: troll cave in City of Um (multi-combat). 40-50: Ankou (Stronghold of Security) of ghouls bij Canifis. Gebruik salve amulet zodra je hem hebt; houd de basic attack plus een paar abilities aan voor semi-AFK.",
+          "why": "De wiki-trainingspagina noemt deze plekken als de beste per levelband. Necromancy is de hoofdstijl: het levert het meeste combatlevel per uur en vanaf 60 gear via rituals.",
+          "completeWhen": {
+            "skills": {
+              "Necromancy": 50
+            }
+          },
+          "sources": [
+            "src-wiki-necro-training",
+            "src-wiki-necro-iron"
+          ]
+        },
+        {
+          "id": "p2-02",
+          "title": "Underworld Grimoire 1",
+          "type": "unlock",
+          "style": "mixed",
+          "estHours": 1,
+          "detail": "Doe de Underworld-achievements voor de eerste Grimoire.",
+          "why": "Wiki-ironmanstrategie: zo vroeg mogelijk. Grimoire 1 bankt ashes gratis in de Abyss en geeft extra disturbance-XP; scheelt banktijd bij AFK-trainen.",
+          "sources": [
+            "src-wiki-necro-iron"
+          ]
+        },
+        {
+          "id": "p2-03",
+          "title": "Kili-taken en T40-gear",
+          "type": "gear",
+          "style": "mixed",
+          "estHours": 2,
+          "location": "City of Um, Kili en de ritual site",
+          "detail": "Doe Kili's Knowledge voor T30 en T40 (lesser communion rituals of souls), maak lesser ensouled bars en cloth en upgrade wapens en robes. EIPG rekent op circa 25 lesser communion rituals (50 souls), 14 lesser ensoul-rituals voor bars en 38 voor cloth en thread; spider silk-items koop je bij Zaff in Varrock. Check per item de Smithing/Crafting-eis op de wiki.",
+          "why": "Wapens elke 10 levels upgraden is het advies van de Necromancy-gids. De overlegpagina waarschuwt dat Smithing/Crafting-eisen vaak gemist worden.",
+          "requires": {
+            "skills": {
+              "Necromancy": 40
+            }
+          },
+          "sources": [
+            "src-wiki-necro-iron",
+            "src-wiki-eipg-talk"
+          ]
+        },
+        {
+          "id": "p2-04",
+          "title": "Defence naar 50 via Necromancy",
+          "type": "skill",
+          "style": "afk",
+          "estHours": 4,
+          "detail": "Selecteer in het combat-XP-menu zowel Necromancy als Defence: dan krijgen ze elk 37,5% van de kill-XP (Constitution 25%). Doe dit op dezelfde AFK-plekken als je Necromancy-training. Holy Grail heeft Defence al naar circa 36 gebracht.",
+          "why": "EIPG traint 'Necromancy en Defence samen' in de troll cave; de wiki-pagina Combat experience bevestigt de 37,5/37,5-verdeling. Eerder stond hier defensief casten met Magic; dat was een denkfout (Necromancy kan wél Defence-XP geven) en defensief casten levert minder XP per uur op. T70-armour vraagt Defence 70.",
+          "completeWhen": {
+            "skills": {
+              "Defence": 50
+            }
+          },
+          "sources": [
+            "src-wiki-combat-xp",
+            "src-wiki-eipg",
+            "src-wiki-eipg-talk",
+            "src-wiki-gear-t70"
+          ]
+        },
+        {
+          "id": "p2-08",
+          "title": "Fort Forinthry: Murder on the Border en Town Hall T2",
+          "type": "quest",
+          "style": "mixed",
+          "estHours": 2.5,
+          "location": "Fort Forinthry, Aster in de Town Hall",
+          "detail": "Doe Murder on the Border (ironmen: 144 willow planks en 24 limestone bricks; de assassin schaalt mee, gebruik Necromancy). Bouw de Town Hall naar Tier 2 (Construction 45) voor dubbel rested XP. Ruil de rested XP bij **Aster** in voor bonus-XP op **Herblore of Prayer**: het gaat altijd in één keer naar één skill, dus kies de skill die je de komende tijd traint. Het Chapel-altaar is bruikbaar voor Prayer, maar zie p2-05: de bonus is in februari 2026 verlaagd.",
+          "why": "EIPG bouwt het fort uit voor rested XP. Ons Pap heeft New Foundations en Construction 46 al, dus dit is goedkoop. De quest geeft een Construction- en een prismatische lamp. Construction zelf trainen loopt sinds de POH-rework (juli 2026) via meubels maken; AFK-bouwen in het fort levert minder op, dus de route traint Construction niet apart. Herblore en Prayer zijn voor een ironman het duurst om te trainen (herbs en botten moet je zelf vinden), dus daar is bonus-XP het meest waard; rs3ironman.com raadt Herblore aan.",
+          "completeWhen": {
+            "quests": [
+              "Murder on the Border"
+            ]
+          },
+          "sources": [
+            "src-wiki-fort",
+            "src-wiki-murder-border",
+            "src-wiki-eipg",
+            "src-upd-poh",
+            "src-wiki-town-hall",
+            "src-site-rs3ironman"
+          ]
+        },
+        {
+          "id": "p2-05",
+          "title": "Prayer naar 43",
+          "type": "skill",
+          "style": "mixed",
+          "estHours": 3,
+          "location": "Port Phasmatys (Ectofuntus) of Fort Forinthry",
+          "detail": "Twee opties sinds de Early-Game Rebalance (februari 2026): de **Ectofuntus** (meeste XP per bot of ash; de wiki-ironmangids raadt hem aan voor Prayer 30-60) of het **Chapel-altaar in Fort Forinthry** (sneller per uur, maar de bonus is verlaagd). Elk gewoon altaar geeft nu ook +50% bij 'Offer'. Bronnen: big bones uit Slayer en de troll cave, dragon bones van blauwe en groene draken (anti-dragon shield), ashes uit Necromancy-training. Holy Grail heeft Prayer al naar circa 29 gebracht.",
+          "why": "Prayer 40 is verplicht voor Vessel of the Harbinger; 43 geeft alle protect-prayers, die je bij K'ril en Vindicta nodig hebt (de QBD-gids noemt 43 ook als minimum). EIPG traint met dragon bones op het Chapel-altaar of het Chaos altar; het Chaos altar geeft sinds februari 2026 nog maar +50% per voltooide Wilderness-takenset, en POH-altaren vragen meer Construction dan Ons Pap heeft.",
+          "completeWhen": {
+            "skills": {
+              "Prayer": 43
+            }
+          },
+          "sources": [
+            "src-wiki-vessel",
+            "src-wiki-qbd",
+            "src-wiki-fort",
+            "src-wiki-eipg",
+            "src-upd-early-game"
+          ]
+        },
+        {
+          "id": "p2-09",
+          "title": "Ivar, King of Bones: eerste boss-oefening",
+          "type": "misc",
+          "style": "active",
+          "estHours": 1.5,
+          "location": "Havenhythe, Hollow Hill",
+          "detail": "Vroege boss in Hollow Hill (Havenhythe), na Visions of Havenhythe. Oefen protect-prayers tegen zijn Bone Bludgeon, Skeletal Shrapnel en Conk Blast; de aanvallen komen in willekeurige volgorde. Elke kill geeft een colossal bone: **begraaf hem direct** (400 Prayer-XP). Een colossal bone kan niet op een altaar, bonfire of de Ectofuntus en gaat niet door een bonecrusher, dus offeren of bewaren voor p5-06 heeft geen zin. Optioneel: doe minstens één kill solo waarin je tegen alle drie de aanvallen minstens één keer de juiste protect-prayer gebruikt; dat geeft de achievement 'Protect From Ivar'.",
+          "why": "Nieuw sinds maart 2026 en volgens Jagex juist ontworpen om protect-prayers en boss-mechanics te leren. Dat sluit aan op het doel 'eerste bosses' en geeft Prayer-XP terug. Doe een paar kills zodra Prayer 43 is. Eerdere versies van deze route lieten de bones meetellen bij het offeren; dat kan volgens de wiki niet (thersguide en rs3ironman zeggen ook: begraven).",
+          "requires": {
+            "skills": {
+              "Prayer": 43
+            },
+            "quests": [
+              "Visions of Havenhythe"
+            ]
+          },
+          "sources": [
+            "src-wiki-ivar",
+            "src-upd-havenhythe",
+            "src-wiki-colossal-bone",
+            "src-site-thersguide",
+            "src-site-rs3ironman"
+          ]
+        },
+        {
+          "id": "p2-06",
+          "title": "Vessel of the Harbinger",
+          "type": "quest",
+          "style": "active",
+          "estHours": 1.5,
+          "location": "City of Um, Death",
+          "detail": "Necromancy-quest met lampen van 10k Necromancy- en 5k Prayer-XP.",
+          "why": "Voorquest van The Spirit of War (T70+). Lampen gaan direct in je hoofdskill.",
+          "requires": {
+            "skills": {
+              "Necromancy": 46,
+              "Prayer": 40
+            },
+            "quests": [
+              "Rune Mythos",
+              "Ghosts Ahoy"
+            ]
+          },
+          "completeWhen": {
+            "quests": [
+              "Vessel of the Harbinger"
+            ]
+          },
+          "sources": [
+            "src-wiki-vessel",
+            "src-wiki-spirit-of-war"
+          ]
+        },
+        {
+          "id": "p2-07",
+          "title": "Slayer 10 naar 20",
+          "type": "skill",
+          "style": "active",
+          "estHours": 1.5,
+          "location": "Lumbridge (Jacquelyn), Edgeville (Vannaka), Canifis (Mazchna)",
+          "detail": "Jacquelyn-taken, elke 10e bij Vannaka (combat 30) of Mazchna in Canifis (combat 50). Combineer met Necromancy-training waar de taak dat toelaat.",
+          "why": "Houdt de puntenteller lopen zonder aparte Slayer-sessies; Slayer wordt pas in fase 5 de hoofdmoot. EIPG gebruikt hier The Raptor (Fort Forinthry), maar die vraagt Unwelcome Guests (Construction 50, Slayer 10) en de wiki raadt hem af voor lage levels.",
+          "completeWhen": {
+            "skills": {
+              "Slayer": 20
+            }
+          },
+          "sources": [
+            "src-wiki-slayer-iron",
+            "src-wiki-slayer-masters",
+            "src-wiki-raptor"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "AFK-fundament: farm, Summoning, Smithing, Crafting en eten",
+      "summary": "Een fase met veel AFK-werk dat later alles versnelt: de player-owned farm, Summoning voor familiars, Smithing en Crafting op 55 (eisen voor T50/T60 en richting 65/75), Divination 35 en een eigen voedselvoorraad. Je kunt deze fase gerust parallel aan fase 2 en 4 draaien als AFK-pool.",
+      "estHours": 30,
+      "targets": [
+        {
+          "skill": "Farming",
+          "level": 35
+        },
+        {
+          "skill": "Summoning",
+          "level": 40
+        },
+        {
+          "skill": "Smithing",
+          "level": 55
+        },
+        {
+          "skill": "Crafting",
+          "level": 55
+        },
+        {
+          "skill": "Fishing",
+          "level": 55
+        },
+        {
+          "skill": "Cooking",
+          "level": 55
+        },
+        {
+          "skill": "Divination",
+          "level": 35
+        },
+        {
+          "skill": "Herblore",
+          "level": 38
+        }
+      ],
+      "steps": [
+        {
+          "id": "p3-01",
+          "title": "Farming 17 en player-owned farm",
+          "type": "unlock",
+          "style": "mixed",
+          "estHours": 2,
+          "location": "Player-owned farm, Granny Potterington (noord van East Ardougne)",
+          "detail": "Farming 14 naar 17 met allotment- en kruidenruns, daarna de tutorial bij Granny Potterington (noord van East Ardougne). Construction 46 is ruim genoeg.",
+          "why": "De farm geeft AFK Farming-XP en beans; de EIPG zet hem in deel 1. Farming 17 en Construction 20 zijn de eisen.",
+          "completeWhen": {
+            "skills": {
+              "Farming": 17
+            }
+          },
+          "sources": [
+            "src-wiki-pof",
+            "src-wiki-eipg"
+          ]
+        },
+        {
+          "id": "p3-02",
+          "title": "Farming 17 naar 35 met de farm",
+          "type": "skill",
+          "style": "afk",
+          "estHours": 3,
+          "location": "Player-owned farm (noord van East Ardougne)",
+          "detail": "Konijnen, op 28 kippen, op 35 schapen (medium pen vraagt Construction 40, heb je). Elke sessie kort langs voor oogst en kweek, plus een kruidenrun.",
+          "why": "Typische AFK-tussendoor-activiteit; kruiden voeden Herblore, dat ironmen anders moeilijk trainen.",
+          "completeWhen": {
+            "skills": {
+              "Farming": 35
+            }
+          },
+          "sources": [
+            "src-wiki-pof"
+          ]
+        },
+        {
+          "id": "p3-03",
+          "title": "Summoning 19 naar 40",
+          "type": "skill",
+          "style": "mixed",
+          "estHours": 4,
+          "location": "Taverley, Pikkupstix (pouches en shards)",
+          "detail": "Charms uit Slayer- en Necromancy-kills, shards kopen met je pickpocket-coins. Pouches volgens de wiki-band (granite crabs, compost mounds, beavers/honey badgers). Nieuw sinds maart 2026: **spirit moths** in de Highweald Forest (Havenhythe) geven charms of shards zonder combat, met een butterfly net (vanaf Hunter 15); handig als AFK-achtige charmbron.",
+          "why": "Summoning telt mee in je combatlevel en houdt op 60 de Queen Black Dragon open voor later (instance-eis). EIPG zet Summoning 37 in deel 2; we gaan iets verder omdat 52 (spirit terrorbird) en 55 (spirit jelly) daarna dichtbij liggen.",
+          "completeWhen": {
+            "skills": {
+              "Summoning": 40
+            }
+          },
+          "sources": [
+            "src-wiki-summoning-iron",
+            "src-wiki-eipg",
+            "src-upd-havenhythe"
+          ]
+        },
+        {
+          "id": "p3-04",
+          "title": "Smithing 41 naar 55",
+          "type": "skill",
+          "style": "mixed",
+          "estHours": 5,
+          "location": "Falador, Artisans' Workshop",
+          "detail": "Volg de EIPG-miniguide: erts zelf minen (AFK), bars smelten en in de **Artisans' Workshop** (Falador) burial sets smeden. Tot 40 gewone items; 40-50 adamant burial sets (circa 248 adamantite ore en 248 luminite); vanaf 50 rune burial sets. **Actief blok**: burial sets. **AFK-blok**: burial gauntlets van hetzelfde metaal (adamant vanaf 40, rune vanaf 50; gemaakt van gauntlets +2 of +3): een klein item met weinig voortgang per stuk, dus minder heropwarmen en minder aandacht, wel minder XP per uur.",
+          "why": "T70-wapens vragen Smithing 65, T80 Smithing 75. Burial sets in de Artisans' Workshop zijn de RS3-methode die de EIPG voor ironmen aanraadt: geen extra bars nodig voor de set, en het minen is AFK. Ook nodig richting Invention 80. De gauntlets-variant komt van thersguide en past bij het AFK-blok; hoeveel XP per uur hij scheelt met sets, staat niet op de wiki (onzeker).",
+          "completeWhen": {
+            "skills": {
+              "Smithing": 55
+            }
+          },
+          "sources": [
+            "src-wiki-eipg",
+            "src-wiki-artisans",
+            "src-wiki-gear-t70",
+            "src-wiki-gear-t80",
+            "src-wiki-invention",
+            "src-wiki-burial",
+            "src-site-thersguide"
+          ]
+        },
+        {
+          "id": "p3-05",
+          "title": "Crafting 17 naar 55",
+          "type": "skill",
+          "style": "mixed",
+          "estHours": 6,
+          "location": "Al Kharid-mijn (uncommon gem rocks)",
+          "detail": "Tot circa 35: flax spinnen tot bowstrings (Burthorpe, verkopen) en klei/aardewerk. Daarna de EIPG-methode: **uncommon gem rocks** in de Al Kharid-mijn minen (Mining 20) en de edelstenen slijpen; een gem bag (Dungeoneering-tokens) maakt het AFK-er.",
+          "why": "T70 Deathwarden-armour vraagt Crafting 65 (boostbaar). Crafting 25 is ook een eis voor Smoking Kills en 75 voor Plague's End, 80 voor Invention.",
+          "completeWhen": {
+            "skills": {
+              "Crafting": 55
+            }
+          },
+          "sources": [
+            "src-wiki-gear-t70",
+            "src-wiki-smoking-kills",
+            "src-wiki-plagues-end",
+            "src-wiki-eipg"
+          ]
+        },
+        {
+          "id": "p3-09",
+          "title": "Haunted Mine: salve amulet",
+          "type": "quest",
+          "style": "active",
+          "estHours": 2,
+          "location": "Abandoned Mine (zuid-Morytania), de zealot",
+          "detail": "Vereist Crafting 35, Agility 15 en toegang tot Morytania. Baas: Treus Dayth (level 63), met Necromancy. Maak de salve amulet met de salve shard en een ball of wool. De lamp van 22.000 XP gaat vast op Strength.",
+          "why": "Beide guides doen hem vóór de Necromancy-grind; RS Guy: 'zeer goed voor training'. De salve amulet versterkt je tegen undead, en bijna alle Necromancy-plekken in deze route zijn undead. Strength-XP helpt een beetje richting de GWD-boulder.",
+          "requires": {
+            "skills": {
+              "Crafting": 35,
+              "Agility": 15
+            },
+            "quests": [
+              "Priest in Peril"
+            ]
+          },
+          "completeWhen": {
+            "quests": [
+              "Haunted Mine"
+            ]
+          },
+          "sources": [
+            "src-wiki-haunted-mine",
+            "src-wiki-rsguy",
+            "src-wiki-eipg"
+          ]
+        },
+        {
+          "id": "p3-06",
+          "title": "Fishing en Cooking naar 55",
+          "type": "skill",
+          "style": "afk",
+          "estHours": 5,
+          "location": "Catherby of Musa Point",
+          "detail": "Harpoenen op tonijn en zwaardvis (Catherby of Musa Point), bakken op een range. Bouw een voorraad van een paar honderd stuks.",
+          "why": "Ironmen moeten zelf eten maken. Zwaardvis is voldoende voor Slayer en de eerste GWD-pogingen; haaien volgen in fase 6.",
+          "completeWhen": {
+            "skills": {
+              "Fishing": 55,
+              "Cooking": 55
+            }
+          },
+          "sources": [
+            "src-wiki-ironman"
+          ]
+        },
+        {
+          "id": "p3-07",
+          "title": "Divination 1 naar 35",
+          "type": "skill",
+          "style": "afk",
+          "estHours": 2,
+          "location": "Draynor Village, daarna Falador en Varrock",
+          "detail": "Wisps in Draynor en daarna Falador/Varrock; volledig AFK. Sinds februari 2026 geven de lage wisps meer XP en energie.",
+          "why": "Guthixian Caches zijn sinds de DailyScape Overhaul geen uurlijks event meer: vanaf Divination 35 open je zelf een rift met 800 memories, en elke cache geeft een boost. Dat maakt het een flexibele Divination-methode. Divination moet later toch naar 80 voor Invention.",
+          "completeWhen": {
+            "skills": {
+              "Divination": 35
+            }
+          },
+          "sources": [
+            "src-wiki-eipg-talk",
+            "src-wiki-invention",
+            "src-upd-dailyscape",
+            "src-upd-early-game"
+          ]
+        },
+        {
+          "id": "p3-08",
+          "title": "Herblore 22 naar 38",
+          "type": "skill",
+          "style": "mixed",
+          "estHours": 1.5,
+          "detail": "Herby Werby wekelijks, kruiden uit de farm en Slayer-drops. Maak prayer potions vanaf 38.",
+          "why": "Prayer potions zijn voor ironmen de belangrijkste pot voor Slayer en bosses.",
+          "completeWhen": {
+            "skills": {
+              "Herblore": 38
+            }
+          },
+          "sources": [
+            "src-wiki-rsguy",
+            "src-wiki-ironman"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "title": "Necromancy 70, The Spirit of War en tier 70",
+      "summary": "De kern van de route: Necromancy naar 70 via AFK-plekken en greater communion rituals, The Spirit of War voor toegang tot T70+, Defence 70 en Smithing/Crafting 65 zodat je T70-wapens en Deathwarden-robes zelf maakt. Daarna sta je op tier 70, het minimum voor serieuze Slayer.",
+      "estHours": 41,
+      "targets": [
+        {
+          "skill": "Necromancy",
+          "level": 70
+        },
+        {
+          "skill": "Defence",
+          "level": 70
+        },
+        {
+          "skill": "Magic",
+          "level": 55
+        },
+        {
+          "skill": "Smithing",
+          "level": 65
+        },
+        {
+          "skill": "Crafting",
+          "level": 65
+        }
+      ],
+      "steps": [
+        {
+          "id": "p4-01",
+          "title": "Necromancy 50 naar 60",
+          "type": "skill",
+          "style": "afk",
+          "estHours": 7,
+          "location": "Canifis (ghouls) of noord van Fort Forinthry",
+          "detail": "Ghouls bij Canifis, bandits in de woestijn (laag-effort met T50) of fetid zombies noord van Fort Forinthry (undead, salve werkt).",
+          "why": "AFK-plekken uit de trainingspagina; past bij de AFK-helft van een sessie. Op 60 komen greater communion rituals vrij. Shattered Worlds (alternatief in EIPG deel 2) bewust niet: het is actief spel en de status van shattered anima is in 2026 omstreden.",
+          "completeWhen": {
+            "skills": {
+              "Necromancy": 60
+            }
+          },
+          "sources": [
+            "src-wiki-necro-training",
+            "src-wiki-eipg",
+            "src-wiki-shattered"
+          ]
+        },
+        {
+          "id": "p4-02",
+          "title": "Greater communion rituals en T60-gear",
+          "type": "skill",
+          "style": "mixed",
+          "estHours": 4,
+          "location": "City of Um, ritual site en Soul forge",
+          "detail": "Maak inkt, boost voor Multiply II (66), en draai greater communion rituals tot je 10 hebt (Kili T60) en daarna 20 (Kili T70). Maak T60-wapens en robes.",
+          "why": "De ritual-optie van Kili's Knowledge voorkomt dat je drakensouls of bossdrops moet farmen. Rituals zijn semi-AFK: zet hem op en onderhoud de glyphs.",
+          "requires": {
+            "skills": {
+              "Necromancy": 60
+            }
+          },
+          "sources": [
+            "src-wiki-necro-iron",
+            "src-wiki-eipg-talk"
+          ]
+        },
+        {
+          "id": "p4-03",
+          "title": "Necromancy 60 naar 65",
+          "type": "skill",
+          "style": "afk",
+          "estHours": 5,
+          "location": "Slayer Tower of Exiled Kalphite Hive",
+          "detail": "Bloodveds (Slayer Tower, met aggression potions) of exiled kalphite marauders ten zuiden van het Bandit Camp (AFK, ghost tegen gif). Armoured zombies in de Chaos Temple Dungeon zijn ook sterk, maar vragen een deels voltooide Defender of Varrock, die in fase 1 niet gepland is.",
+          "why": "Zeer AFK-vriendelijk met T60 en ghost-sustain volgens de trainingspagina. Op 65 kun je The Spirit of War doen.",
+          "completeWhen": {
+            "skills": {
+              "Necromancy": 65
+            }
+          },
+          "sources": [
+            "src-wiki-necro-training"
+          ]
+        },
+        {
+          "id": "p4-04",
+          "title": "The Spirit of War",
+          "type": "quest",
+          "style": "mixed",
+          "estHours": 3,
+          "location": "City of Um, Kharen",
+          "detail": "Verzamel 3.000 vessel souls in City of Um en doe de quest. Lamp van 45k Necromancy-XP.",
+          "why": "Verplicht voor alle Kili-taken van T70 tot T90. Zonder deze quest stopt de gear-route op T60.",
+          "requires": {
+            "skills": {
+              "Necromancy": 65
+            },
+            "quests": [
+              "Vessel of the Harbinger"
+            ]
+          },
+          "completeWhen": {
+            "quests": [
+              "The Spirit of War"
+            ]
+          },
+          "sources": [
+            "src-wiki-spirit-of-war",
+            "src-wiki-necro-iron"
+          ]
+        },
+        {
+          "id": "p4-05",
+          "title": "Necromancy 65 naar 70",
+          "type": "skill",
+          "style": "afk",
+          "estHours": 3,
+          "location": "Noord van Fort Forinthry (bound skeletons)",
+          "detail": "Lamp plus bound skeletons of exiled kalphite marauders.",
+          "why": "Na de lamp is 70 dichtbij; 70 is de eis voor T70-wapens.",
+          "completeWhen": {
+            "skills": {
+              "Necromancy": 70
+            }
+          },
+          "sources": [
+            "src-wiki-necro-training"
+          ]
+        },
+        {
+          "id": "p4-06",
+          "title": "Defence naar 70 via Necromancy",
+          "type": "skill",
+          "style": "afk",
+          "estHours": 7,
+          "detail": "Necromancy en Defence samen geselecteerd (37,5% elk) op dezelfde AFK-plekken. Wissel per sessie: Necromancy alleen als je een level-eis voor gear wilt halen, gedeeld als Defence achterloopt.",
+          "why": "Deathwarden T70 vraagt Defence 70. Delen met Necromancy is sneller dan defensief casten en past in dezelfde AFK-sessies.",
+          "completeWhen": {
+            "skills": {
+              "Defence": 70
+            }
+          },
+          "sources": [
+            "src-wiki-gear-t70",
+            "src-wiki-combat-xp"
+          ]
+        },
+        {
+          "id": "p4-09",
+          "title": "Magic 55 voor High Level Alchemy",
+          "type": "skill",
+          "style": "mixed",
+          "estHours": 4,
+          "detail": "Train Magic met combat-spells op een rustige plek en doe de Magic-activiteit van het wekelijkse Circus. Sinds de Combat Style Modernisation kosten ook Magic-abilities runes (15% kans per cast), dus koop wekelijks elementaire runes in (Aubury in Varrock en andere runewinkels). Vanaf 55: alch je Slayer-drops.",
+          "why": "High Alch is volgens de ironmangids een vroege prioriteit voor coins. EIPG traint Magic en Ranged naar 55 in Shattered Worlds; dat laat ik bewust weg (actief spel, en de status van anima is omstreden).",
+          "completeWhen": {
+            "skills": {
+              "Magic": 55
+            }
+          },
+          "sources": [
+            "src-wiki-ironman",
+            "src-wiki-eipg",
+            "src-wiki-rsguy",
+            "src-upd-csm"
+          ]
+        },
+        {
+          "id": "p4-07",
+          "title": "Smithing en Crafting naar 65",
+          "type": "skill",
+          "style": "mixed",
+          "estHours": 6,
+          "location": "Falador, Artisans' Workshop",
+          "detail": "Zelfde methodes als fase 3: rune burial sets in de Artisans' Workshop (50-70) en edelstenen slijpen. Smithing in het **actieve blok** met rune burial sets, in het **AFK-blok** met rune burial gauntlets (Smithing 50, van rune gauntlets +3). Beide skills zijn boostbaar, dus 62-63 plus een boost volstaat ook.",
+          "why": "Harde maak-eisen voor T70 Death guard/Skull lantern (Smithing 65) en Deathwarden-robes (Crafting 65). De gauntlets houden Smithing bruikbaar als AFK-vulling; minder XP per uur dan sets (hoeveel is onzeker).",
+          "completeWhen": {
+            "skills": {
+              "Smithing": 65,
+              "Crafting": 65
+            }
+          },
+          "sources": [
+            "src-wiki-gear-t70",
+            "src-wiki-burial",
+            "src-site-thersguide"
+          ]
+        },
+        {
+          "id": "p4-08",
+          "title": "Tier 70: Deathwarden-robes en wapens",
+          "type": "gear",
+          "style": "mixed",
+          "estHours": 2,
+          "location": "City of Um, Soul forge bij Kili",
+          "detail": "Kili's Knowledge V via 20 greater communion. Kies eerst **Deathwarden** (tank), maak T70 Death guard en Skull lantern bij de Soul forge, en daarna de robes.",
+          "why": "PvME zet tank-armour voor power-armour; voor iemand die bosses nog moet leren is tank veiliger. T70 is wat de strategiegidsen van de eerste bosses (K'ril, QBD) als minimum voor armour noemen.",
+          "requires": {
+            "skills": {
+              "Necromancy": 70,
+              "Defence": 70,
+              "Smithing": 65,
+              "Crafting": 65
+            },
+            "quests": [
+              "The Spirit of War"
+            ]
+          },
+          "sources": [
+            "src-wiki-necro-iron",
+            "src-pvme-necro",
+            "src-wiki-gear-t70",
+            "src-wiki-qbd"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "title": "Combat 100+, Slayer rendabel en tier 80-wapens",
+      "summary": "Necromancy en Defence naar 80, Slayer naar 50 met Smoking Kills en de eerste Slayer- en Reaper-unlocks, Prayer en Summoning naar 60 en Agility naar 60 voor de GWD-boulder. Met T80-wapens erbij kom je uit op combat rond 106 en ben je klaar voor de eerste bosses.",
+      "estHours": 50,
+      "targets": [
+        {
+          "skill": "Necromancy",
+          "level": 80
+        },
+        {
+          "skill": "Defence",
+          "level": 80
+        },
+        {
+          "skill": "Constitution",
+          "level": 75
+        },
+        {
+          "skill": "Slayer",
+          "level": 50
+        },
+        {
+          "skill": "Prayer",
+          "level": 60
+        },
+        {
+          "skill": "Summoning",
+          "level": 60
+        },
+        {
+          "skill": "Agility",
+          "level": 60
+        },
+        {
+          "skill": "Smithing",
+          "level": 75
+        }
+      ],
+      "steps": [
+        {
+          "id": "p5-01",
+          "title": "Necromancy 70 naar 80",
+          "type": "skill",
+          "style": "afk",
+          "estHours": 9,
+          "location": "Noord van Fort Forinthry of Exiled Kalphite Hive",
+          "detail": "Bound skeletons (tot circa 180k XP/u AFK), exiled kalphite marauders (circa 147k XP/u met T70) of bloodveds met aggression potions.",
+          "why": "Hoogste AFK-rates uit de trainingspagina; 80 is de eis voor T80-wapens en het grootste deel van je combatlevel.",
+          "completeWhen": {
+            "skills": {
+              "Necromancy": 80
+            }
+          },
+          "sources": [
+            "src-wiki-necro-training"
+          ]
+        },
+        {
+          "id": "p5-02",
+          "title": "Defence 70 naar 80 en Constitution 75",
+          "type": "skill",
+          "style": "afk",
+          "estHours": 8,
+          "detail": "Necromancy en Defence gedeeld (37,5% elk). Constitution krijgt altijd 25% van alle combat-XP en loopt dus vanzelf mee.",
+          "why": "Defence 80 is de aanbeveling voor een eerste Vindicta-kill (en 75 voor de uitgestelde QBD); Constitution 70 is de eis voor het Zamorak-gebied in GWD1. Op Constitution 75 kun je bovendien de lamp van 50.000 Constitution-XP bij de Statue of Death claimen (zie p1-18).",
+          "completeWhen": {
+            "skills": {
+              "Defence": 80,
+              "Constitution": 75
+            }
+          },
+          "sources": [
+            "src-wiki-vindicta",
+            "src-wiki-qbd",
+            "src-wiki-gwd",
+            "src-wiki-mpd"
+          ]
+        },
+        {
+          "id": "p5-03",
+          "title": "Slayer 20 naar 50",
+          "type": "skill",
+          "style": "active",
+          "estHours": 6,
+          "location": "Canifis (Mazchna), later Pollnivneach (Sumona)",
+          "detail": "Taken bij Mazchna (Canifis, combat 50); na Smoking Kills en vanaf combat 90 bij Sumona (Pollnivneach). Sterke taken: aberrant spectres, ankou, banshees, nechryael, kalphites, en sinds Havenhythe sanguine crawlers (Slayer 35; Vannaka geeft ze vaker sinds juli 2026, met vampyrism gloves als drop). Chaeldar valt af: die zit in Zanaris en vraagt Lost City, die niet in fase 1 zit.",
+          "why": "Slayer is de actieve helft van deze fase en levert charms (Summoning), botten (Prayer), kruiden (Herblore) en alchables. EIPG traint Slayer 35-45 bij The Raptor; de wiki raadt die af voor lage levels en hij vraagt Unwelcome Guests (Construction 50, maple-materialen). Duradel vraagt combat 100, Slayer 50 en Shilo Village.",
+          "completeWhen": {
+            "skills": {
+              "Slayer": 50
+            }
+          },
+          "sources": [
+            "src-wiki-slayer-iron",
+            "src-wiki-slayer-masters",
+            "src-wiki-raptor",
+            "src-upd-havenhythe",
+            "src-upd-mid-game"
+          ]
+        },
+        {
+          "id": "p5-04",
+          "title": "Smoking Kills",
+          "type": "quest",
+          "style": "active",
+          "estHours": 1.5,
+          "location": "Pollnivneach, Sumona",
+          "detail": "Afronding van de keten uit fase 1.",
+          "why": "Zonder deze quest halveren je Slayer-punten. De Slayer-gids zegt: zo snel mogelijk.",
+          "requires": {
+            "skills": {
+              "Slayer": 35,
+              "Crafting": 25
+            },
+            "quests": [
+              "Icthlarin's Little Helper",
+              "The Restless Ghost"
+            ]
+          },
+          "completeWhen": {
+            "quests": [
+              "Smoking Kills"
+            ]
+          },
+          "sources": [
+            "src-wiki-smoking-kills",
+            "src-wiki-slayer-iron"
+          ]
+        },
+        {
+          "id": "p5-12",
+          "title": "Lair of Tarn Razorlor: salve amulet (e)",
+          "type": "quest",
+          "style": "active",
+          "estHours": 1.5,
+          "location": "Abandoned Mine (Morytania), noordmuur begane grond",
+          "detail": "Miniquest na Haunted Mine bij Slayer 40. Baas Tarn Razorlor (level 79). Gebruik Tarn's diary op je salve amulet.",
+          "why": "EIPG doet hem direct na Haunted Mine en noemt de salve amulet (e) best-in-slot tegen undead. De EIPG-overlegpagina merkte op dat de Slayer 40-eis in die guide ontbrak; hier staat hij pas na Slayer 40.",
+          "requires": {
+            "skills": {
+              "Slayer": 40
+            },
+            "quests": [
+              "Haunted Mine"
+            ]
+          },
+          "completeWhen": {
+            "quests": [
+              "Lair of Tarn Razorlor (miniquest)"
+            ]
+          },
+          "sources": [
+            "src-wiki-haunted-mine",
+            "src-wiki-eipg",
+            "src-wiki-eipg-talk"
+          ]
+        },
+        {
+          "id": "p5-11",
+          "title": "Reaper-taken bij Death",
+          "type": "misc",
+          "style": "mixed",
+          "estHours": 2,
+          "location": "Death's office, Death",
+          "detail": "Sinds de DailyScape Overhaul (16 maart 2026): Reaper-taken bij Death vragen **Slayer 45 en combat 50**, er is geen dagelijkse limiet meer, wel een maximum van 300 Reaper points per week, en elke taak geeft ook Slayer-punten. Koop met je eerste Reaper-punten in Death's Store eerst de **Reaper Scroll** (+50% Slayer-XP uit Reaper-taken) en daarna **Reaper's choice** (10% kans om je taak zelf te kiezen), elk 250 Reaper-punten. Pak de taken als bossing-variant op Slayer-avonden, bijvoorbeeld zodra K'ril of Vindicta in beeld komt.",
+          "why": "Beide guides zetten Reaper-taken hoog (EIPG bovenaan, RS Guy prioriteit 8). Door de nieuwe eisen kan Ons Pap ze pas rond het einde van fase 5 doen. Zonder dagcap passen ze beter bij een onregelmatig speelritme. Scroll en choice kosten samen ongeveer twee weken punten en maken elke volgende taak meer waard; thersguide zet ze bovenaan.",
+          "requires": {
+            "skills": {
+              "Slayer": 45
+            }
+          },
+          "sources": [
+            "src-wiki-eipg",
+            "src-wiki-rsguy",
+            "src-upd-dailyscape",
+            "src-wiki-death-store",
+            "src-site-thersguide"
+          ]
+        },
+        {
+          "id": "p5-05",
+          "title": "Slayer-punten besteden",
+          "type": "unlock",
+          "style": "mixed",
+          "estHours": 1,
+          "detail": "Volgorde: **Ring of slaying** (300), dan **Killing blow** (400), daarna sparen (bijvoorbeeld voor latere helm-unlocks of de Bonecrusher aan je tool belt). De Slayer helmet en de Spectral lens zitten **niet** in deze fase: de helmbonus geldt alleen voor melee, en de black mask die je ervoor nodig hebt vraagt als ironman Slayer 58 plus Cabin Fever (cave horrors) of sea horrors in de Shadow Reef. Zie 'Na fase 1'.",
+          "why": "De wiki-Slayergids zet de helm eerst, maar die gids gaat uit van melee. Voor een Necromancy-speler op Slayer 50 levert de helm niets op; de Necromancy-variant (Spectral lens) valt bij Profane Scabarites, die Slayer 87 vragen. Zo spaar je 400 punten voor iets wat wél werkt.",
+          "sources": [
+            "src-wiki-slayer-iron",
+            "src-wiki-slayer-helmet",
+            "src-site-thersguide"
+          ]
+        },
+        {
+          "id": "p5-06",
+          "title": "Prayer 43 naar 60",
+          "type": "skill",
+          "style": "mixed",
+          "estHours": 4,
+          "location": "Port Phasmatys (Ectofuntus) of Fort Forinthry",
+          "detail": "Botten uit Slayer en dragon bones van blauwe en groene draken op de Ectofuntus of het Chapel-altaar in Fort Forinthry (zie p2-05; bonus verlaagd in februari 2026). Ashes uit Necromancy tellen mee. Colossal bones van Ivar kunnen niet op een altaar of de Ectofuntus: begraaf die direct na de kill (400 XP per stuk, zie p2-09).",
+          "why": "60 is een middenweg: genoeg voor bosses, zonder de dure 75 uit EIPG deel 4 die op Vindicta-dragon bones leunt. EIPG traint 37 en 47 op dezelfde manier met dragon bones.",
+          "completeWhen": {
+            "skills": {
+              "Prayer": 60
+            }
+          },
+          "sources": [
+            "src-wiki-eipg",
+            "src-wiki-qbd",
+            "src-wiki-fort",
+            "src-upd-early-game",
+            "src-wiki-colossal-bone"
+          ]
+        },
+        {
+          "id": "p5-07",
+          "title": "Summoning 40 naar 60",
+          "type": "skill",
+          "style": "mixed",
+          "estHours": 4,
+          "location": "Taverley, Pikkupstix",
+          "detail": "Spirit terrorbirds (52) en spirit jellies (55); charms uit Slayer.",
+          "why": "Summoning telt mee in je combatlevel en 60 is de instance-eis van de Queen Black Dragon, die na fase 1 terugkomt.",
+          "completeWhen": {
+            "skills": {
+              "Summoning": 60
+            }
+          },
+          "sources": [
+            "src-wiki-summoning-iron",
+            "src-wiki-qbd"
+          ]
+        },
+        {
+          "id": "p5-08",
+          "title": "Agility 25 naar 60",
+          "type": "skill",
+          "style": "active",
+          "estHours": 5,
+          "location": "Anachronia Agility Course, daarna Wilderness Agility Course",
+          "detail": "Penguin-lampen op Agility (tot 56). Courses: Anachronia-course van 30 tot circa 52, daarna de Wilderness Agility Course (52+). Alle courses geven sinds februari en juli 2026 flink meer XP, en op Agility 30 krijg je nu Dive (zonder Succession). Een agility potion (+3, Herblore 34) maakt 57 genoeg voor de boulder. Zodra je Agility 55 hebt: claim de **10.000 Agility-XP in de vierde grot** van Myths of the White Lands (p1-16).",
+          "why": "De GWD1-boulder vraagt Agility 60 of Strength 60, maar Agility is in deze route de keuze (beide boostbaar); Strength komt met Waterfall en Haunted Mine maar rond 40. Courses volgen de EIPG (Agility 56); de Penguin-lampen het RS Guy-advies. Agility is ook nodig voor Plague's End (75) en shortcuts.",
+          "completeWhen": {
+            "skills": {
+              "Agility": 60
+            }
+          },
+          "sources": [
+            "src-wiki-gwd",
+            "src-wiki-plagues-end",
+            "src-wiki-eipg",
+            "src-wiki-rsguy",
+            "src-upd-mid-game",
+            "src-upd-early-game",
+            "src-wiki-myths"
+          ]
+        },
+        {
+          "id": "p5-09",
+          "title": "Smithing 65 naar 75",
+          "type": "skill",
+          "style": "mixed",
+          "estHours": 5,
+          "location": "Falador, Artisans' Workshop",
+          "detail": "Rune burial sets tot 70, daarna necronium burial sets (Artisans' Workshop; necronium ore en phasmatite zelf minen), zoals in de EIPG-miniguide. **Actief blok**: burial sets. **AFK-blok**: burial gauntlets van hetzelfde metaal (rune tot 70, daarna necronium burial gauntlets van necronium gauntlets +4).",
+          "why": "Harde eis voor T80 Skull lantern en Death guard. Necronium-sets geven per set circa vier keer zoveel XP als rune. De gauntlets zijn de rustige variant voor naast het werk; minder XP per uur (hoeveel is onzeker).",
+          "completeWhen": {
+            "skills": {
+              "Smithing": 75
+            }
+          },
+          "sources": [
+            "src-wiki-gear-t80",
+            "src-wiki-eipg",
+            "src-wiki-artisans",
+            "src-wiki-burial",
+            "src-site-thersguide"
+          ]
+        },
+        {
+          "id": "p5-10",
+          "title": "Tier 80-wapens",
+          "type": "gear",
+          "style": "mixed",
+          "estHours": 2.5,
+          "location": "City of Um, ritual site en Soul forge",
+          "detail": "Kili's Knowledge VI via 30 greater communion, daarna T80 Death guard en Skull lantern bij de Soul forge met greater ensouled bars.",
+          "why": "De strategiegidsen van K'ril en Vindicta noemen T80-wapens als aanbeveling. De ritual-route vermijdt de GWD-hammers die je zonder GWD-ervaring nog niet kunt halen. Armour blijft T70 tot Necromancy 90, zoals de ironmangids adviseert.",
+          "requires": {
+            "skills": {
+              "Necromancy": 80,
+              "Smithing": 75
+            },
+            "quests": [
+              "The Spirit of War"
+            ]
+          },
+          "sources": [
+            "src-wiki-gear-t80",
+            "src-wiki-necro-iron",
+            "src-wiki-vindicta"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p6",
+      "title": "Eerste bosses: K'ril en de brug naar Vindicta",
+      "summary": "Voorbereiden (potions, haaien), dan K'ril Tsutsaroth als eerste GWD1-general omdat alleen Constitution 70 nodig is. Daarna de brug naar het PvM-doel: uitzoeken wat Vindicta in GWD2 vraagt en de eerste Zarosian killcount halen. De Queen Black Dragon is uitgesteld tot na fase 1, omdat antifire Herblore 69 vraagt. Afgesloten met een evaluatie en de keuze voor fase 2 van het project.",
+      "estHours": 26,
+      "targets": [
+        {
+          "skill": "Fishing",
+          "level": 76
+        },
+        {
+          "skill": "Cooking",
+          "level": 80
+        },
+        {
+          "skill": "Herblore",
+          "level": 55
+        }
+      ],
+      "steps": [
+        {
+          "id": "p6-01",
+          "title": "Bossvoorbereiding",
+          "type": "misc",
+          "style": "mixed",
+          "estHours": 2,
+          "detail": "Lees de strategiepagina's, leg 6-8 prayer potions, eten en een teleport klaar, zet Necromancy-abilities op je balk en oefen tegen sterke Slayer-taken. Gebruik alleen gidsen en rotaties van na de Combat Style Modernisation (2 maart 2026).",
+          "why": "Bossminima zijn volgens de ironmangids minimum voor een eerste kill, niet comfortabel; voorbereiding scheelt dure sterfgevallen.",
+          "sources": [
+            "src-wiki-ironman",
+            "src-wiki-gwd",
+            "src-wiki-csm"
+          ]
+        },
+        {
+          "id": "p6-02",
+          "title": "Haaien: Fishing 76 en Cooking 80",
+          "type": "skill",
+          "style": "afk",
+          "estHours": 10,
+          "location": "Catherby of de Fishing Guild",
+          "detail": "Harpoenen (Catherby, Fishing Guild) en koken. Als AFK-pool naast de boss-sessies; begin er gerust al in fase 5 mee.",
+          "why": "Haaien zijn het eten dat de GWD-gids als standaard noemt. Fishing en Cooking zijn bij uitstek AFK.",
+          "completeWhen": {
+            "skills": {
+              "Fishing": 76,
+              "Cooking": 80
+            }
+          },
+          "sources": [
+            "src-wiki-gwd",
+            "src-wiki-ironman"
+          ]
+        },
+        {
+          "id": "p6-03",
+          "title": "Herblore 38 naar 55 (optioneel)",
+          "type": "skill",
+          "style": "mixed",
+          "estHours": 4,
+          "detail": "Kruiden uit farm en Slayer, Herby Werby. Richt op potions die je bij bosses gebruikt.",
+          "why": "Betere potions maken GWD veiliger; optioneel omdat herbs voor ironmen duur zijn. Op 45 maak je super attacks, die je later voor de Attack-eis van Vindicta nodig hebt (p6-07). Antifire (Herblore 69) voor de Queen Black Dragon valt buiten deze fase; daarom is QBD uitgesteld. Plague's End vraagt later 75.",
+          "completeWhen": {
+            "skills": {
+              "Herblore": 55
+            }
+          },
+          "sources": [
+            "src-wiki-rsguy",
+            "src-wiki-plagues-end",
+            "src-wiki-super-attack",
+            "src-wiki-antifire"
+          ]
+        },
+        {
+          "id": "p6-04",
+          "title": "K'ril Tsutsaroth (GWD1, Zamorak)",
+          "type": "misc",
+          "style": "active",
+          "estHours": 6,
+          "location": "God Wars Dungeon (Trollheim), Zamorak-gebied",
+          "detail": "Boulder met Agility 60 (of Strength 60, maar Agility is in deze route de keuze; beide boostbaar), 40 Zamorak-kills voor kill count, Antipoison++ mee. Let op zijn speciale aanval die je prayer halveert. Sinds juli 2026 blijft je killcount bewaard als je de dungeon verlaat (maximaal 200), en bosses kosten geen instance-fee meer: je kunt dus rustig in meerdere korte sessies leren.",
+          "why": "Van de vier generals is Zamorak de enige waarvoor je gebiedseis (Constitution 70) vanzelf haalt met een Necromancy-route; Bandos, Armadyl en Saradomin vragen 70 Strength, Ranged of Agility.",
+          "requires": {
+            "skills": {
+              "Agility": 60,
+              "Constitution": 70
+            },
+            "quests": [
+              "Troll Stronghold"
+            ]
+          },
+          "sources": [
+            "src-wiki-gwd",
+            "src-upd-mid-game"
+          ]
+        },
+        {
+          "id": "p6-07",
+          "title": "Vindicta-voorbereiding: eisen kennen en eerste killcount",
+          "type": "misc",
+          "style": "active",
+          "estHours": 3,
+          "location": "Heart of Gielinor (west van Nardah), Zaros's Bastion",
+          "detail": "**Toegang.** De Heart of Gielinor (GWD2) ligt ten westen van Nardah; het hoofdgebied heeft geen eisen. Vindicta & Gorvek zitten in **Zaros's Bastion** (zuidwest), dat **Attack 80 (boostbaar)** vraagt. Elke instance kost **40 Zarosian killcount**; met 2.000 Zaros-reputatie of War's Blessing 2 wordt dat 20, met beide 0. Killcount blijft bewaard tot 200. **Aanbevolen voor een eerste kill (wiki, normal mode):** combat 80, Defence 80, tier 80-wapen en -armour, overloads, Prayer 71 met Ancient Curses (Deflect Melee) en een damage-familiar. Zonder curses: Protect from Melee. **Wat Ons Pap nog mist:** Attack staat na Waterfall Quest rond 30; met een super attack (2 + 12%, Herblore 45) heb je **Attack 70** nodig, met een extreme attack (Herblore 88) 67. De route traint Attack niet, dus dit is de grootste kloof. Verder: T80-armour (je hebt T70 Deathwarden), Prayer 71 en curses (je hebt 60), overloads (Herblore 96). **Wat je nu al doet:** lees Vindicta & Gorvek/Strategies, loop naar de Heart (bandit camp-lodestone of Nardah) en dood Zarosian volgelingen (ancient warriors, mages en rangers, level 108; blood reavers 115) met je T80-wapens tot je 40 killcount hebt. Ze zijn agressief zolang je geen Zaros-insignia draagt: kom met eten en Protect from Melee. Ingression fragments uit die kills geven reputatie. **Optioneel:** de miniquest Tales of the God Wars (Constitution 70, Strength of Agility 60; vraagt een K'ril-kill, de Barrows-kist, grotworms en wisps in Isafdar) geeft 25 Heart-teleports, een anima crystal (+500 reputatie) en een lamp van 30.000 XP. Vink deze stap handmatig af.",
+          "why": "Vindicta is het PvM-doel dat Mees noemt; deze stap maakt de weg ernaartoe concreet zonder de route te forceren. GWD2 heeft geen Necromancy-ingang: elke general vraagt 80 in Attack (Vindicta), Ranged (Twin Furies), Magic (Helwyr) of Prayer (Gregorovic), allemaal boostbaar. Vindicta is ook voor de Necromancy-lijn nuttig: tijdens Kili's Knowledge VII (T90) laat ze necromantic seals vallen, en ze dropt dragon bones (Prayer). Killcount opsparen kan al nu en blijft bewaard. **Onzeker:** of Tales of the God Wars voor Ons Pap toegankelijk is (Isafdar en fairy rings vragen eigen quests), en hoe hard een eerste kill met T70-armour en Necromancy gaat, want de strategiepagina heeft geen Necromancy-preset.",
+          "requires": {
+            "skills": {
+              "Necromancy": 80,
+              "Defence": 80
+            }
+          },
+          "sources": [
+            "src-wiki-heart",
+            "src-wiki-vindicta",
+            "src-wiki-super-attack",
+            "src-wiki-tales-god-wars",
+            "src-wiki-kili-7",
+            "src-upd-mid-game"
+          ]
+        },
+        {
+          "id": "p6-06",
+          "title": "Evaluatie en keuze voor het vervolg",
+          "type": "misc",
+          "style": "mixed",
+          "estHours": 1,
+          "detail": "Kies het volgende blok: Invention (Crafting, Divination, Smithing 80), Plague's End en Prifddinas (tien skills op 75), The Arc (Impressing the Locals), Necromancy 90 met T90, Dungeoneering voor Bonecrusher en Charming imp (sinds de remaster in mei 2026 sneller tokens, en ironmen mogen met anderen dungeonen), een vaste bossfarm (Vindicta voor dragon bones, zie p6-07; vraagt eerst Attack 70 met super attacks), of de uitgestelde Queen Black Dragon zodra Herblore 69 haalbaar is (zie 'Na fase 1'). Toets ook de Late-Game Rebalance en de MTX-verwijdering die voor november 2026 zijn aangekondigd.",
+          "why": "Deze unlocks zijn waardevol maar te groot voor fase 1; EIPG zet ze in deel 4 tot 6.",
+          "sources": [
+            "src-wiki-eipg",
+            "src-wiki-invention",
+            "src-wiki-plagues-end",
+            "src-wiki-arc",
+            "src-wiki-arch-iron",
+            "src-upd-dungeoneering"
+          ]
+        }
+      ]
+    }
+  ]
+}

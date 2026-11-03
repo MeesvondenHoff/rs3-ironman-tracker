@@ -1,0 +1,257 @@
+[
+  {
+    "boss": "ivar",
+    "name": "Ivar, King of Bones",
+    "stepIds": ["p2-09"],
+    "location": "Hollow Hill, Havenhythe",
+    "checked": "2026-11-03",
+    "summary": "Leerboss voor protect-prayers: na vier gewone aanvallen een special die je met de juiste protect-prayer of een stap opzij opvangt.",
+    "requirements": [
+      "Quest Visions of Havenhythe (toegang via de bone pile in Hollow Hill)",
+      "Geen vaste level-eis; de wiki raadt 50+ in je combatstijl en 50+ Defence aan, met tier 50-gear",
+      "Prayer 43 voor de drie protect-prayers (route-eis van stap p2-09)",
+      "Alleen als instance, tot 10 spelers"
+    ],
+    "ironmanGear": [
+      { "slot": "Wapens", "item": "T40 Death guard en Skull lantern", "how": "Kili's Knowledge in Um met lesser ensouled bars (stap p2-03)" },
+      { "slot": "Armour", "item": "T40 Deathwarden-robes", "how": "Zelf maken na Kili's Knowledge II (Defence 40) met ensouled cloth en thread uit ensoul-rituals; T50 na Kili's Knowledge III" },
+      { "slot": "Prayers", "item": "Protect from Melee, en bij een special de passende protect", "how": "Prayer 43 (stap p2-05)" },
+      { "slot": "Potions", "item": "Beste combat-potion die je hebt, minimaal super potions", "how": "Zelf brouwen; herbs uit Slayer, je farm en Herby Werby" },
+      { "slot": "Food", "item": "Het beste eten dat je zelf vangt en kookt", "how": "Fishing en Cooking; de wiki noemt geen vast eten" }
+    ],
+    "mechanics": [
+      "Blijf dichtbij: op afstand gebruikt hij een sterkere magic-aanval die protect-prayers niet verlagen.",
+      "Na vier gewone aanvallen volgt een special, in willekeurige volgorde en aangekondigd met chattekst en geluid.",
+      "Bone Bludgeon (melee): knockback en je protect-prayers gaan even uit. Protect from Melee voorkomt dat.",
+      "Skeletal Shrapnel (ranged): Protect from Ranged vangt het grootste deel op.",
+      "Conk Blast (magic, korte stun): Protect from Magic voorkomt de stun.",
+      "Elke special raakt een 3x3-vak dat vooraf oplicht: stap eruit en je ontwijkt alles."
+    ],
+    "drops": {
+      "progress": [
+        { "item": "Colossal bone", "rate": "altijd", "note": "Veel Prayer-XP; werkt niet met een bonecrusher" }
+      ],
+      "useful": [
+        { "item": "Bonecrusher maul", "rate": "1/64", "note": "Tweehandig melee-wapen dat botten vanzelf vermaalt" },
+        { "item": "Magic skull mask", "rate": "1/64" },
+        { "item": "Big bones (10, noted)", "rate": "6/128" },
+        { "item": "Gold stone spirit (10)", "rate": "9/128" },
+        { "item": "Death rune", "rate": "7/128" }
+      ],
+      "rest": [
+        { "item": "Grimy ranarr", "rate": "11/128" },
+        { "item": "Ranarr seed", "rate": "7/128" },
+        { "item": "Rune chainbody", "rate": "4/128" },
+        { "item": "Ivar's head", "rate": "1/500" },
+        { "item": "Ivar's loincloth", "rate": "1/1.250" }
+      ]
+    },
+    "uncertain": [
+      "Droprates zijn schattingen van de wiki uit ongeveer 1.000 kills (Drop Log Project).",
+      "De strategiepagina geeft geen Necromancy-specifieke setup en geen vast eten; de gear hierboven volgt de tier-aanbeveling en onze route."
+    ],
+    "sources": [
+      { "title": "Ivar, King of Bones", "url": "https://runescape.wiki/w/Ivar,_King_of_Bones" },
+      { "title": "Ivar, King of Bones/Strategies", "url": "https://runescape.wiki/w/Ivar,_King_of_Bones/Strategies" },
+      { "title": "Visions of Havenhythe", "url": "https://runescape.wiki/w/Visions_of_Havenhythe" },
+      { "title": "Deathwarden robes", "url": "https://runescape.wiki/w/Deathwarden_robes" },
+      { "title": "Necromancy equipment", "url": "https://runescape.wiki/w/Necromancy_equipment" }
+    ]
+  },
+  {
+    "boss": "kril",
+    "name": "K'ril Tsutsaroth",
+    "stepIds": ["p6-04"],
+    "location": "God Wars Dungeon, Zamorak-gebied",
+    "checked": "2026-11-03",
+    "summary": "Zamorak-general met drie minions. Zijn special halveert je prayer; Debilitate en goed staan maken het verschil.",
+    "requirements": [
+      "Troll Stronghold, voor de weg naar de God Wars Dungeon-ingang",
+      "Agility 60 of Strength 60 (boostbaar) voor de boulder; in deze route Agility 60",
+      "Constitution 70 (niet te boosten) voor het Zamorak-gebied",
+      "40 Zamorak-killcount, tenzij Totem of Intimidation of War's Blessing 2 actief is; sinds 20 juli 2026 blijft de killcount bewaard (maximaal 200)",
+      "Aanbevolen (strategiepagina, 6 augustus 2026): 75+ in je combatstijl, 75+ Defence en 43+ Prayer. De tier 70-setup hoort bij dat niveau, de tier 80-setup bij 90+. Voor Ons Pap aan het eind van fase 1 (Necromancy 80, Defence 80) past de T70-armour met T80-wapens"
+    ],
+    "ironmanGear": [
+      { "slot": "Wapens", "item": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI, daarna smeden bij de Soul forge met greater ensouled bars (stap p5-10)" },
+      { "slot": "Armour", "item": "T70 Deathwarden-robes", "how": "Kili's Knowledge V, zelf maken (stap p4-08); de tier die de wiki bij 75+ in je stijl aanbeveelt" },
+      { "slot": "Prayers", "item": "Protect from Magic", "how": "Prayer 43; Soul Split en Deflect Magic vragen curses en veel hogere Prayer" },
+      { "slot": "Food", "item": "Sharks", "how": "Zelf vissen en koken (stap p6-02)" },
+      { "slot": "Potions", "item": "Beste combat-potion (minimaal super) en prayer potions of super restores", "how": "Zelf brouwen; K'ril laat zelf ook super restores en Zamorak brews vallen" },
+      { "slot": "Familiar", "item": "Een damage-familiar uit de wikilijst (Ripper Demon, Kal'gerion demon, blood reaver, steel titan)", "how": "Zelf maken met Summoning, voor zover je level het toelaat" }
+    ],
+    "mechanics": [
+      "Melee en een magic-schokgolf, beide tot 1.500. De wiki raadt Protect from Magic aan.",
+      "Special: tot 6.600 schade zonder type en de helft van je prayer weg. Debilitate halveert de schade.",
+      "Sta niet naast andere spelers: de special wordt gedeeld.",
+      "Minions in volgorde Balfrug Kreeyath (magic), Tstanon Karlak, Zakl'n Gritch. In de zuidwesthoek ontloop je Zakl'n, in de zuidoosthoek de andere twee.",
+      "Immuun voor poison en hij verkort je antipoison; de poisonschade zelf is klein.",
+      "Hard mode bestaat alleen als privé-instance. Begin op normal."
+    ],
+    "drops": {
+      "progress": [
+        { "item": "Kill telt voor Kili's Knowledge VI", "note": "Deathwarden T80 vraagt onder meer kills van God Wars-generals" }
+      ],
+      "useful": [
+        { "item": "Steam battlestaff", "rate": "1/512", "note": "Onbeperkt fire en water runes" },
+        { "item": "Super restore (3)", "rate": "16/128" },
+        { "item": "Zamorak brew (3)", "rate": "16/128" },
+        { "item": "Infernal ashes", "rate": "altijd", "note": "Prayer-XP" },
+        { "item": "Lantadyme seed", "rate": "12/128" }
+      ],
+      "rest": [
+        { "item": "Zamorakian spear", "rate": "1/512" },
+        { "item": "Zamorak hilt", "rate": "1/512" },
+        { "item": "Godsword shard 1, 2 en 3", "rate": "1/768 elk" },
+        { "item": "Hood, garb, gown, gloves, boots en ward of subjugation", "rate": "1/512 elk", "note": "Magic-armour" },
+        { "item": "K'ril shoulder guard", "rate": "1/500" }
+      ]
+    },
+    "uncertain": [
+      "De precieze Kili's Knowledge VI-eis voor Deathwarden (aantal en welke God Wars-bosses) is niet regel voor regel gecontroleerd.",
+      "Welke Summoning-levels de genoemde familiars vragen, is niet gecontroleerd."
+    ],
+    "sources": [
+      { "title": "K'ril Tsutsaroth", "url": "https://runescape.wiki/w/K%27ril_Tsutsaroth" },
+      { "title": "K'ril Tsutsaroth/Strategies (bijgewerkt 6 augustus 2026)", "url": "https://runescape.wiki/w/K%27ril_Tsutsaroth/Strategies" },
+      { "title": "God Wars Dungeon", "url": "https://runescape.wiki/w/God_Wars_Dungeon" },
+      { "title": "Necromancy equipment", "url": "https://runescape.wiki/w/Necromancy_equipment" },
+      { "title": "Update: Patch Notes: Mid-Game Rebalance", "url": "https://runescape.wiki/w/Update:Patch_Notes:_Mid-Game_Rebalance" }
+    ]
+  },
+  {
+    "boss": "qbd",
+    "name": "Queen Black Dragon",
+    "stepIds": [],
+    "location": "Grotworm Lair, Asgarnia",
+    "checked": "2026-11-03",
+    "summary": "Uitgesteld; zie Na fase 1 in de route (besluit 2026-11-03: antifire vraagt Herblore 69). Vier fases met elk een artefact om te activeren. Zonder bescherming tegen dragonfire is ze niet te doen.",
+    "requirements": [
+      "Summoning 60 voor de portal in de Grotworm Lair",
+      "Bescherming tegen dragonfire is verplicht: antifire (Herblore 69, clean lantadyme + dragon scale dust) met een anti-dragon shield als offhand, of super antifire (Herblore 85) of elder overload salve volgens de wiki",
+      "Aanbevolen: 75+ in je stijl en Defence, tier 70-armour en tier 80-wapens; onder tier 75 noemt de wiki het bijna onmogelijk",
+      "Prayer 43 voor Protect from Ranged en Melee",
+      "Solo-instance: je komt er pas uit na winst, dood of teleport"
+    ],
+    "ironmanGear": [
+      { "slot": "Wapens", "item": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI en de Soul forge (stap p5-10)" },
+      { "slot": "Armour", "item": "T70 Deathwarden-robes", "how": "Kili's Knowledge V (stap p4-08)" },
+      { "slot": "Dragonfire", "item": "Antifire voor de gewone adem, anti-dragon shield als wissel voor de muren en de fase 4-adem", "how": "Antifire vraagt Herblore 69, super antifire Herblore 85 (phoenix feather); de shield haal je gratis bij Duke Horacio in Lumbridge na Dragon Slayer. Antifires vallen ook uit elite reward caskets" },
+      { "slot": "Prayers", "item": "Protect from Ranged op afstand, Protect from Melee dichtbij", "how": "Prayer 43" },
+      { "slot": "Food en potions", "item": "Sharks, beste combat-potion, prayer potions", "how": "Zelf maken; swordfish en prayer potions zijn ook te koop bij Flesh-hatcher Mhekarnahz" },
+      { "slot": "Familiar", "item": "Damage-familiar, of een Beast of Burden met extra eten", "how": "Zelf maken met Summoning" }
+    ],
+    "mechanics": [
+      "Activeer per fase het juiste artefact (noord-midden, zuidwest, zuidoost, zuid), anders komen er worms en harde treffers.",
+      "Binnen 5 vakjes melee, verder weg een sterkere ranged-zwaai: kies je protect-prayer op je afstand.",
+      "Vuurmuur: wacht tot hij vlak bij je is en ren dan recht door het gat op vakje 5, 9 of 15.",
+      "Tortured souls (vanaf fase 2): hun wolk doet 1.050 tot 1.500; vanaf fase 3 healt ze via de souls.",
+      "Crystal (fase 3 en 4): Necromancy doet dan 25% meer schade, magic juist minder. Carapace werkt andersom.",
+      "Fase 4: houd afstand van de kop bij de extreme adem en dood de summoned soul binnen ongeveer 10 seconden (Time stop)."
+    ],
+    "drops": {
+      "progress": [
+        { "item": "Tortured soul essence", "rate": "altijd", "note": "Alleen tijdens de Kili's Knowledge VI-taak, met een Necromancy-kill" },
+        { "item": "Royal torsion spring, sight, frame en bolt stabiliser", "rate": "5/253 elk", "note": "Onderdelen van de royal crossbow" },
+        { "item": "Dragonkin lamp", "note": "Bij Mr Mordaut na je eerste kill" }
+      ],
+      "useful": [
+        { "item": "Royal dragonhide, royal bolts en dragon bones", "rate": "altijd" },
+        { "item": "Raw shark (40)", "rate": "7/109" },
+        { "item": "Draconic visage", "rate": "1/109" },
+        { "item": "Dragonbone upgrade kit", "rate": "2/253" },
+        { "item": "Inert adrenaline crystal", "rate": "7/109" },
+        { "item": "Magic logs (120)", "rate": "7/109" }
+      ],
+      "rest": [
+        { "item": "Coins (150.000)", "rate": "10/109" },
+        { "item": "Torstol seed (2)", "rate": "8/109" },
+        { "item": "Uncut dragonstone (5)", "rate": "5/109" },
+        { "item": "Queen Black Dragon's shackles", "rate": "1/500" },
+        { "item": "Black dragon egg", "rate": "1/200" }
+      ]
+    },
+    "uncertain": [
+      "De strategiepagina is laatst gewijzigd op 19 juli 2026, een dag voor de Mid-Game Rebalance.",
+      "De route heeft Herblore 55 als doel; antifire vraagt 69 en super antifire 85. Zonder die levels blijven alleen elite caskets en de anti-dragon shield over.",
+      "Of een anti-dragon shield goed samengaat met een Death guard (de shield vervangt de Skull lantern) staat niet op de wiki."
+    ],
+    "sources": [
+      { "title": "Queen Black Dragon", "url": "https://runescape.wiki/w/Queen_Black_Dragon" },
+      { "title": "Queen Black Dragon/Strategies", "url": "https://runescape.wiki/w/Queen_Black_Dragon/Strategies" },
+      { "title": "Antifire potion", "url": "https://runescape.wiki/w/Antifire_potion" },
+      { "title": "Anti-dragon shield", "url": "https://runescape.wiki/w/Anti-dragon_shield" },
+      { "title": "Necromancy equipment", "url": "https://runescape.wiki/w/Necromancy_equipment" }
+    ]
+  },
+  {
+    "boss": "vindicta",
+    "name": "Vindicta & Gorvek",
+    "stepIds": ["p6-07"],
+    "location": "Heart of Gielinor (GWD2), Zaros's Bastion",
+    "checked": "2026-11-03",
+    "summary": "Zaros-general in GWD2: twee fases, weinig specials maar harde melee-treffers, en een vuurmuur waar je direct uit moet. De ingang vraagt Attack 80 (boostbaar), dus voor een Necromancy-ironman eerst Attack 70 met super attacks.",
+    "requirements": [
+      "Zaros's Bastion: Attack 80, boostbaar. Met een super attack (2 + 12%, Herblore 45) volstaat Attack 70, met een extreme attack (Herblore 88) Attack 67",
+      "40 Zarosian killcount per instance; 20 met 2.000 Zaros-reputatie of War's Blessing 2, 0 met beide. Killcount blijft bewaard tot 200",
+      "Het hoofdgebied van de Heart of Gielinor heeft geen eisen; killcount halen kan dus al voordat je Attack 80 hebt",
+      "Aanbevolen voor normal mode: combat 80, Defence 80, tier 80-wapen en -armour, Prayer 71 met Ancient Curses, overloads",
+      "Solo of met maximaal 50 spelers; hard mode is alleen solo (aanbevolen combat 99, tier 90)"
+    ],
+    "ironmanGear": [
+      { "slot": "Wapens", "item": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI en de Soul forge (stap p5-10)" },
+      { "slot": "Armour", "item": "T70 Deathwarden-robes (de wiki raadt tier 80 aan)", "how": "Kili's Knowledge V (stap p4-08); T80/T90-armour pas op Necromancy 90" },
+      { "slot": "Prayers", "item": "Protect from Melee; Deflect Melee als je Ancient Curses hebt", "how": "Prayer 43 voor Protect; Deflect Melee vraagt Prayer 71 en Ancient Curses" },
+      { "slot": "Potions", "item": "Super attacks voor de Attack-eis, beste combat-potion, prayer potions of super restores", "how": "Zelf brouwen: super attack op Herblore 45 (irit + eye of newt); super restores vallen ook bij K'ril" },
+      { "slot": "Food", "item": "Sharks", "how": "Zelf vissen en koken (stap p6-02); Vindicta laat zelf ook raw sharks vallen" },
+      { "slot": "Familiar", "item": "Een damage-familiar", "how": "Zelf maken met Summoning, voor zover je level het toelaat" }
+    ],
+    "mechanics": [
+      "Fase 1 (Vindicta, 200.000 LP): harde melee-aanvallen. Protect from Melee, of Deflect Melee met curses.",
+      "Hurricane: een melee-treffer op iedereen binnen twee vakjes die altijd raak is. Houd je LP hoog.",
+      "Vuurmuur: een lijn paars vuur die tot ongeveer 1.000 per tick doet. Loop of Surge er meteen uit.",
+      "Fase 2 vanaf 100.000 LP: ze rijdt op Gorvek. Zijn ranged-aanval raakt een 3x3-vak, is altijd raak en wordt elke ronde zwaarder: Resonance met een shield, of Protect from Ranged met Devotion of Debilitate.",
+      "Fly away: ze vliegt naar een hoek en legt vanaf daar een vuurmuur. Sluit de afstand met Surge of Barge zonder door het vuur te gaan.",
+      "Begin op normal mode. Hard mode (300.000 LP en daarna Gorvek los) is solo en een flinke stap zwaarder."
+    ],
+    "drops": {
+      "progress": [
+        { "item": "Unpowered necromantic seal of the Dragon Riders (1-2)", "rate": "altijd", "note": "Alleen tijdens Kili's Knowledge VII (T90 Necromancy) met minstens 25 greater necroplasm bij je" },
+        { "item": "Dragon bones (1, plus 150-250 noted)", "rate": "altijd; 150-250 met 8/64", "note": "Prayer-XP voor de stap naar 75 na fase 1" }
+      ],
+      "useful": [
+        { "item": "Raw shark (45-55, noted)", "rate": "7/64" },
+        { "item": "Uncut diamond (18-22, noted)", "rate": "7/64" },
+        { "item": "Black dragonhide (25-35, noted)", "rate": "6/64" },
+        { "item": "Magic logs (150-250, noted)", "rate": "5/64" },
+        { "item": "Dwarf weed seed (3-5)", "rate": "5/64" },
+        { "item": "Large plated rune salvage (8-12, noted)", "rate": "3/64", "note": "Alchen of disassemblen" }
+      ],
+      "rest": [
+        { "item": "Dragon Rider lance", "rate": "1/255", "note": "Tier 80 melee-wapen" },
+        { "item": "Crest of Zaros", "rate": "1/255", "note": "Maakt van dormant anima core armour tier 80 melee power-armour" },
+        { "item": "Dormant anima core helm, body en legs", "rate": "1/255 elk" },
+        { "item": "Zarosian essence", "rate": "1/64" },
+        { "item": "Coins (60.000-80.000)", "rate": "6/64" },
+        { "item": "Gorvek's head", "rate": "1/500" }
+      ]
+    },
+    "uncertain": [
+      "De strategiepagina heeft geen Necromancy-preset; de gear hierboven volgt de tier-aanbeveling en onze route. Hoe goed een eerste kill gaat met T70-armour is onzeker.",
+      "Prayer 71 met Ancient Curses (Deflect Melee) zit niet in de route; Ancient Curses vragen een eigen quest die hier niet is nagelopen.",
+      "Droprates in normal mode komen van een Jagex-ontwikkelaar (2017) en het Drop Log Project; sinds de Mid-Game Rebalance (juli 2026) beïnvloedt reputatie de unique-droprates niet meer.",
+      "Of de miniquest Tales of the God Wars (25 Heart-teleports, +500 reputatie) voor Ons Pap toegankelijk is, is niet gecontroleerd: hij vraagt ook wisps in Isafdar.",
+      "Welke Summoning-levels damage-familiars vragen, is niet gecontroleerd."
+    ],
+    "sources": [
+      { "title": "Vindicta & Gorvek", "url": "https://runescape.wiki/w/Vindicta_%26_Gorvek" },
+      { "title": "Vindicta & Gorvek/Strategies", "url": "https://runescape.wiki/w/Vindicta_%26_Gorvek/Strategies" },
+      { "title": "Heart of Gielinor", "url": "https://runescape.wiki/w/Heart_of_Gielinor" },
+      { "title": "Reputation (Heart of Gielinor)", "url": "https://runescape.wiki/w/Reputation_(Heart_of_Gielinor)" },
+      { "title": "Super attack", "url": "https://runescape.wiki/w/Super_attack" },
+      { "title": "Temporary skill boost", "url": "https://runescape.wiki/w/Temporary_skill_boost" },
+      { "title": "Tales of the God Wars (miniquest)", "url": "https://runescape.wiki/w/Tales_of_the_God_Wars_(miniquest)" },
+      { "title": "Kili's Knowledge VII", "url": "https://runescape.wiki/w/Kili%27s_Knowledge_VII" }
+    ]
+  }
+]

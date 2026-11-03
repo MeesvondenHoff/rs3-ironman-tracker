@@ -1,0 +1,877 @@
+/*
+  RS3 Ironman Tracker: "kaarttafel".
+  Een leistenen tafel onder een lamp: warm licht van boven, een vage hoogtekaart achter de kop,
+  panelen die op de tafel liggen en één perkamenten opdrachtbrief (de volgende stap) als het gedurfde vlak.
+  Een goudspoor loopt van start naar combat-klaar. Alegreya voor koppen, Alegreya Sans voor de rest.
+*/
+
+:root {
+  /* Palet */
+  --slate: #17202a;          /* leisteen: de tafel */
+  --slate-raised: #1f2a36;   /* panelen, invoervelden */
+  --slate-raised-2: #1b2530; /* onderkant van een paneel (verloop) */
+  --slate-well: #121a22;     /* verdiept: balken, tabbalk, velden */
+  --slate-edge: #0c1218;     /* rand van de tafel (vignet) */
+  --rule: #2f3d4b;
+  --rule-strong: #46586a;
+  --edge-light: rgb(232 224 204 / 0.08); /* dunne lichte bovenrand van panelen */
+  --text: #e8e0cc;
+  --muted: #9da7b1;
+  --gold: #d6ae5c;           /* RS3-interfacegoud */
+  --gold-bright: #e6c477;
+  --gold-deep: #9a7735;
+  --lamp: rgb(214 174 92 / 0.11); /* lamplicht boven de tafel */
+  --parchment: #ebdfc4;
+  --parchment-edge: #b9a57c;
+  --ink: #2a2016;
+  --ink-muted: #5e4e38;
+  --active: #e58c5a;         /* smidsvuur: actief spelen */
+  --afk: #8db4d8;            /* maanlicht: AFK */
+  --moss: #93ba7e;           /* gehaald */
+  --red: #ee7a6e;
+  --focus: var(--gold);
+
+  /* Vorm: hoe hoger in de hiërarchie, hoe ronder; de perkamentkaart blijft scherp. */
+  --r-sheet: 3px;
+  --r-ctl: 6px;
+  --r-panel: 10px;
+  --r-pill: 999px;
+
+  /* Ritme (veelvouden van 8) */
+  --s1: 8px;
+  --s2: 16px;
+  --s3: 24px;
+  --s4: 40px;
+  --s5: 56px;
+
+  /* Type */
+  --serif: "Alegreya", Georgia, "Times New Roman", serif;
+  --sans: "Alegreya Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --t-xs: 0.8125rem;   /* 13 */
+  --t-sm: 0.875rem;    /* 14 */
+  --t-md: 1rem;        /* 16 */
+  --t-lg: 1.25rem;     /* 20 */
+  --t-xl: 1.5625rem;   /* 25 */
+  --t-2xl: 1.9375rem;  /* 31 */
+  --t-3xl: 2.4375rem;  /* 39 */
+
+  --gutter: clamp(16px, 4vw, 40px);
+  --max: 1160px;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+
+  color-scheme: dark;
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+  font-variant-numeric: lining-nums;
+  -webkit-text-size-adjust: 100%;
+}
+
+* { box-sizing: border-box; }
+
+/* De tafel: lamplicht van boven, donkere randen, en een heel fijne korrel zodat het vlak niet egaal is. */
+body {
+  margin: 0; color: var(--text); min-height: 100vh;
+  background-color: var(--slate);
+  background-image:
+    radial-gradient(1200px 560px at 50% -160px, var(--lamp), transparent 72%),
+    radial-gradient(140% 100% at 50% 30%, transparent 58%, var(--slate-edge) 100%);
+  background-attachment: fixed;
+}
+body::before {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3 { margin: 0; font-family: var(--serif); font-weight: 700; line-height: 1.15; text-wrap: balance; }
+p { margin: 0; }
+a { color: var(--gold); text-underline-offset: 2px; }
+a:hover { color: var(--gold-bright); }
+code { font-family: inherit; background: var(--slate-well); padding: 0 5px; border-radius: 3px; }
+strong { font-weight: 700; }
+.muted { color: var(--muted); }
+.gain { color: var(--moss); }
+.yes { color: var(--moss); }
+.nowrap { white-space: nowrap; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.icon { width: 16px; height: 16px; flex: none; }
+
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 2px; }
+
+/* Paneel: een vlak dat op de tafel ligt. Geen zachte grijze schaduw, wel een lichte bovenrand. */
+.panel {
+  background: linear-gradient(180deg, var(--slate-raised), var(--slate-raised-2));
+  border: 1px solid rgb(70 88 106 / 0.45);
+  border-radius: var(--r-panel);
+  box-shadow: inset 0 1px 0 var(--edge-light);
+}
+
+/* ---------- Knoppen en velden ---------- */
+
+.btn {
+  font: inherit; font-weight: 500; color: var(--text);
+  background: transparent; border: 1px solid var(--rule-strong); border-radius: var(--r-ctl);
+  min-height: 40px; padding: 7px 14px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: border-color 140ms, background-color 140ms, color 140ms;
+}
+.btn:hover:not(:disabled) { border-color: var(--gold); }
+.btn:disabled { opacity: 0.5; cursor: default; }
+.btn-gold {
+  background: linear-gradient(180deg, var(--gold-bright), var(--gold)); border-color: var(--gold);
+  color: var(--ink); font-weight: 700;
+  box-shadow: inset 0 1px 0 rgb(255 245 220 / 0.45), 0 1px 0 rgb(0 0 0 / 0.35);
+}
+.btn-gold:hover:not(:disabled) { background: var(--gold-bright); border-color: var(--gold-bright); }
+.btn-gold:disabled { opacity: 0.75; }
+.btn-refresh .icon { width: 15px; height: 15px; }
+.btn-refresh.is-loading .icon { animation: spin 900ms linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.btn-danger { color: var(--red); border-color: color-mix(in srgb, var(--red) 55%, transparent); }
+.btn-danger:hover:not(:disabled) { border-color: var(--red); }
+
+.linklike {
+  font: inherit; color: var(--text); background: none; border: 0; padding: 0; cursor: pointer;
+  text-align: left; text-decoration: underline; text-decoration-color: var(--rule-strong); text-underline-offset: 3px;
+  transition: text-decoration-color 140ms, color 140ms;
+}
+.linklike:hover { text-decoration-color: var(--gold); color: var(--parchment); }
+
+input:not([type]), input[type="search"], select {
+  font: inherit; color: var(--text); background: var(--slate-well);
+  border: 1px solid var(--rule-strong); border-radius: var(--r-ctl); min-height: 40px; padding: 6px 10px;
+}
+input:not([type]):hover, input[type="search"]:hover, select:hover { border-color: var(--muted); }
+
+/* Eigen vinkje: goud vlak met een inkt-vinkje; de native input blijft (id's, labels, toetsenbord). */
+input[type="checkbox"] {
+  appearance: none; -webkit-appearance: none;
+  width: 18px; height: 18px; margin: 0; flex: none; cursor: pointer;
+  border: 1.5px solid var(--rule-strong); border-radius: 4px; background: var(--slate-well);
+  display: inline-grid; place-content: center;
+  transition: background-color 160ms, border-color 160ms, transform 160ms var(--ease);
+}
+input[type="checkbox"]:hover:not(:disabled) { border-color: var(--gold); }
+input[type="checkbox"]:checked {
+  background: var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.3l3 3 6-6.6' fill='none' stroke='%232a2016' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 13px no-repeat;
+  border-color: var(--gold);
+}
+input[type="checkbox"]:active:not(:disabled) { transform: scale(0.88); }
+input[type="checkbox"]:disabled { cursor: default; }
+input[type="checkbox"]:disabled:checked { background-color: var(--gold-deep); border-color: var(--gold-deep); }
+.toggle { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; min-height: 40px; }
+
+/* ---------- Kop en navigatie ---------- */
+
+.app { position: relative; z-index: 1; max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter) 80px; }
+
+.masthead {
+  position: relative;
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+  gap: var(--s2) var(--s4); padding: var(--s4) 0 var(--s3);
+}
+/* Hoogtelijnen achter de kop: de kaart op de tafel. */
+.masthead::before {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  right: 0; top: -30px; width: min(560px, 80%); height: 280px; opacity: 0.9;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 260' fill='none' stroke='%23d6ae5c' stroke-opacity='.11' stroke-width='1.2'%3E%3Cpath d='M30 150C40 70 160 22 270 34S500 84 506 152 390 252 268 244 20 230 30 150Z'/%3E%3Cpath d='M70 150C80 92 175 56 270 64S460 100 466 152 372 220 268 214 60 210 70 150Z'/%3E%3Cpath d='M112 150C120 110 192 86 270 92S420 114 426 150 354 194 268 190 104 190 112 150Z'/%3E%3Cpath d='M156 148C164 122 212 108 268 112S378 128 382 150 326 172 268 170 148 172 156 148Z'/%3E%3Cpath d='M204 147C210 132 238 126 266 128S330 136 332 148 300 158 266 157 198 160 204 147Z'/%3E%3Cpath d='M248 146C252 140 262 138 270 139S290 142 290 147 280 152 270 152 244 152 248 146Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 35%);
+  mask-image: linear-gradient(90deg, transparent, #000 35%);
+}
+.ident { display: flex; align-items: center; gap: var(--s2); min-width: 0; }
+.helm { width: 52px; height: 52px; flex: none; filter: drop-shadow(0 4px 10px rgb(0 0 0 / 0.45)); }
+.ident-text { display: grid; gap: 6px; min-width: 0; }
+.ident h1 { font-size: var(--t-3xl); color: var(--parchment); letter-spacing: 0.005em; line-height: 1; }
+.ident-sub { color: var(--muted); }
+
+/* Kerncijfers als feitenrij: groot getal, klein label erachter, gescheiden door dunne lijnen. */
+.ident-facts { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; row-gap: 4px; }
+.ident-facts > div { display: flex; flex-direction: row-reverse; align-items: baseline; gap: 5px; padding: 0 14px; }
+.ident-facts > div:first-child { padding-left: 0; }
+.ident-facts > div + div { border-left: 1px solid var(--rule-strong); }
+.ident-facts dt { color: var(--muted); font-size: var(--t-sm); }
+.ident-facts dd { margin: 0; font-weight: 700; font-size: var(--t-lg); line-height: 1; color: var(--text); font-variant-numeric: lining-nums tabular-nums; }
+.ident-facts .ident-mode dd { font-family: var(--serif); font-style: italic; font-weight: 500; color: var(--gold); }
+
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.refresh { display: flex; align-items: center; gap: 12px; }
+.updated { color: var(--muted); font-size: var(--t-sm); line-height: 1.3; max-width: 16ch; }
+
+.account-switch { position: relative; }
+.account-switch summary {
+  cursor: pointer; color: var(--muted); list-style: none; min-height: 40px; display: flex; align-items: center;
+  text-decoration: underline; text-decoration-color: var(--rule-strong); text-underline-offset: 3px;
+}
+.account-switch summary::-webkit-details-marker { display: none; }
+.account-switch summary:hover { color: var(--text); }
+.account-switch form {
+  position: absolute; right: 0; top: calc(100% + 6px); z-index: 5; width: min(320px, calc(100vw - 32px));
+  background: var(--slate-raised); border: 1px solid var(--rule-strong); border-radius: var(--r-panel); padding: 14px;
+  box-shadow: inset 0 1px 0 var(--edge-light), 0 18px 36px -14px rgb(0 0 0 / 0.65);
+}
+.account-switch label { display: block; font-size: var(--t-sm); color: var(--muted); margin-bottom: 6px; }
+.account-row { display: flex; gap: 8px; }
+.account-row input { flex: 1; min-width: 0; }
+
+/* Tabbalk: een verdiepte goot met het actieve tabblad als opgetild vlak met een gouden streep. */
+.tabs {
+  display: flex; width: fit-content; max-width: 100%; gap: 2px; padding: 4px;
+  background: rgb(18 26 34 / 0.85); border: 1px solid var(--rule); border-radius: 12px;
+  box-shadow: inset 0 1px 2px rgb(0 0 0 / 0.35);
+  overflow-x: auto; scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  position: relative;
+  font: inherit; font-size: var(--t-md); font-weight: 500; color: var(--muted);
+  background: transparent; border: 1px solid transparent; border-radius: 8px;
+  padding: 8px 18px; min-height: 40px; cursor: pointer; white-space: nowrap;
+  transition: color 160ms, background-color 160ms;
+}
+.tab:hover { color: var(--text); background: rgb(255 255 255 / 0.03); }
+.tab[aria-current="page"] {
+  color: var(--parchment); font-weight: 700;
+  background: linear-gradient(180deg, #273444, var(--slate-raised));
+  border-color: rgb(70 88 106 / 0.6);
+  box-shadow: inset 0 1px 0 var(--edge-light), 0 2px 6px -2px rgb(0 0 0 / 0.5);
+}
+.tab[aria-current="page"]::after {
+  content: ""; position: absolute; left: 18px; right: 18px; bottom: 5px; height: 2px; border-radius: 1px; background: var(--gold);
+}
+
+main { padding-top: var(--s4); }
+.tab-panel { animation: panel-in 240ms var(--ease) both; }
+@keyframes panel-in { from { opacity: 0; transform: translateY(6px); } }
+
+/* ---------- Meldingen ---------- */
+
+.notices { display: grid; gap: 10px; margin-top: var(--s2); }
+.notices:empty { display: none; }
+.route .notices { margin: 0 0 var(--s3); }
+.notice {
+  background: var(--slate-raised); border: 1px solid rgb(70 88 106 / 0.45); border-left: 3px solid var(--muted);
+  border-radius: 4px var(--r-ctl) var(--r-ctl) 4px; box-shadow: inset 0 1px 0 var(--edge-light);
+  padding: 12px 16px; display: grid; gap: 4px; max-width: 72ch;
+}
+.n-error { border-left-color: var(--red); }
+.n-warn { border-left-color: var(--active); }
+.n-info { border-left-color: var(--afk); }
+.notice-title { font-weight: 700; }
+.notice-body { display: grid; gap: 4px; }
+.notice-raw { color: var(--muted); font-size: var(--t-sm); }
+.notice-action { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 8px; }
+.quiet-info { color: var(--muted); font-size: var(--t-sm); }
+
+.empty { max-width: 56ch; padding: var(--s3) 0; display: grid; gap: 12px; justify-items: start; }
+.empty h2 { font-size: var(--t-xl); }
+.empty-inline { padding: 12px 0; }
+.empty-line { color: var(--muted); max-width: 64ch; }
+
+/* ---------- Gedeelde stukjes ---------- */
+
+.style-mark { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.style-mark .glyph { width: 9px; height: 9px; flex: none; }
+.s-active .glyph { background: var(--active); transform: rotate(45deg); }
+.s-afk .glyph { border: 2px solid var(--afk); border-radius: 50%; }
+.s-mixed .glyph { border-radius: 50%; background: linear-gradient(90deg, var(--active) 50%, var(--afk) 50%); }
+
+.bar { position: relative; height: 6px; background: var(--slate-well); border-radius: 3px; box-shadow: inset 0 0 0 1px var(--rule); }
+.bar .fill { height: 100%; background: var(--muted); border-radius: 3px; transition: width 400ms var(--ease); }
+.bar-gold .fill { background: linear-gradient(90deg, var(--gold-deep), var(--gold)); }
+.bar-moss .fill { background: var(--moss); }
+.bar-mark {
+  position: absolute; top: -3px; bottom: -3px; width: 2px; margin-left: -1px; border-radius: 1px;
+  background: var(--parchment); box-shadow: 0 0 0 1px var(--slate-raised);
+}
+
+/* Rustige lege cel: een kort lijntje in plaats van een streepje. */
+.nil { display: inline-block; width: 12px; height: 1px; vertical-align: middle; background: var(--rule-strong); }
+
+.checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.checks.inline { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.check { display: flex; gap: 6px; align-items: baseline; color: var(--muted); }
+.check.met { color: var(--moss); }
+.check-glyph { width: 1em; flex: none; text-align: center; }
+
+.here { font-family: var(--serif); font-style: italic; font-weight: 500; color: var(--gold); font-size: var(--t-sm); white-space: nowrap; }
+
+.why summary { cursor: pointer; color: var(--gold); width: fit-content; }
+.why[open] summary { margin-bottom: 4px; }
+
+.md p { margin: 6px 0; }
+.md ul, .md ol { margin: 6px 0; padding-left: 22px; }
+.md li { margin: 2px 0; }
+.md h4, .md h5, .md h6 { font-family: var(--serif); margin: 10px 0 4px; font-size: var(--t-md); }
+
+/* Meta-kenmerken van een stap: klein teken plus tekst, als rustige badge. */
+.badge {
+  display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+  padding: 2px 10px 2px 8px; min-height: 26px; border-radius: var(--r-pill);
+  background: rgb(255 255 255 / 0.035); border: 1px solid rgb(70 88 106 / 0.55);
+  font-size: var(--t-sm); color: var(--text);
+}
+.badge .icon { width: 14px; height: 14px; color: var(--gold); }
+.badge-style { padding-left: 10px; }
+.badge-quiet { background: none; border-color: transparent; color: var(--muted); padding-left: 2px; }
+.badge-quiet .icon { color: var(--muted); }
+
+.pill {
+  display: inline-flex; align-items: center; gap: 7px; white-space: nowrap;
+  padding: 1px 10px 1px 8px; border-radius: var(--r-pill); font-size: var(--t-sm); font-weight: 500;
+  border: 1px solid transparent;
+}
+.pill-dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; flex: none; }
+.q-COMPLETED { color: var(--moss); background: rgb(147 186 126 / 0.12); border-color: rgb(147 186 126 / 0.3); }
+.q-STARTED { color: var(--active); background: rgb(229 140 90 / 0.12); border-color: rgb(229 140 90 / 0.32); }
+.q-STARTED .pill-dot { background: linear-gradient(90deg, currentColor 50%, transparent 50%); box-shadow: inset 0 0 0 1.5px currentColor; }
+.q-NOT_STARTED { color: var(--muted); border-color: var(--rule-strong); }
+.q-NOT_STARTED .pill-dot { background: none; box-shadow: inset 0 0 0 1.5px currentColor; }
+
+/* ---------- Vanavond ---------- */
+
+.tonight { display: grid; gap: var(--s5); }
+.tonight-top { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(260px, 1fr); gap: var(--s4) 32px; align-items: start; }
+
+/* De opdrachtbrief: het enige lichte vlak in de app. */
+.sheet {
+  --focus: var(--ink);
+  --active: #953f1c;
+  --afk: #2f5d86;
+  --moss: #476b32;
+  --muted: var(--ink-muted);
+  --gold: #7a5717;
+  position: relative;
+  background:
+    radial-gradient(120% 90% at 20% 0%, rgb(255 250 235 / 0.55), transparent 60%),
+    radial-gradient(140% 120% at 50% 50%, transparent 62%, rgb(150 120 70 / 0.22) 100%),
+    var(--parchment);
+  color: var(--ink);
+  border-radius: var(--r-sheet); padding: clamp(22px, 4vw, 40px);
+  outline: 1px solid var(--parchment-edge); outline-offset: -8px;
+  box-shadow:
+    0 2px 0 rgb(0 0 0 / 0.25),
+    0 30px 60px -28px rgb(0 0 0 / 0.85),
+    0 0 80px -20px rgb(214 174 92 / 0.18);
+  display: grid; gap: 18px; max-width: 72ch;
+}
+.tonight-top .sheet { max-width: none; }
+.sheet a { color: #6e4b0e; }
+.sheet code { background: rgb(42 32 22 / 0.08); }
+.sheet input[type="checkbox"] { border-color: var(--ink-muted); background-color: transparent; }
+.sheet-kicker { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: var(--t-lg); color: var(--ink-muted); }
+.sheet-title { font-size: clamp(var(--t-2xl), 4.2vw, var(--t-3xl)); margin-top: -10px; color: var(--ink); }
+.sheet-facts { margin: 0; display: flex; flex-wrap: wrap; gap: 10px 32px; padding-bottom: 16px; border-bottom: 1px solid rgb(42 32 22 / 0.18); }
+.sheet-facts dt { font-size: var(--t-sm); color: var(--ink-muted); }
+.sheet-facts dd { margin: 0; font-weight: 500; }
+.sheet-blocked { border-left: 3px solid var(--active); padding-left: 12px; display: grid; gap: 4px; }
+.sheet-block { display: grid; gap: 4px; }
+.sheet-label { font-weight: 500; }
+.sheet-detail { max-width: 64ch; }
+.sheet-detail .md p:first-child { margin-top: 0; }
+.sheet-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding-top: 4px; }
+.sheet-undo { border-top: 1px solid rgb(42 32 22 / 0.18); padding-top: 12px; animation: undo-in 360ms var(--ease) both; }
+@keyframes undo-in { from { opacity: 0; transform: translateY(-4px); } }
+.sheet .linklike { color: var(--ink); text-decoration-color: var(--ink-muted); }
+.sheet-note { color: var(--ink-muted); font-style: italic; font-family: var(--serif); }
+.btn-ink { background: var(--ink); border-color: var(--ink); color: var(--parchment); box-shadow: 0 1px 0 rgb(255 250 235 / 0.4); }
+.btn-ink:hover:not(:disabled) { background: #3d2f20; border-color: #3d2f20; }
+.btn-ink-quiet { color: var(--ink); border-color: rgb(42 32 22 / 0.4); }
+.btn-ink-quiet:hover:not(:disabled) { border-color: var(--ink); }
+
+.phase-col {
+  display: grid; gap: 12px; padding: var(--s3);
+  background: linear-gradient(180deg, var(--slate-raised), var(--slate-raised-2));
+  border: 1px solid rgb(70 88 106 / 0.45); border-radius: var(--r-panel);
+  box-shadow: inset 0 1px 0 var(--edge-light);
+}
+.phase-col-no { color: var(--gold); font-family: var(--serif); font-style: italic; font-weight: 500; font-size: var(--t-lg); }
+.phase-col h2 { font-size: var(--t-xl); margin-top: -6px; }
+.phase-col .bar { height: 8px; }
+.phase-col-count { color: var(--muted); }
+.phase-col-count strong { color: var(--text); font-weight: 500; }
+.phase-col h3 { font-size: var(--t-md); margin-top: 12px; padding-top: 16px; border-top: 1px solid var(--rule); }
+.targets { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.targets li {
+  display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: baseline;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.targets .bar { grid-column: 1 / -1; height: 5px; }
+.targets .bar .fill { background: linear-gradient(90deg, var(--gold-deep), var(--gold)); }
+.targets .bar.bar-moss .fill { background: var(--moss); }
+.t-of { color: var(--muted); }
+.targets li.met .t-skill::after { content: " ✓"; color: var(--moss); }
+
+/* Het spoor */
+.trail-wrap { display: grid; gap: var(--s3); }
+.trail-head { display: grid; gap: 4px; }
+.trail-head h2 { font-size: var(--t-xl); }
+.trail-head p { color: var(--muted); max-width: 72ch; }
+.trail-head p:nth-child(2) { color: var(--text); }
+.trail-goal { font-style: italic; }
+
+.trail { list-style: none; margin: 0; padding: 0; display: flex; align-items: flex-start; }
+.leg {
+  flex: var(--w) 1 104px; min-width: 0;
+  display: grid; grid-template-columns: 32px 1fr; grid-template-rows: 32px auto; align-items: center;
+}
+.waypoint {
+  width: 32px; height: 32px; border-radius: 50%;
+  display: grid; place-items: center; z-index: 1;
+  font-family: var(--sans); font-weight: 700; font-size: var(--t-sm);
+  border: 2px solid var(--rule-strong); color: var(--muted); background: var(--slate);
+}
+.leg-track {
+  height: 6px; margin: 0 3px; position: relative; overflow: hidden; border-radius: 3px;
+  background: repeating-linear-gradient(90deg, var(--rule-strong) 0 6px, transparent 6px 11px);
+}
+.leg-fill {
+  position: absolute; inset: 0 auto 0 0; border-radius: 3px;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold-bright));
+  box-shadow: 0 0 10px rgb(214 174 92 / 0.45);
+  transform-origin: left; animation: draw 800ms var(--ease) both;
+  animation-delay: calc(var(--i, 0) * 110ms + 150ms);
+}
+@keyframes draw { from { transform: scaleX(0); } }
+.leg-label { grid-column: 1 / -1; display: grid; gap: 0; padding: 10px 12px 0 0; min-width: 0; }
+.leg-name { font-weight: 500; hyphens: auto; line-height: 1.25; }
+.leg-meta { color: var(--muted); font-size: var(--t-sm); display: flex; flex-wrap: wrap; gap: 0 8px; font-variant-numeric: lining-nums tabular-nums; }
+
+.leg-done .waypoint { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+.leg-done .leg-track, .leg-partial .leg-track, .leg-current .leg-track { background: rgb(154 119 53 / 0.35); }
+.leg-current .waypoint {
+  border-color: var(--gold); color: var(--gold);
+  box-shadow: 0 0 0 4px var(--slate), 0 0 0 5px var(--gold-deep), 0 0 22px 2px rgb(214 174 92 / 0.35);
+}
+.leg-current .leg-name { color: var(--parchment); }
+.leg-ahead .leg-name { color: var(--muted); }
+
+.leg-end { flex: 0 0 auto; display: grid; grid-template-rows: 32px auto; justify-items: start; align-items: center; }
+.waypoint-end {
+  width: 18px; height: 18px; margin-left: 7px; border-radius: 2px; transform: rotate(45deg);
+  border: 2px solid var(--gold); background: var(--slate);
+}
+.leg-end .leg-label { padding-right: 0; white-space: nowrap; }
+.leg-end .leg-name { font-family: var(--serif); color: var(--gold); }
+
+/* Daarna, Laatst in de game en Account: één paneel met drie kolommen. */
+.tonight-bottom { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: var(--s1) 0; }
+.col { padding: var(--s3) 28px; display: grid; gap: 14px; align-content: start; }
+.col + .col { border-left: 1px solid var(--rule); }
+.col h2 { font-size: var(--t-lg); color: var(--gold); }
+.col h3 { font-size: var(--t-md); }
+
+.mini-steps { margin: 0; padding: 0 0 0 20px; display: grid; gap: 12px; }
+.mini-steps li::marker { color: var(--gold-deep); font-weight: 700; font-variant-numeric: lining-nums tabular-nums; }
+.mini-meta { display: flex; flex-wrap: wrap; gap: 2px 14px; color: var(--muted); font-size: var(--t-sm); margin-top: 2px; }
+.blocked-tag { color: var(--red); }
+.alt { display: grid; gap: 4px; padding-top: 14px; border-top: 1px dashed var(--rule-strong); }
+.alt h3 { font-style: italic; font-weight: 500; color: var(--parchment); }
+
+.acts { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.acts li { display: grid; padding: 8px 0; }
+.acts li + li { border-top: 1px solid rgb(47 61 75 / 0.6); }
+.acts li:first-child { padding-top: 0; }
+.act-date { color: var(--muted); font-size: var(--t-sm); }
+
+.facts { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; }
+.facts dt { color: var(--muted); font-size: var(--t-sm); }
+.facts dd { margin: 0; font-size: var(--t-lg); font-weight: 500; font-variant-numeric: lining-nums tabular-nums; }
+.facts dd .muted { font-size: var(--t-sm); font-weight: 400; }
+
+/* ---------- Paginakoppen (route, skills, quests, logboek) ---------- */
+
+.page-head { display: grid; gap: 6px; margin-bottom: var(--s3); max-width: 80ch; }
+.page-head h2 { font-size: var(--t-2xl); }
+.page-sub { color: var(--muted); }
+.page-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; margin-top: 8px; }
+
+/* ---------- Route ---------- */
+
+.issues { max-width: 72ch; }
+.issues summary { cursor: pointer; color: var(--active); width: fit-content; }
+.issues ul { margin: 8px 0 0; padding-left: 20px; color: var(--muted); }
+
+.phase {
+  margin-bottom: 12px;
+  background: linear-gradient(180deg, var(--slate-raised), var(--slate-raised-2));
+  border: 1px solid rgb(70 88 106 / 0.45); border-radius: var(--r-panel);
+  box-shadow: inset 0 1px 0 var(--edge-light);
+}
+.phase-current { border-color: rgb(154 119 53 / 0.7); box-shadow: inset 0 2px 0 var(--gold-deep); }
+.phase-done:not([open]) { background: rgb(31 42 54 / 0.45); }
+.phase > summary {
+  list-style: none; cursor: pointer; border-radius: var(--r-panel);
+  display: grid; grid-template-columns: 34px minmax(0, 1fr) minmax(170px, 240px) 16px; gap: 4px 16px; align-items: center;
+  padding: 18px 20px;
+}
+.phase > summary::-webkit-details-marker { display: none; }
+/* Open of dicht: een klein winkeltje dat meedraait. */
+.phase > summary::after {
+  content: ""; width: 8px; height: 8px; justify-self: end; margin-top: -4px;
+  border-right: 1.5px solid var(--muted); border-bottom: 1.5px solid var(--muted);
+  transform: rotate(45deg); transition: transform 200ms var(--ease);
+}
+.phase[open] > summary::after { transform: rotate(225deg); margin-top: 4px; }
+.phase > summary:hover .phase-name { color: var(--parchment); }
+.phase > summary:hover::after { border-color: var(--gold); }
+.phase-no {
+  width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
+  font-family: var(--sans); font-weight: 700; font-size: var(--t-sm);
+  border: 2px solid var(--rule-strong); color: var(--muted); background: var(--slate);
+}
+.phase-current .phase-no { border-color: var(--gold); color: var(--gold); box-shadow: 0 0 14px rgb(214 174 92 / 0.3); }
+.phase-done .phase-no { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+.phase-name { font-family: var(--serif); font-weight: 700; font-size: var(--t-lg); line-height: 1.25; display: flex; flex-wrap: wrap; gap: 0 12px; align-items: baseline; }
+.phase-sum { display: grid; gap: 6px; color: var(--muted); font-size: var(--t-sm); font-variant-numeric: lining-nums tabular-nums; }
+.phase-body { padding: 4px 20px 24px 70px; display: grid; gap: 14px; border-top: 1px solid rgb(47 61 75 / 0.7); padding-top: 18px; }
+.phase-summary { max-width: 72ch; }
+.phase-summary .md p:first-child { margin-top: 0; }
+.phase-facts { color: var(--muted); }
+.phase-facts:empty { display: none; }
+.phase-targets { display: grid; gap: 6px; }
+.phase-targets h3 { font-size: var(--t-md); }
+
+.steps { list-style: none; margin: 8px 0 0 -14px; padding: 0; position: relative; }
+.steps::before { content: ""; position: absolute; left: 21px; top: 24px; bottom: 24px; width: 1px; background: var(--rule-strong); }
+.step {
+  position: relative;
+  display: grid; grid-template-columns: 16px minmax(0, 1fr); gap: 0 16px; padding: 14px 14px;
+  border-radius: 8px; scroll-margin: 96px;
+  transition: background-color 160ms;
+}
+.step:hover { background: rgb(255 255 255 / 0.025); }
+.step + .step::before {
+  content: ""; position: absolute; top: 0; left: 46px; right: 14px; height: 1px; background: rgb(47 61 75 / 0.6);
+}
+.step:focus { outline: none; }
+.step:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.step-marker {
+  position: relative; z-index: 1; width: 11px; height: 11px; margin: 8px 0 0 2px; transform: rotate(45deg);
+  background: var(--slate-raised); border: 2px solid var(--rule-strong);
+}
+.step.done .step-marker { background: var(--moss); border-color: var(--moss); }
+.step.blocked .step-marker { border-style: dashed; }
+
+/* De volgende stap: gouden rail links en een zweem lamplicht. */
+.step.is-next {
+  background: linear-gradient(90deg, rgb(214 174 92 / 0.12), rgb(214 174 92 / 0.03) 55%, transparent);
+  box-shadow: inset 3px 0 0 var(--gold);
+  border-radius: 2px 8px 8px 2px;
+}
+.step.is-next::before, .step.is-next + .step::before { display: none; }
+.step.is-next .step-marker { background: var(--gold); border-color: var(--gold); box-shadow: 0 0 0 3px var(--slate-raised), 0 0 0 4px var(--gold-deep), 0 0 14px rgb(214 174 92 / 0.5); }
+
+.step-main { display: grid; gap: 8px; min-width: 0; }
+.step-head { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; }
+.step-title { font-weight: 500; font-size: 1.0625rem; cursor: pointer; }
+.step.done .step-title { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--rule-strong); }
+.step.is-next .step-title { color: var(--parchment); font-weight: 700; }
+.step input:disabled + .step-title { cursor: default; }
+.step-id { margin-left: auto; color: var(--muted); font-size: var(--t-xs); font-variant-numeric: tabular-nums; }
+.step-meta { display: flex; flex-wrap: wrap; gap: 6px 6px; padding-left: 28px; }
+.step-main > .checks, .step-blocked, .step-detail, .step-main > .why, .sources { padding-left: 28px; }
+.step-blocked { color: var(--text); border-left: 3px solid var(--red); padding-left: 10px; margin-left: 28px; font-size: var(--t-sm); }
+.step-blocked strong { color: var(--red); }
+.step.done .step-meta, .step.done .step-detail, .step.done .sources, .step.done .why { opacity: 0.55; }
+.step.done .badge .icon { color: var(--muted); }
+.step-detail { max-width: 72ch; }
+.step-detail .md p:first-child { margin-top: 0; }
+.sources { font-size: var(--t-sm); color: var(--muted); }
+.sources summary { color: var(--muted); }
+.sources summary:hover { color: var(--gold); }
+.sources p { margin: 0; }
+
+/* Afvinken: de ruit springt even op en er gaat een gouden ring van af. */
+.step.just-done .step-marker { animation: marker-pop 520ms var(--ease); }
+.step.just-done .step-marker::after {
+  content: ""; position: absolute; inset: -4px; border: 2px solid var(--gold); opacity: 0;
+  animation: marker-ring 700ms var(--ease);
+}
+.step.just-done .step-title { animation: title-settle 600ms var(--ease); }
+@keyframes marker-pop {
+  0% { transform: rotate(45deg) scale(0.6); }
+  55% { transform: rotate(45deg) scale(1.45); }
+  100% { transform: rotate(45deg) scale(1); }
+}
+@keyframes marker-ring {
+  0% { opacity: 0.9; transform: scale(0.6); }
+  100% { opacity: 0; transform: scale(2.4); }
+}
+@keyframes title-settle { from { color: var(--moss); } }
+
+/* ---------- Tabellen ---------- */
+
+.table-wrap {
+  overflow-x: auto;
+  background: linear-gradient(180deg, var(--slate-raised), var(--slate-raised-2));
+  border: 1px solid rgb(70 88 106 / 0.45); border-radius: var(--r-panel);
+  box-shadow: inset 0 1px 0 var(--edge-light);
+}
+.log-section .table-wrap { background: none; border: 0; box-shadow: none; border-radius: 0; }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: lining-nums tabular-nums; }
+th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid rgb(47 61 75 / 0.75); vertical-align: middle; }
+th:first-child, td:first-child { padding-left: 20px; }
+th:last-child, td:last-child { padding-right: 20px; }
+thead th {
+  color: var(--muted); font-weight: 500; font-size: var(--t-sm);
+  border-bottom-color: var(--rule-strong); vertical-align: bottom; padding-top: 14px;
+}
+tbody th { font-weight: 500; }
+tbody tr:last-child > * { border-bottom: 0; }
+tfoot th, tfoot td { font-weight: 700; border-bottom: 0; }
+tfoot tr:first-child th, tfoot tr:first-child td { border-top: 1px solid var(--rule-strong); }
+.num { text-align: right; white-space: nowrap; }
+.data tbody tr:not(.group-row):not(.quiet-row) { transition: background-color 120ms; }
+.data tbody tr:not(.group-row):not(.quiet-row):hover { background: rgb(214 174 92 / 0.055); }
+.data tbody tr:not(.group-row):not(.quiet-row):hover > th { color: var(--parchment); }
+
+.skills { min-width: 700px; }
+.skills .of { color: var(--muted); font-size: var(--t-sm); }
+.skills .lvl { font-weight: 700; font-size: 1.0625rem; }
+.skills .lvl .of { font-weight: 400; }
+.skills .col-prog { min-width: 200px; width: 30%; }
+/* Groepskop: teken, naam en een samenvatting, met wat lucht boven. */
+.group-row th {
+  padding-top: 22px; padding-bottom: 8px; border-bottom: 1px solid rgb(154 119 53 / 0.45);
+  font-weight: 400;
+}
+.skill-group:first-of-type .group-row th { padding-top: 14px; }
+.group-title {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--serif); font-weight: 700; font-size: var(--t-md); color: var(--parchment);
+}
+.group-title .icon { color: var(--gold); width: 17px; height: 17px; }
+.group-sum { margin-left: 12px; color: var(--muted); font-size: var(--t-sm); }
+.sg-goal { background: rgb(214 174 92 / 0.04); }
+.prog { display: grid; gap: 4px; }
+.prog-text { color: var(--muted); font-size: var(--t-sm); line-height: 1.3; }
+.maxed { color: var(--gold); font-weight: 500; font-family: var(--serif); font-style: italic; }
+.src-mark { color: var(--muted); margin-left: 2px; }
+.goal-tag { margin-left: 10px; font-family: var(--serif); font-style: italic; color: var(--gold); font-weight: 500; font-size: var(--t-sm); }
+tr.goal th { color: var(--parchment); }
+tr.goal-met .goal-tag { color: var(--moss); }
+.footnote { color: var(--muted); font-size: var(--t-sm); margin-top: 14px; max-width: 80ch; }
+
+.filters { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 20px; margin-bottom: var(--s2); }
+.field { display: grid; gap: 4px; }
+.field > span { font-size: var(--t-sm); color: var(--muted); }
+.field input { min-width: 220px; }
+.filter-count { color: var(--muted); font-size: var(--t-sm); margin-left: auto; min-height: 40px; display: flex; align-items: center; }
+.quests { min-width: 860px; }
+.qstatus { white-space: nowrap; }
+.quests .row-done > th { color: var(--text); }
+.route-ids { color: var(--muted); font-size: var(--t-sm); }
+.quests .ql-cell { white-space: nowrap; }
+
+/* Questgidsen: kleine externe links naar de RS3-wiki (Quick guide, anders de questpagina). */
+.quest-link { display: inline-flex; align-items: center; gap: 4px; font-size: var(--t-sm); }
+.quest-link .icon { width: 13px; height: 13px; flex: none; }
+.quest-link.ql-wiki { color: var(--muted); }
+.quest-link.ql-wiki:hover { color: var(--gold); }
+.ql-kind { color: var(--muted); }
+.quest-guides { font-size: var(--t-sm); color: var(--muted); line-height: 1.7; }
+.quest-guides .quest-link { display: inline; }
+.quest-guides .quest-link .icon { vertical-align: -2px; margin-right: 3px; }
+.step-qg { padding-left: 28px; }
+.step.done .step-qg { opacity: 0.55; }
+.sheet-qg { margin-top: -6px; color: var(--ink-muted); }
+.sheet .quest-link.ql-wiki, .sheet .ql-kind { color: var(--ink-muted); }
+
+/* ---------- Logboek ---------- */
+
+.logbook { display: grid; gap: var(--s3); }
+.logbook .page-head { margin-bottom: 0; }
+.log-section { display: grid; gap: 12px; padding: var(--s3); }
+.log-section > .table-wrap { margin: 0 calc(-1 * var(--s3)); }
+.log-section h3 { font-size: var(--t-lg); }
+.log-section th:first-child, .log-section td:first-child { padding-left: var(--s3); }
+.gains { max-width: 760px; }
+.quiet-row td { color: var(--muted); font-size: var(--t-sm); font-style: italic; }
+.history { min-width: 560px; }
+.gain-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 2px 18px; }
+.data-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.result { font-size: var(--t-sm); }
+.result.ok { color: var(--moss); }
+.result.fail { color: var(--red); }
+
+
+/* ---------- Locatie, notities, bosskaarten en weekritme ---------- */
+
+.tonight-main { display: grid; gap: var(--s3); min-width: 0; }
+
+/* Vaste locatieregel: plaatsteken plus plaatsnaam. */
+.loc-line { display: flex; align-items: center; gap: 6px; font-size: var(--t-sm); color: var(--muted); }
+.loc-line .icon { width: 14px; height: 14px; color: var(--gold); }
+.step-loc { padding-left: 28px; }
+.sheet-loc { margin-top: -6px; font-size: var(--t-md); color: var(--ink-muted); }
+.sheet .loc-line .icon { color: var(--gold); }
+.step.done .step-loc { opacity: 0.55; }
+
+/* Notitie per stap */
+.note-mark { display: inline-flex; color: var(--gold); }
+.note-mark .icon { width: 14px; height: 14px; }
+.step-main > .step-note { padding-left: 28px; }
+.note-field {
+  display: block; width: 100%; max-width: 72ch; margin-top: 6px; resize: vertical; min-height: 64px;
+  font: inherit; color: var(--text); background: var(--slate-well);
+  border: 1px solid var(--rule-strong); border-radius: var(--r-ctl); padding: 8px 10px;
+}
+.note-field::placeholder { color: var(--muted); }
+.note-field:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+.sheet-note-box { display: grid; gap: 2px; padding: 10px 12px; border-left: 3px solid var(--gold); background: rgb(42 32 22 / 0.05); }
+.sheet-note-box .sheet-label { display: inline-flex; align-items: center; gap: 6px; }
+.sheet-note-text { white-space: pre-wrap; }
+
+/* Bosskaart in de route */
+.boss-card {
+  margin-left: 28px; max-width: 80ch;
+  border: 1px solid rgb(154 119 53 / 0.45); border-radius: var(--r-ctl);
+  background: rgb(214 174 92 / 0.04);
+}
+.boss-card > summary {
+  cursor: pointer; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; padding: 8px 12px;
+  list-style: none;
+}
+.boss-card > summary::-webkit-details-marker { display: none; }
+.boss-card > summary .icon { color: var(--gold); }
+.boss-card-title { font-family: var(--serif); font-weight: 700; color: var(--parchment); }
+.boss-card-loc { color: var(--muted); font-size: var(--t-sm); }
+.boss-card[open] > summary { border-bottom: 1px solid rgb(154 119 53 / 0.3); }
+.boss-body { display: grid; gap: 14px; padding: 12px 14px 14px; }
+.boss-sec { display: grid; gap: 6px; }
+.boss-sec h4 { margin: 0; font-family: var(--serif); font-size: var(--t-md); color: var(--gold); }
+.boss-sec h5 { margin: 0; font-size: var(--t-sm); font-weight: 700; color: var(--text); }
+.boss-sec ul, .boss-sec ol { margin: 0; padding-left: 20px; display: grid; gap: 3px; }
+.boss-gear { margin: 0; display: grid; gap: 8px; }
+.boss-gear > div { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 2px 12px; }
+.boss-gear dt { color: var(--muted); font-size: var(--t-sm); padding-top: 2px; }
+.boss-gear dd { margin: 0; display: grid; }
+.gear-how { color: var(--muted); font-size: var(--t-sm); }
+.boss-drop-tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px 20px; }
+.drop-tier { display: grid; gap: 4px; align-content: start; }
+.boss-drops { list-style: none; padding: 0 !important; }
+.boss-drops li { display: flex; flex-wrap: wrap; gap: 0 8px; align-items: baseline; }
+.drop-rate { color: var(--gold); font-size: var(--t-sm); font-variant-numeric: lining-nums tabular-nums; }
+.drop-note { flex-basis: 100%; color: var(--muted); font-size: var(--t-sm); }
+.tier-progress h5 { color: var(--parchment); }
+.boss-uncertain li { color: var(--muted); }
+
+/* Korte bosskaart op het perkament */
+.boss-brief { display: grid; gap: 6px; padding-top: 14px; border-top: 1px solid rgb(42 32 22 / 0.18); }
+.boss-brief-title { display: inline-flex; align-items: center; gap: 6px; font-family: var(--serif); font-size: var(--t-lg); font-weight: 700; }
+.boss-brief-mech { margin: 0; padding-left: 20px; display: grid; gap: 2px; }
+
+/* Weekritme */
+.week { padding: var(--s3); display: grid; gap: 18px; }
+.week-head { display: grid; gap: 4px; }
+.week-head h2 { font-size: var(--t-xl); display: inline-flex; align-items: center; gap: 8px; }
+.week-head h2 .icon { color: var(--gold); width: 18px; height: 18px; }
+.week-sub { color: var(--muted); font-size: var(--t-sm); }
+.week-group { display: grid; gap: 8px; }
+.week-group + .week-group { padding-top: 14px; border-top: 1px solid var(--rule); }
+.week-group-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 14px; }
+.week-group-head h3 { font-size: var(--t-md); color: var(--gold); }
+.week-count { color: var(--muted); font-size: var(--t-sm); font-variant-numeric: lining-nums tabular-nums; }
+.week-count strong { color: var(--text); font-weight: 500; }
+.week-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.rep { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 0 10px; padding: 8px 6px; border-radius: 6px; }
+.rep:hover { background: rgb(255 255 255 / 0.025); }
+.rep input { margin-top: 4px; }
+.rep-main { display: grid; gap: 2px; min-width: 0; }
+.rep-title { font-weight: 500; cursor: pointer; display: flex; flex-wrap: wrap; gap: 2px 10px; align-items: baseline; }
+.rep-tag { font-family: var(--serif); font-style: italic; font-weight: 500; color: var(--gold); font-size: var(--t-sm); }
+.rep-detail { color: var(--muted); font-size: var(--t-sm); max-width: 70ch; }
+.rep-meta { display: flex; flex-wrap: wrap; gap: 2px 16px; font-size: var(--t-sm); }
+.rep.done .rep-title { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--rule-strong); }
+.rep.done .rep-detail, .rep.done .rep-meta { opacity: 0.55; }
+.week-later { color: var(--muted); font-size: var(--t-sm); font-style: italic; }
+
+/* ---------- Kleinere schermen ---------- */
+
+@media (max-width: 960px) {
+  .tonight-top { grid-template-columns: 1fr; gap: var(--s3); }
+  .targets { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); column-gap: 32px; }
+  .tonight-bottom { grid-template-columns: 1fr 1fr; }
+  .tonight-bottom .col:last-child { grid-column: 1 / -1; border-left: 0; border-top: 1px solid var(--rule); }
+  .masthead::before { opacity: 0.6; }
+}
+
+@media (max-width: 720px) {
+  .masthead { padding: var(--s3) 0 var(--s2); align-items: flex-start; flex-direction: column; gap: var(--s2); }
+  .masthead::before { width: 90%; height: 200px; top: -10px; }
+  .helm { width: 44px; height: 44px; }
+  .ident { align-items: flex-start; }
+  .ident h1 { font-size: var(--t-2xl); }
+  .ident-facts { column-gap: 16px; }
+  .ident-facts > div, .ident-facts > div + div { padding: 0; border-left: 0; }
+  .ident-facts dd { font-size: var(--t-md); }
+  .controls { width: 100%; justify-content: space-between; gap: 8px 16px; }
+  .updated { max-width: none; }
+  .account-switch form { right: auto; left: 0; }
+  .tabs { width: 100%; }
+  .tab { flex: 1 0 auto; padding: 8px 14px; }
+  .tab[aria-current="page"]::after { left: 14px; right: 14px; }
+  main { padding-top: var(--s3); }
+  .tonight { gap: var(--s4); }
+  .sheet { outline-offset: -6px; box-shadow: 0 24px 44px -24px rgb(0 0 0 / 0.8); }
+  .sheet-facts { gap: 10px 24px; }
+  .phase-col { padding: 20px; }
+
+  /* Spoor wordt verticaal: elke fase een regel, met een lijn langs de bakens. */
+  .trail { flex-direction: column; align-items: stretch; position: relative; gap: 14px; }
+  .trail::before { content: ""; position: absolute; left: 15px; top: 16px; bottom: 16px; width: 2px; background: var(--rule-strong); }
+  .leg, .leg-end { flex: none; grid-template-columns: 32px 1fr; grid-template-rows: auto auto; column-gap: 14px; align-items: start; }
+  .leg .waypoint { grid-row: 1 / span 2; }
+  .leg-label { grid-column: 2; grid-row: 1; padding: 4px 0 0; }
+  .leg-track { grid-column: 2; grid-row: 2; margin: 6px 0 0; max-width: 260px; }
+  .leg-end { display: grid; }
+  .leg-end .waypoint-end { margin: 4px 0 0 7px; }
+  .leg-end .leg-label { grid-column: 2; }
+
+  .tonight-bottom { grid-template-columns: 1fr; padding: 0; }
+  .col { padding: 20px; }
+  .col + .col, .tonight-bottom .col:last-child { border-left: 0; border-top: 1px solid var(--rule); }
+
+  .phase > summary { grid-template-columns: 32px minmax(0, 1fr) 14px; padding: 16px; }
+  .phase-sum { grid-column: 2; grid-row: 2; }
+  .phase > summary::after { grid-column: 3; grid-row: 1; }
+  .phase-body { padding: 16px 16px 20px; }
+  .steps { margin-left: -8px; margin-right: -8px; }
+  .steps::before { left: 15px; }
+  .step { padding: 12px 8px; }
+  .step + .step::before { left: 8px; right: 8px; }
+  .step-meta, .step-main > .checks, .step-detail, .step-main > .why, .sources { padding-left: 0; }
+  .step-blocked { margin-left: 0; }
+  .step-loc, .step-main > .step-note, .step-qg { padding-left: 0; }
+  .boss-card { margin-left: 0; }
+  .boss-gear > div { grid-template-columns: 1fr; }
+  .week { padding: 20px 16px; }
+
+  th:first-child, td:first-child { padding-left: 14px; }
+  th:last-child, td:last-child { padding-right: 14px; }
+  .col-rank { display: none; }
+  .quests tr > :first-child, .skills tr:not(.group-row) > :first-child, .history tr > :first-child {
+    position: sticky; left: 0; z-index: 1; background: var(--slate-raised); padding-right: 12px;
+  }
+  .group-row .group-title { position: sticky; left: 14px; }
+  .filter-count { margin-left: 0; }
+  .field, .field input, .field select { width: 100%; min-width: 0; }
+  .filters .field { flex: 1 1 100%; }
+  .log-section { padding: 20px 16px; }
+  .log-section > .table-wrap { margin: 0 -16px; }
+  .log-section th:first-child, .log-section td:first-child { padding-left: 16px; }
+  .page-head h2 { font-size: var(--t-xl); }
+}
+
+@media (max-width: 420px) {
+  .tabs { padding: 3px; }
+  .tab { padding: 8px 9px; font-size: 0.9375rem; }
+  .tab[aria-current="page"]::after { left: 9px; right: 9px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

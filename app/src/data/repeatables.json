@@ -1,0 +1,65 @@
+[
+  {
+    "id": "daily-challenges",
+    "title": "Daily Challenges",
+    "period": "daily",
+    "optional": true,
+    "detail": "Drie challenges per dag, beloning zo groot als een large XP lamp in die skill. Alleen doen als ze passen bij wat je toch traint; sinds 16 maart 2026 geen weektrack, extend of reroll meer.",
+    "wikiUrl": "https://runescape.wiki/w/Challenge_System"
+  },
+  {
+    "id": "herby-werby",
+    "title": "Herby Werby",
+    "period": "weekly",
+    "detail": "Anachronia, via de Anachronia-lodestone. Herblore-XP en Firemaking-lamps, maximaal 100 punten per week; punten ruil je bij de Ancient Zygomite elder (herb bag voor 200).",
+    "wikiUrl": "https://runescape.wiki/w/Herby_Werby",
+    "stop": "Herblore 120"
+  },
+  {
+    "id": "penguins",
+    "title": "Penguin Hide and Seek",
+    "period": "weekly",
+    "detail": "Zoek de pinguïns (en na Hunt for Red Raktuber de Polar bear). Punten worden XP-lamps naar keuze: in deze route eerst Agility tot 56, daarna Herblore.",
+    "wikiUrl": "https://runescape.wiki/w/Penguin_Hide_and_Seek",
+    "stop": "Alle skills die je ermee boost op hun maximum"
+  },
+  {
+    "id": "circus",
+    "title": "Circus: Agility-act",
+    "period": "weekly",
+    "detail": "Balthazar Beauregard's Big Top Bonanza staat elke week in een andere stad. Doe de Agility-act (tightrope of jongleren) voor 13.750 Agility-XP per week, 20.625 na Back to the Freezer.",
+    "wikiUrl": "https://runescape.wiki/w/Balthazar_Beauregard%27s_Big_Top_Bonanza"
+  },
+  {
+    "id": "rune-shops",
+    "title": "Rune shop run",
+    "period": "weekly",
+    "detail": "Voorraad bouwt sinds 16 maart 2026 over 7 dagen op, dus één ronde per week. Eerst air, water, earth en fire: Magic Guild Store (Magic 66), Baba Yaga (Lunar Diplomacy) en Void Knight Magic Store tot 7.000 per soort, daarna Aubury, Betty en Ali tot 2.100.",
+    "wikiUrl": "https://runescape.wiki/w/Magic_Guild_Store_-_Runes_and_Staves"
+  },
+  {
+    "id": "thalmund",
+    "title": "Thalmund's Wares",
+    "period": "weekly",
+    "dayOfWeek": 3,
+    "detail": "City of Um, bij de smithy. Elke woensdag vier nieuwe items, één per categorie (ensouled materials, necrotic runes, ritual items, rare finds). Koop greater ensouled cloth, ink en uncut moonstone als ze er staan.",
+    "wikiUrl": "https://runescape.wiki/w/Thalmund%27s_Wares",
+    "stop": "4 uncut moonstone"
+  },
+  {
+    "id": "troll-invasion",
+    "title": "Troll Invasion",
+    "period": "monthly",
+    "detail": "Captain Jute buiten het poortgebouw ten noorden van de Warriors' Guild. Eén reward book per maand met XP in een skill naar keuze; hard mode gaat sneller. Een dood telt hier als veilig.",
+    "wikiUrl": "https://runescape.wiki/w/Troll_Invasion"
+  },
+  {
+    "id": "reaper",
+    "title": "Reaper-taken",
+    "period": "weekly",
+    "unlockedBy": "p5-11",
+    "detail": "Bij Death (Death's Hourglass bij de Draynor-lodestone). Slayer 45 en combat 50. Geen daglimiet meer; elke taak geeft ook Slayer-punten, herrollen kost 30.",
+    "wikiUrl": "https://runescape.wiki/w/Soul_Reaper",
+    "stop": "300 reaper points deze week"
+  }
+]

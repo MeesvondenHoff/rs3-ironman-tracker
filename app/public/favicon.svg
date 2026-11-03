@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Leisteen schild met gouden rand: een ironman-helm in silhouet -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#17202a" stroke="#d6ae5c" stroke-width="3"/>
+  <!-- Helmkap -->
+  <path d="M32 10c-10.5 0-18 7.6-18 18v9c0 2 1 3.4 2.6 4.2L22 44h20l5.4-2.8C49 40.4 50 39 50 37v-9c0-10.4-7.5-18-18-18z" fill="#d6ae5c"/>
+  <!-- Oogspleet -->
+  <path d="M20 30h24v5H20z" fill="#17202a"/>
+  <!-- Neusbeschermer -->
+  <path d="M30 35h4v9h-4z" fill="#17202a"/>
+  <!-- Kinband / schouder -->
+  <path d="M18 47h28v5H18z" fill="#9a7735"/>
+</svg>
