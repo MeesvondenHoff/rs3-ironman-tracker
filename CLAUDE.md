@@ -26,7 +26,16 @@ Leeswijzer:
 | `research/In-game status.md` | In-game feiten die de API niet laat zien (nieuwste bovenaan, met datum). |
 | `research/snapshots/` | Momentopnames van hiscores en RuneMetrics (profiel, quests). |
 | `research/scripts/build_route.py` | Bron van `route.json` en van de faseblokken in `Route Ons Pap.md`. |
+| `research/Site-review thersguide.md`, `Site-review rs3ironman.md`, `Site-review ironman.guide.md` | Wat uit die sites is overgenomen (inhoud alleen van de RS3-sites; van ironman.guide alleen UX-ideeën, want dat is OSRS). |
+| `research/scripts/build_quest_links.py` | Bouwt `app/src/data/quest-links.json` (Quick guide-link per quest) uit een RuneMetrics-questsnapshot; zie `app/README.md`. |
 | `research/scripts/validate_route.py` | Valideert `route.json` tegen het schema en de quest-snapshot: `python -I research/scripts/validate_route.py "<pad naar RS3 Ironman>"`. |
+
+### Repo en werken vanaf een andere computer
+
+- GitHub: privérepo `https://github.com/MeesvondenHoff/rs3-ironman-tracker` (branch `main`, remote `origin`). Mees gaf op 2026-11-03 toestemming om bij dit project zelf te committen en te pushen; doe dat na elke afgeronde wijziging, met een Nederlandse commitboodschap.
+- Alle projectkennis staat in dit bestand en in `research/`; Claude Code laadt `CLAUDE.md` vanzelf zodra de map open staat. Er is geen kennis die alleen in het geheugen van één computer leeft; staat iets alleen in een chat, zet het dan hier of in `research/In-game status.md`.
+- Op een andere computer: `git clone` van de repo, daarna `npm install --prefix app` en `npm run dev --prefix app`. De app bewaart vinkjes, notities en snapshots in localStorage van de browser, dus die reizen niet mee; gebruik de back-up (Logboek, exporteren/terugzetten) om ze over te zetten.
+- Openstaand (vastgelegd 2026-11-03): de route opnieuw toetsen zodra de Late-Game Rebalance en de MTX-verwijdering (november 2026) en de Remastered Journey met het nieuwe Elvarg-model (2 december 2026, raakt Dragon Slayer, stap p1-09) live zijn. Staat ook in `research/In-game status.md`.
 
 ### Account en doel
 
@@ -52,6 +61,8 @@ Leeswijzer:
    - behoud bestaande stap-id's (nieuwe stappen krijgen een nieuw id).
 5. **Ironman-toets**: elk advies (guide, forum, nieuws) eerst toetsen aan hoofdstuk 3 van dit bestand. Veel algemene RS3-guides gaan uit van de Grand Exchange.
 6. **Bij twijfel** over een regel: de RS3-wikipagina zelf lezen (`https://runescape.wiki/w/<Titel>?action=raw` als de normale pagina geblokkeerd wordt) en de datum van de laatste update controleren.
+7. **Questbeloningen op de questpagina zelf controleren.** De verzameltabellen op de wiki (zoals "Quests for Agility experience") tellen "Additional rewards" mee zonder hun level-eis. Voorbeeld van 2026-11-03: de tabel noemde 10.000 Agility-XP voor Myths of the White Lands, maar die zit in een grot die Agility 55 vraagt; de quest zelf geeft een lamp van 500 XP. Lees dus per quest de secties Rewards en Additional rewards, en noteer beloningen met een eis als latere bonus, niet als directe opbrengst. Geldt voor subagents én voor snelle antwoorden tijdens het gamen.
+8. **Bouwwerk gaat naar een subagent** (op deze computers `bouwer-opus` voor programmeerwerk, `bouwer-sonnet`/`bouwer-haiku` alleen voor mechanisch werk); de hoofdchat verkent, beslist en controleert. Bestaan die agenttypes niet op de computer waar je zit, gebruik dan de gewone agent.
 
 Bronnen hoofdstuk 1: projectbestanden; Double XP.
 
