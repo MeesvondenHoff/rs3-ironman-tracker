@@ -25,6 +25,7 @@ Leeswijzer:
 | `research/ROUTE-SCHEMA.md` | Het dataschema van `route.json`: het contract tussen research en app. |
 | `research/Route Ons Pap.md` | De route in leesbare vorm, met fasetabellen die uit dezelfde bron komen als `route.json`. |
 | `research/Guide-afweging.md` | Waarom welke guide hoeveel meeweegt. |
+| `research/T80-afweging.md` | Beslisdocument tier 80 Necromancy-wapens: Kili's Knowledge VI (pad A) tegen de chaotic guard en lantern via Dungeoneering 70 (pad B), met uren, tokens, onderhoud, derde opties en advies (gecontroleerd 2026-11-04). |
 | `research/Review EIPG en RS Guy.md` | Stapsgewijze review van de Efficient Ironman Pathway Guide en de RS Guy-guide. |
 | `research/Game-updates 2025-2026.md` | Alle RS3-game-updates van nov 2025 tot nov 2026, getoetst aan de route. |
 | `research/API en plugins.md` | Officieel pluginsysteem (live sinds 19 okt 2026), publieke Jagex-API's (RuneMetrics stopt 10 nov 2026), wiki- en Weird Gloop-API, Alt1, wat mag volgens Jagex en welke bouwideeën voor de tracker (stand 4 nov 2026). |
