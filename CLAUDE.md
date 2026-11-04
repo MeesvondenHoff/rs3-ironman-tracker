@@ -23,6 +23,7 @@ Leeswijzer:
 | `research/Guide-afweging.md` | Waarom welke guide hoeveel meeweegt. |
 | `research/Review EIPG en RS Guy.md` | Stapsgewijze review van de Efficient Ironman Pathway Guide en de RS Guy-guide. |
 | `research/Game-updates 2025-2026.md` | Alle RS3-game-updates van nov 2025 tot nov 2026, getoetst aan de route. |
+| `research/API en plugins.md` | Officieel pluginsysteem (live sinds 19 okt 2026), publieke Jagex-API's (RuneMetrics stopt 10 nov 2026), wiki- en Weird Gloop-API, Alt1, wat mag volgens Jagex en welke bouwideeën voor de tracker (stand 4 nov 2026). |
 | `research/In-game status.md` | In-game feiten die de API niet laat zien (nieuwste bovenaan, met datum). |
 | `research/snapshots/` | Momentopnames van hiscores en RuneMetrics (profiel, quests). |
 | `research/scripts/build_route.py` | Bron van `route.json` en van de faseblokken in `Route Ons Pap.md`. |
@@ -35,6 +36,8 @@ Leeswijzer:
 - GitHub: privérepo `https://github.com/MeesvondenHoff/rs3-ironman-tracker` (branch `main`, remote `origin`). Mees gaf op 2026-11-03 toestemming om bij dit project zelf te committen en te pushen; doe dat na elke afgeronde wijziging, met een Nederlandse commitboodschap.
 - Alle projectkennis staat in dit bestand en in `research/`; Claude Code laadt `CLAUDE.md` vanzelf zodra de map open staat. Er is geen kennis die alleen in het geheugen van één computer leeft; staat iets alleen in een chat, zet het dan hier of in `research/In-game status.md`.
 - Op een andere computer: `git clone` van de repo, daarna `npm install --prefix app` en `npm run dev --prefix app`. De app bewaart vinkjes, notities en snapshots in localStorage van de browser, dus die reizen niet mee; gebruik de back-up (Logboek, exporteren/terugzetten) om ze over te zetten.
+- **Urgent (vastgelegd 2026-11-04)**: de RuneMetrics- en Adventurer's Log-API stoppen op 10 november 2026 (Jagex-nieuws 26 okt en 2 nov). De app haalt profiel, activiteiten en quests daar vandaan (`app/src/lib/api.ts`), en `build_quest_links.py` en `validate_route.py` gebruiken de RuneMetrics-questsnapshot. De vervangende web-API wordt gedocumenteerd op developer.runescape.com; zodra die er is de app omzetten. Hiscores blijven werken. Details: `research/API en plugins.md`.
+- Wiki en curl: de wiki blokkeert alleen de standaard-User-Agent; met een beschrijvende User-Agent (bijv. `OnsPapTracker/0.1 (research; contact via github MeesvondenHoff)`) werken `?action=raw` en `api.php` gewoon met curl.
 - Openstaand (vastgelegd 2026-11-03): de route opnieuw toetsen zodra de Late-Game Rebalance en de MTX-verwijdering (november 2026) en de Remastered Journey met het nieuwe Elvarg-model (2 december 2026, raakt Dragon Slayer, stap p1-09) live zijn. Staat ook in `research/In-game status.md`.
 
 ### Account en doel
@@ -60,7 +63,7 @@ Leeswijzer:
    - werk de fasetabellen in `Route Ons Pap.md` bij;
    - behoud bestaande stap-id's (nieuwe stappen krijgen een nieuw id).
 5. **Ironman-toets**: elk advies (guide, forum, nieuws) eerst toetsen aan hoofdstuk 3 van dit bestand. Veel algemene RS3-guides gaan uit van de Grand Exchange.
-6. **Bij twijfel** over een regel: de RS3-wikipagina zelf lezen (`https://runescape.wiki/w/<Titel>?action=raw` als de normale pagina geblokkeerd wordt) en de datum van de laatste update controleren.
+6. **Bij twijfel** over een regel: de RS3-wikipagina zelf lezen (`https://runescape.wiki/w/<Titel>?action=raw`, met een beschrijvende User-Agent) en de datum van de laatste update controleren.
 7. **Questbeloningen op de questpagina zelf controleren.** De verzameltabellen op de wiki (zoals "Quests for Agility experience") tellen "Additional rewards" mee zonder hun level-eis. Voorbeeld van 2026-11-03: de tabel noemde 10.000 Agility-XP voor Myths of the White Lands, maar die zit in een grot die Agility 55 vraagt; de quest zelf geeft een lamp van 500 XP. Lees dus per quest de secties Rewards en Additional rewards, en noteer beloningen met een eis als latere bonus, niet als directe opbrengst. Geldt voor subagents én voor snelle antwoorden tijdens het gamen.
 8. **Bouwwerk gaat naar een subagent** (op deze computers `bouwer-opus` voor programmeerwerk, `bouwer-sonnet`/`bouwer-haiku` alleen voor mechanisch werk); de hoofdchat verkent, beslist en controleert. Bestaan die agenttypes niet op de computer waar je zit, gebruik dan de gewone agent.
 
