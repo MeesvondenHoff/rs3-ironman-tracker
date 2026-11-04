@@ -84,6 +84,12 @@ export function baseFor7Days(mine: Snapshot[], now = Date.now()): { base: Snapsh
   return { base: mine[0], full: false };
 }
 
+/** Alleen de dag, bijv. "4 november 2026" (ook voor een kale ISO-datum als "2026-11-04"). */
+export function fmtDay(iso: string): string {
+  const d = /^\d{4}-\d{2}-\d{2}$/.test(iso) ? new Date(iso + "T12:00:00") : new Date(iso);
+  return d.toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" });
+}
+
 export function fmtDate(iso: string): string {
   return new Date(iso).toLocaleString("nl-NL", { dateStyle: "medium", timeStyle: "short" });
 }

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { combatLevel, fetchAccount, type AccountData } from "./lib/api";
+import { accountCombat, fallbackNotice, fetchAccount, normalizeAccountData, type AccountData } from "./lib/api";
 import { loadRoute, makeContext, type LoadedRoute } from "./lib/route";
 import { addSnapshot, fmtDate, toSnapshot, type Snapshot } from "./lib/snapshots";
 import { fmt } from "./lib/skills";
@@ -55,7 +55,7 @@ export default function App() {
   const [accountInput, setAccountInput] = useState(account);
   const [data, setData] = useState<AccountData | null>(() => {
     const d = load<AccountData | null>(KEYS.lastData, null);
-    return d && d.account === account ? d : null;
+    return d && d.account === account ? normalizeAccountData(d) : null;
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -88,7 +88,8 @@ export default function App() {
     setError(null);
     setInfo(null);
     try {
-      const d = await fetchAccount(name);
+      // De vorige data is de terugval als RuneMetrics (gestopt op 10 november 2026) geen profiel of quests geeft.
+      const d = await fetchAccount(name, { previous: load<AccountData | null>(KEYS.lastData, null) });
       setData(d);
       save(KEYS.lastData, d);
       // localStorage is de bron van waarheid voor snapshots; zo blijft deze callback zuiver.
@@ -135,7 +136,7 @@ export default function App() {
     setAccount(acc);
     setAccountInput(acc);
     const d = load<AccountData | null>(KEYS.lastData, null);
-    setData(d && d.account === acc ? d : null);
+    setData(d && d.account === acc ? normalizeAccountData(d) : null);
   };
 
   const openSwitch = () => {
@@ -147,6 +148,7 @@ export default function App() {
   const p = data?.profile;
   const name = p?.name ?? account;
   const err = error ? explain(error, account) : null;
+  const fallback = data ? fallbackNotice(data) : null;
   const totalLevel = data
     ? Math.max(p?.totalskill ?? 0, data.overall?.level ?? 0, data.skills.reduce((a, s) => a + s.level, 0))
     : 0;
@@ -161,7 +163,7 @@ export default function App() {
             {data ? (
               <dl className="ident-facts">
                 <div className="ident-mode"><dt className="sr-only">Spelmodus</dt><dd>Ironman</dd></div>
-                <div><dt>combat</dt><dd>{fmt(p?.combatlevel ?? combatLevel(data.skills))}</dd></div>
+                <div><dt>combat</dt><dd>{fmt(accountCombat(data))}</dd></div>
                 <div><dt>totaal level</dt><dd>{fmt(totalLevel)}</dd></div>
                 {data.questPoints !== null && <div><dt>quest points</dt><dd>{fmt(data.questPoints)}</dd></div>}
               </dl>
@@ -227,6 +229,12 @@ export default function App() {
             ))}
           </Notice>
         )}
+        {fallback && (
+          <Notice tone="info" title={fallback.title}>
+            <p>{fallback.body.join(" ")}</p>
+            {fallback.raw.length > 0 && <p className="notice-raw">Melding: {fallback.raw.join("; ")}</p>}
+          </Notice>
+        )}
         {info && <p className="quiet-info" role="status">{info}</p>}
       </div>
 
@@ -258,7 +266,9 @@ export default function App() {
           />
         )}
         {tab === "skills" && <SkillsView data={data} route={route} ctx={ctx} snapshots={snapshots} refresh={() => refresh(account)} loading={loading} />}
-        {tab === "quests" && <QuestsView quests={data?.quests ?? null} route={route?.route ?? null} hasData={!!data} />}
+        {tab === "quests" && (
+          <QuestsView quests={data?.quests ?? null} source={data?.questsSource ?? null} route={route?.route ?? null} hasData={!!data} />
+        )}
         {tab === "logboek" && (
           <LogbookView account={account} snapshots={snapshots} setSnapshots={updateSnapshots} onImported={reloadFromStorage} />
         )}

@@ -1,7 +1,8 @@
 import { useMemo, useState } from "react";
-import type { Quest, QuestStatus } from "../lib/api";
+import { runemetricsStopped, type Quest, type QuestsSource, type QuestStatus } from "../lib/api";
 import { questsInRoute, type Route } from "../lib/route";
 import { fmt } from "../lib/skills";
+import { fmtDay } from "../lib/snapshots";
 import { Nil, QuestGuideLink } from "./ui";
 
 const STATUS_LABEL: Record<QuestStatus, string> = { COMPLETED: "voltooid", STARTED: "gestart", NOT_STARTED: "niet gestart" };
@@ -10,7 +11,15 @@ const DIFFICULTY: Record<number, string> = { 0: "Novice", 1: "Intermediate", 2: 
 type StatusFilter = "" | QuestStatus;
 type EligibleFilter = "" | "yes" | "no";
 
-export default function QuestsView({ quests, route, hasData }: { quests: Quest[] | null; route: Route | null; hasData: boolean }) {
+interface Props {
+  quests: Quest[] | null;
+  /** Waar de questlijst vandaan komt; niet live betekent een stand van een eerdere datum. */
+  source?: QuestsSource | null;
+  route: Route | null;
+  hasData: boolean;
+}
+
+export default function QuestsView({ quests, source, route, hasData }: Props) {
   const [status, setStatus] = useState<StatusFilter>("");
   const [eligible, setEligible] = useState<EligibleFilter>("");
   const [onlyRoute, setOnlyRoute] = useState(false);
@@ -33,9 +42,11 @@ export default function QuestsView({ quests, route, hasData }: { quests: Quest[]
       <section className="empty">
         <h2>Geen questlijst</h2>
         <p>
-          {hasData
-            ? "RuneMetrics gaf geen quests terug. Meestal staat het profiel op privé: zet RuneMetrics in de game op openbaar en klik op Vernieuwen."
-            : "Klik op Vernieuwen om de quests van het account op te halen."}
+          {!hasData
+            ? "Klik op Vernieuwen om de quests van het account op te halen."
+            : runemetricsStopped()
+              ? "RuneMetrics is gestopt en van dit account is geen eerdere questlijst bewaard. De route werkt wel: vink quests zelf af in de Route-tab."
+              : "RuneMetrics gaf geen quests terug. Meestal staat het profiel op privé: zet RuneMetrics in de game op openbaar en klik op Vernieuwen."}
         </p>
       </section>
     );
@@ -58,6 +69,9 @@ export default function QuestsView({ quests, route, hasData }: { quests: Quest[]
         <h2>Quests</h2>
         <p className="page-sub">
           {done.length} van {quests.length} quests voltooid, goed voor {fmt(qp)} van de {fmt(totalQp)} quest points. {inRoute.size} quests komen in de route voor.
+          {source && source.kind !== "live" && (
+            <> Stand van {fmtDay(source.at)} ({source.kind === "cached" ? "laatste opslag" : "meegeleverde lijst"}); nieuwe quests vink je af in de Route-tab.</>
+          )}
         </p>
       </header>
 

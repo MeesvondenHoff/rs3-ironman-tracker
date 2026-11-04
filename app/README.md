@@ -68,7 +68,42 @@ De RuneScape-API's sturen geen CORS-headers, dus de browser praat via de Vite de
 De proxy bestaat alleen in `npm run dev` (en niet in `vite preview` of een statische build).
 
 Skills: per skill wint de bron met de meeste XP (RuneMetrics loopt vaak voor op de hiscores); de rank komt altijd
-van de Ironman-hiscores. QP = som van `questPoints` van voltooide quests uit RuneMetrics.
+van de Ironman-hiscores. QP = som van `questPoints` van voltooide quests uit de questlijst (live of terugval, zie hieronder).
+
+## Stop van RuneMetrics en de terugval
+
+Jagex zet de RuneMetrics- en Adventurer's Log-API op 10 november 2026 uit (`../research/API en plugins.md`). De
+ironman-hiscores blijven werken. De app vangt dat op in `fetchAccount` (`src/lib/api.ts`):
+
+- Elke fout van RuneMetrics telt mee: HTTP-fout, doorverwijzing (de app volgt die niet, `redirect: "manual"`),
+  een antwoord dat geen JSON is of een netwerkfout.
+- **Quests**: de laatst bekende lijst, uit `rs3t:lastData` of anders de meegeleverde `src/data/quests-snapshot.json`
+  (alleen voor het account in dat bestand). Is de meegeleverde lijst nieuwer dan de opslag, dan wint die. QP komt uit
+  dezelfde lijst. Nieuwe quests vink je zelf af in de Route-tab (handmatig vinkje wint altijd).
+- **Profiel**: het laatst bekende profiel voor activiteiten; combat is dan nooit lager dan wat de hiscores opleveren.
+  Zonder opgeslagen profiel berekent `combatLevel(skills)` combat uit de hiscores. De RuneMetrics-rank toont alleen live.
+- **Skills**: de hiscores, met het laatst bekende profiel als ondergrens (XP daalt nooit), zodat het Logboek geen
+  negatieve winst toont zolang de hiscores nog achterlopen.
+- `AccountData.questsSource` (`live`, `cached`, `bundled`) en `profileSource` (`live`, `cached`, `computed`) zeggen
+  waar het vandaan komt, met `at` = de datum van die stand. Fouten van RuneMetrics staan in `sourceErrors`, niet in
+  `errors`, dus Vernieuwen voelt niet als mislukt zolang de hiscores lukken.
+- De app toont dan één rustige melding (`fallbackNotice`), bijvoorbeeld "RuneMetrics is gestopt (10 november 2026).
+  Queststatus van 8 november 2026 uit de laatste opslag; skills en XP komen live van de hiscores." Zolang RuneMetrics
+  werkt, is er geen melding en verandert er niets.
+
+Meegeleverde questlijst verversen (vanuit de projectmap). Het script pakt de nieuwste
+`research/snapshots/<datum> runemetrics quests.json`, of een opgegeven bestand in dezelfde vorm (`{"quests": [...]}`,
+bijvoorbeeld een omgezette export uit de nieuwe API), en zet `fetchedAt` op de datum uit de bestandsnaam:
+
+```bash
+python -I research/scripts/update_quest_snapshot.py
+python -I research/scripts/update_quest_snapshot.py "research/snapshots/<datum> runemetrics quests.json" --account "Ons Pap"
+```
+
+**Nieuwe API.** Profiel en quests lopen via één bron, `ACCOUNT_SOURCE` in `src/lib/api.ts` (nu `runeMetricsSource`).
+Zodra de nieuwe web-API op developer.runescape.com gedocumenteerd is: een proxyregel in `vite.config.ts` toevoegen
+(de enige plek met de host), `fetchProfileV2` en `fetchQuestsV2` schrijven die naar `Profile` en `Quest` vertalen, en
+`ACCOUNT_SOURCE` omzetten. De terugval blijft daarna gewoon werken.
 
 ## Route
 

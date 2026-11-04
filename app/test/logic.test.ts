@@ -71,9 +71,12 @@ function accountData(skillsOverride: Record<string, number> = {}): AccountData {
     skills,
     overall: hiscores.overall,
     profile,
+    profileSource: { kind: "live", at: "2026-11-03T08:00:00.000Z" },
     quests,
+    questsSource: { kind: "live", at: "2026-11-03T08:00:00.000Z" },
     questPoints: quests.filter((q) => q.status === "COMPLETED").reduce((a, q) => a + q.questPoints, 0),
     errors: [],
+    sourceErrors: [],
   };
 }
 

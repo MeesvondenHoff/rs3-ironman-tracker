@@ -1,12 +1,12 @@
 import { useState } from "react";
 import type { AccountData } from "../lib/api";
-import { combatLevel } from "../lib/api";
+import { accountCombat, runemetricsStopped } from "../lib/api";
 import { Markdown } from "../lib/markdown";
 import {
   nextStep, phaseProgress, stepState,
   type EvalContext, type LoadedRoute, type NextStep, type RoutePhase,
 } from "../lib/route";
-import { baseFor7Days, diff, forAccount, type Snapshot } from "../lib/snapshots";
+import { baseFor7Days, diff, fmtDay, forAccount, type Snapshot } from "../lib/snapshots";
 import { fmt, fmtSigned } from "../lib/skills";
 import { bossForStep } from "../lib/bosses";
 import { stepQuests } from "../lib/questLinks";
@@ -251,11 +251,19 @@ function Upcoming({ route, ctx, next, openStep }: {
 
 function Activities({ data }: { data: AccountData }) {
   const acts = data.profile?.activities ?? [];
+  const cached = data.profileSource?.kind === "cached";
   return (
     <section className="col" aria-labelledby="acts-title">
       <h2 id="acts-title">Laatst in de game</h2>
+      {cached && (
+        <p className="muted acts-note">Laatst bekend, van {fmtDay(data.profileSource.at)}. RuneMetrics geeft geen nieuwe activiteiten meer.</p>
+      )}
       {!data.profile ? (
-        <p className="muted">RuneMetrics gaf geen profiel terug, dus recente activiteiten ontbreken. Zet het profiel op openbaar en vernieuw.</p>
+        <p className="muted">
+          {runemetricsStopped()
+            ? "Recente activiteiten kwamen uit RuneMetrics, en die is gestopt. Wat je speelt, zie je terug in de XP-winst in het Logboek."
+            : "RuneMetrics gaf geen profiel terug, dus recente activiteiten ontbreken. Zet het profiel op openbaar en vernieuw."}
+        </p>
       ) : acts.length === 0 ? (
         <p className="muted">Nog geen activiteiten. Na je volgende sessie verschijnen hier levels en quests.</p>
       ) : (
@@ -279,13 +287,16 @@ function AccountFacts({ data, snapshots }: { data: AccountData; snapshots: Snaps
   const mine = forAccount(snapshots, data.account);
   const b7 = baseFor7Days(mine);
   const week = b7 && mine.length >= 2 ? diff(b7.base, mine[mine.length - 1]) : null;
-  const questsTotal = p ? p.questscomplete + p.questsstarted + p.questsnotstarted : null;
+  // Uit de questlijst (live of laatst bekend), zodat dit dezelfde stand is als de quest points.
+  const questsDone = data.quests ? data.quests.filter((q) => q.status === "COMPLETED").length : p?.questscomplete ?? null;
+  const questsTotal = data.quests ? data.quests.length : p ? p.questscomplete + p.questsstarted + p.questsnotstarted : null;
+  const liveRank = data.profileSource?.kind === "live" ? p?.rank : null;
 
   return (
     <section className="col" aria-labelledby="facts-title">
       <h2 id="facts-title">Account</h2>
       <dl className="facts">
-        <div><dt>Combat</dt><dd>{fmt(p?.combatlevel ?? combatLevel(data.skills))}</dd></div>
+        <div><dt>Combat</dt><dd>{fmt(accountCombat(data))}</dd></div>
         <div><dt>Totaal level</dt><dd>{fmt(totalLevel)}</dd></div>
         <div><dt>Totaal XP</dt><dd>{fmt(totalXp)}</dd></div>
         <div>
@@ -293,9 +304,9 @@ function AccountFacts({ data, snapshots }: { data: AccountData; snapshots: Snaps
           <dd>{week ? fmtSigned(week.totalXp) : <span className="muted">na 2 snapshots</span>}</dd>
         </div>
         <div><dt>Quest points</dt><dd>{fmt(data.questPoints)}</dd></div>
-        <div><dt>Quests klaar</dt><dd>{p && questsTotal ? `${p.questscomplete} van ${questsTotal}` : <Nil label="onbekend" />}</dd></div>
+        <div><dt>Quests klaar</dt><dd>{questsDone !== null && questsTotal ? `${questsDone} van ${questsTotal}` : <Nil label="onbekend" />}</dd></div>
         <div><dt>Ironman-rank</dt><dd>{data.overall?.rank ? fmt(data.overall.rank) : <Nil label="onbekend" />}</dd></div>
-        <div><dt>RuneMetrics-rank</dt><dd>{p?.rank ? fmt(Number(String(p.rank).replace(/,/g, ""))) : <Nil label="onbekend" />}</dd></div>
+        <div><dt>RuneMetrics-rank</dt><dd>{liveRank ? fmt(Number(String(liveRank).replace(/,/g, ""))) : <Nil label="onbekend" />}</dd></div>
       </dl>
     </section>
   );
