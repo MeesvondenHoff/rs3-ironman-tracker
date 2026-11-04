@@ -1,6 +1,7 @@
 import bundledJson from "../data/quests-snapshot.json";
-import { SKILLS, type SkillName } from "./skills";
-import { fmtDay } from "./snapshots";
+import type { PluginQuest, StoredPluginSnapshot } from "../server/pluginInbox";
+import { levelForXp, maxLevel, SKILLS, type SkillName } from "./skills";
+import { fmtDate, fmtDay } from "./snapshots";
 
 export type QuestStatus = "COMPLETED" | "STARTED" | "NOT_STARTED";
 
@@ -44,7 +45,7 @@ export interface SkillRow {
   xp: number;
   /** Ironman-hiscore-rank, null als niet gerankt. */
   rank: number | null;
-  source: "hiscore" | "runemetrics";
+  source: "hiscore" | "runemetrics" | "plugin";
 }
 
 /**
@@ -53,10 +54,11 @@ export interface SkillRow {
  * - live: net opgehaald bij de quest- en profielbron (nu RuneMetrics);
  * - cached: laatst bekende gegevens uit `rs3t:lastData`;
  * - bundled: de meegeleverde questlijst `src/data/quests-snapshot.json`;
- * - computed: geen profiel bekend, combat is berekend uit de hiscores.
+ * - computed: geen profiel bekend, combat is berekend uit de hiscores;
+ * - plugin: queststatus uit de snapshot van de in-game plugin (nieuwer dan de andere bron).
  */
 export interface QuestsSource {
-  kind: "live" | "cached" | "bundled";
+  kind: "live" | "cached" | "bundled" | "plugin";
   at: string;
 }
 export interface ProfileSource {
@@ -81,6 +83,8 @@ export interface AccountData {
   errors: string[];
   /** Ruwe meldingen van de quest- en profielbron; de app valt dan terug en toont één rustige melding. */
   sourceErrors: string[];
+  /** Ontvangsttijd van de plugin-snapshot als die skills of quests heeft aangevuld, anders null. */
+  pluginAt?: string | null;
 }
 
 /** De meegeleverde questlijst (verversen met research/scripts/update_quest_snapshot.py). */
@@ -185,20 +189,120 @@ export const runeMetricsSource: AccountSource = { profile: fetchProfileRuneMetri
 export const ACCOUNT_SOURCE: AccountSource = runeMetricsSource;
 
 /**
- * Combineert hiscores en RuneMetrics. Per skill wint de bron met de hoogste XP:
- * RuneMetrics loopt vaak voor op de hiscores, terwijl de hiscores de Ironman-rank leveren.
+ * Combineert hiscores, RuneMetrics en (als die er is) de plugin-snapshot. Per skill wint de bron met de hoogste
+ * XP: RuneMetrics en de plugin lopen vaak voor op de hiscores, terwijl de hiscores de Ironman-rank leveren.
+ * XP daalt nooit, dus een oudere plugin-snapshot verliest vanzelf van nieuwere hiscores.
  */
-export function mergeSkills(hs: HiscoreRow[] | null, profile: Profile | null): SkillRow[] {
+export function mergeSkills(hs: HiscoreRow[] | null, profile: Profile | null, plugin: PluginSnapshot | null = null): SkillRow[] {
   return SKILLS.map((name, id) => {
     const h = hs?.[id];
     const r = profile?.skillvalues.find((s) => s.id === id);
+    const p = plugin?.skills.find((s) => s.name === name) ?? plugin?.skills.find((s) => s.id === id);
     const rXp = r ? Math.floor(r.xp / 10) : -1;
     const hXp = h ? h.xp : -1;
-    if (r && rXp > hXp) {
-      return { name, level: r.level, xp: rXp, rank: h?.rank ?? null, source: "runemetrics" as const };
+    const pXp = p ? p.xp : -1;
+    const rank = h?.rank ?? null;
+    if (p && pXp > hXp && pXp > rXp) {
+      const level = p.level >= 1 ? p.level : levelForXp(pXp, maxLevel(name));
+      return { name, level, xp: pXp, rank, source: "plugin" as const };
     }
-    return { name, level: h?.level ?? 1, xp: Math.max(0, hXp), rank: h?.rank ?? null, source: "hiscore" as const };
+    if (r && rXp > hXp) {
+      return { name, level: r.level, xp: rXp, rank, source: "runemetrics" as const };
+    }
+    return { name, level: h?.level ?? 1, xp: Math.max(0, hXp), rank, source: "hiscore" as const };
   });
+}
+
+// ---------------------------------------------------------------------------------------------------------
+// Derde bron: de in-game plugin "Ons Pap sync" (../plugin/ons-pap-sync). De plugin post naar de dev-server
+// (src/server/pluginInbox.ts); de app leest de laatste snapshot via GET /api/plugin/latest. In een
+// productiebuild bestaat dat endpoint niet en wordt deze bron stil overgeslagen.
+// ---------------------------------------------------------------------------------------------------------
+
+export type PluginSnapshot = StoredPluginSnapshot;
+
+const PLUGIN_LATEST = "/api/plugin/latest";
+
+/**
+ * De Client API zegt niet of XP in hele punten of in tienden komt (RuneMetrics gebruikt tienden). Kloppen de
+ * levels beter bij XP/10 dan bij XP, dan delen we alles door 10.
+ */
+function pluginXpInTenths(skills: PluginSnapshot["skills"]): boolean {
+  let whole = 0;
+  let tenths = 0;
+  for (const s of skills) {
+    const name = SKILLS[s.id];
+    if (!name || s.xp <= 0) continue;
+    const cap = maxLevel(name);
+    if (levelForXp(s.xp, cap) === s.level) whole++;
+    if (levelForXp(Math.floor(s.xp / 10), cap) === s.level) tenths++;
+  }
+  return tenths > whole;
+}
+
+/** Leest het antwoord van /api/plugin/latest; null als het niet de verwachte vorm heeft. */
+export function parsePluginSnapshot(j: any): PluginSnapshot | null {
+  if (!j || typeof j !== "object" || j.v !== 1 || typeof j.account !== "string" || !Array.isArray(j.skills)) return null;
+  const receivedAt = typeof j.receivedAt === "string" && Date.parse(j.receivedAt) ? (j.receivedAt as string) : null;
+  if (!receivedAt) return null;
+  const skills = (j.skills as any[]).filter(
+    (s) => s && Number.isInteger(s.id) && typeof s.name === "string" && Number.isFinite(s.level) && Number.isFinite(s.xp) && s.xp >= 0,
+  ) as PluginSnapshot["skills"];
+  const tenths = pluginXpInTenths(skills);
+  const quests = Array.isArray(j.quests)
+    ? ((j.quests as any[]).filter((q) => q && typeof q.name === "string" && ["COMPLETED", "STARTED", "NOT_STARTED"].includes(q.status)) as PluginQuest[])
+    : null;
+  return {
+    v: 1,
+    account: j.account,
+    sentAt: Number.isFinite(j.sentAt) ? j.sentAt : null,
+    receivedAt,
+    skills: skills.map((s) => ({ id: s.id, name: s.name, level: s.level, xp: tenths ? Math.floor(s.xp / 10) : Math.floor(s.xp) })),
+    quests,
+    questsAt: !quests ? null : typeof j.questsAt === "string" && Date.parse(j.questsAt) ? j.questsAt : receivedAt,
+  };
+}
+
+/** Laatste plugin-snapshot, of null als er geen is, het endpoint ontbreekt of het antwoord niet klopt. Gooit nooit. */
+export async function fetchPluginSnapshot(): Promise<PluginSnapshot | null> {
+  if (!import.meta.env.DEV) return null; // alleen de dev-server heeft dit endpoint
+  try {
+    const res = await fetch(PLUGIN_LATEST, { cache: "no-store" });
+    if (!res.ok) return null;
+    return parsePluginSnapshot(await res.json());
+  } catch {
+    return null;
+  }
+}
+
+/** Questlijst van de plugin in de vorm van de app. */
+export function pluginQuests(list: PluginQuest[]): Quest[] {
+  return list.map((q) => ({
+    title: q.name,
+    status: q.status,
+    difficulty: typeof q.difficulty === "number" ? q.difficulty : 0,
+    members: q.members !== false,
+    questPoints: typeof q.questPoints === "number" ? q.questPoints : 0,
+    userEligible: q.eligible !== false,
+  }));
+}
+
+/**
+ * Legt de queststatus van de plugin over een bestaande lijst: bij dezelfde titel (hoofdletters tellen niet)
+ * wint de status van de plugin, de rest van de velden blijft. Quests die alleen de plugin kent, komen erbij.
+ */
+export function overlayPluginQuests(base: Quest[] | null, list: PluginQuest[]): Quest[] {
+  const fromPlugin = pluginQuests(list);
+  if (!base) return fromPlugin;
+  const key = (t: string) => t.trim().toLowerCase();
+  const byTitle = new Map(fromPlugin.map((q) => [key(q.title), q]));
+  const merged = base.map((q) => {
+    const p = byTitle.get(key(q.title));
+    if (!p) return q;
+    byTitle.delete(key(q.title));
+    return { ...q, status: p.status };
+  });
+  return [...merged, ...byTitle.values()];
 }
 
 export const questPointsOf = (quests: Quest[] | null) =>
@@ -212,6 +316,7 @@ export function normalizeAccountData(d: AccountData): AccountData {
     questsSource: d.questsSource !== undefined ? d.questsSource : d.quests ? { kind: "live", at: d.fetchedAt } : null,
     errors: d.errors ?? [],
     sourceErrors: d.sourceErrors ?? [],
+    pluginAt: d.pluginAt ?? null,
   };
 }
 
@@ -247,6 +352,8 @@ export interface FetchOptions {
   bundled?: QuestSnapshot | null;
   /** Bron voor profiel en quests; standaard ACCOUNT_SOURCE. */
   source?: AccountSource;
+  /** Plugin-snapshot ophalen; standaard fetchPluginSnapshot (alleen in de dev-server). */
+  plugin?: () => Promise<PluginSnapshot | null>;
 }
 
 /**
@@ -259,7 +366,8 @@ export async function fetchAccount(name: string, opts: FetchOptions = {}): Promi
   const bundled = opts.bundled === undefined ? BUNDLED_QUESTS : opts.bundled;
   const prev = opts.previous && sameAccount(opts.previous.account, name) ? normalizeAccountData(opts.previous) : null;
 
-  const [hs, prof, qs] = await Promise.allSettled([fetchHiscore(name), source.profile(name), source.quests(name)]);
+  const pluginFetch = opts.plugin ?? fetchPluginSnapshot;
+  const [hs, prof, qs, pl] = await Promise.allSettled([fetchHiscore(name), source.profile(name), source.quests(name), pluginFetch()]);
   const fetchedAt = new Date().toISOString();
   const errors = hs.status === "rejected" ? [errMsg(hs.reason)] : [];
   const sourceErrors = [prof, qs].flatMap((r) => (r.status === "rejected" ? [errMsg(r.reason)] : []));
@@ -290,12 +398,24 @@ export async function fetchAccount(name: string, opts: FetchOptions = {}): Promi
     }
   }
 
+  // Plugin-snapshot van hetzelfde account: skills via de hoogste XP, quests alleen als de questbron niet live is
+  // en de snapshot nieuwer is dan die bron (na de stop wint een recente snapshot dus van de opslag).
+  const plugin = pl.status === "fulfilled" && pl.value && sameAccount(pl.value.account, name) ? pl.value : null;
+  const questsLive = questsSource?.kind === "live";
+  if (plugin?.quests && plugin.questsAt && !questsLive && (!questsSource || time(plugin.questsAt) > time(questsSource.at))) {
+    quests = overlayPluginQuests(quests, plugin.quests);
+    questsSource = { kind: "plugin", at: plugin.questsAt };
+  }
+
+  // Hiscores zijn leidend. XP daalt nooit, dus een laatst bekend profiel is een veilige ondergrens: zo zakt de
+  // XP niet terug (en toont het Logboek geen negatieve winst) zolang de hiscores nog achterlopen op RuneMetrics.
+  const skills = mergeSkills(hiscore?.skills ?? null, profile, plugin);
+  const pluginUsed = skills.some((s) => s.source === "plugin") || questsSource?.kind === "plugin";
+
   return {
     account: name,
     fetchedAt,
-    // Hiscores zijn leidend. XP daalt nooit, dus een laatst bekend profiel is een veilige ondergrens: zo zakt de
-    // XP niet terug (en toont het Logboek geen negatieve winst) zolang de hiscores nog achterlopen op RuneMetrics.
-    skills: mergeSkills(hiscore?.skills ?? null, profile),
+    skills,
     overall: hiscore?.overall ?? null,
     profile,
     profileSource,
@@ -304,6 +424,7 @@ export async function fetchAccount(name: string, opts: FetchOptions = {}): Promi
     questPoints: questPointsOf(quests),
     errors,
     sourceErrors,
+    pluginAt: pluginUsed && plugin ? plugin.receivedAt : null,
   };
 }
 
@@ -331,7 +452,10 @@ export function accountCombat(d: AccountData): number {
 export function fallbackNotice(d: AccountData, now: Date = new Date()): { title: string; body: string[]; raw: string[] } | null {
   const qs = d.questsSource;
   const ps = d.profileSource;
-  if ((!ps || ps.kind === "live") && qs?.kind === "live") return null;
+  const pluginLine = d.pluginAt ? `Plugin-snapshot van ${fmtDate(d.pluginAt)}.` : null;
+  if ((!ps || ps.kind === "live") && qs?.kind === "live") {
+    return pluginLine ? { title: "Aangevuld met de plugin", body: [pluginLine], raw: [] } : null;
+  }
   if (!ps && qs === undefined) return null;
   const stopped = runemetricsStopped(now);
   const hiscoresOk = (d.errors ?? []).length === 0;
@@ -340,13 +464,15 @@ export function fallbackNotice(d: AccountData, now: Date = new Date()): { title:
   let first: string;
   if (!qs) first = "Er is geen questlijst van dit account bewaard";
   else if (qs.kind === "live") first = "De quests zijn live opgehaald";
+  else if (qs.kind === "plugin") first = "De queststatus komt uit de plugin";
   else first = `Queststatus van ${fmtDay(qs.at)} uit ${qs.kind === "cached" ? "de laatste opslag" : "de meegeleverde lijst"}`;
   body.push(hiscoresOk ? `${first}; skills en XP komen live van de hiscores.` : `${first}.`);
-  if (qs && qs.kind !== "live") body.push("Vink nieuwe quests zelf af in de Route-tab.");
+  if (qs && (qs.kind === "cached" || qs.kind === "bundled")) body.push("Vink nieuwe quests zelf af in de Route-tab.");
   if (ps?.kind === "cached") body.push(`Activiteiten zijn van ${fmtDay(ps.at)}; combat volgt verder de hiscores.`);
   if (ps?.kind === "computed") body.push("Combat is berekend uit de hiscores.");
   if (!stopped && (d.sourceErrors ?? []).some((e) => /privé/i.test(e)))
     body.push("Staat het profiel op privé, zet RuneMetrics dan in de game op openbaar en vernieuw.");
+  if (pluginLine) body.push(pluginLine);
 
   return {
     title: stopped ? "RuneMetrics is gestopt (10 november 2026)" : "RuneMetrics gaf nu geen antwoord",

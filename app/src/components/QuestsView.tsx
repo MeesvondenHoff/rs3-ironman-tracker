@@ -70,7 +70,7 @@ export default function QuestsView({ quests, source, route, hasData }: Props) {
         <p className="page-sub">
           {done.length} van {quests.length} quests voltooid, goed voor {fmt(qp)} van de {fmt(totalQp)} quest points. {inRoute.size} quests komen in de route voor.
           {source && source.kind !== "live" && (
-            <> Stand van {fmtDay(source.at)} ({source.kind === "cached" ? "laatste opslag" : "meegeleverde lijst"}); nieuwe quests vink je af in de Route-tab.</>
+            <> Stand van {fmtDay(source.at)} ({source.kind === "cached" ? "laatste opslag" : source.kind === "plugin" ? "plugin-snapshot" : "meegeleverde lijst"}){source.kind !== "plugin" && "; nieuwe quests vink je af in de Route-tab"}.</>
           )}
         </p>
       </header>

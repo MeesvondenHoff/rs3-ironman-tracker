@@ -1,0 +1,10 @@
+{
+    "name": "Ons Pap sync",
+    "version": "0.1.0",
+    "contactEmailAddress": "vul-in@example.com",
+    "requiredDependencies": {},
+    "optionalDependencies": {},
+    "requiredPermissions": [ "httpAccess" ],
+    "optionalPermissions": [],
+    "urls": { "tracker": "http://localhost:5173" }
+}

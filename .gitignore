@@ -1,6 +1,8 @@
 # Node
 node_modules/
 app/dist/
+# Ontvangen plugin-snapshots (dev-server)
+app/.plugin/
 npm-debug.log*
 
 # Python

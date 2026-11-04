@@ -104,6 +104,7 @@ export default function SkillsView({ data, route, ctx, snapshots, refresh, loadi
                     <th scope="row">
                       {s.name}
                       {s.source === "runemetrics" && <span className="src-mark" title="XP uit RuneMetrics, recenter dan de hiscores">*</span>}
+                      {s.source === "plugin" && <span className="src-mark" title="XP uit de plugin-snapshot, recenter dan de hiscores">*</span>}
                       {goal && <span className="goal-tag">doel {goal}</span>}
                     </th>
                     <td className="num lvl">{s.level}<span className="of">/{maxLevel(s.name)}</span></td>

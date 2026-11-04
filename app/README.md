@@ -70,6 +70,27 @@ De proxy bestaat alleen in `npm run dev` (en niet in `vite preview` of een stati
 Skills: per skill wint de bron met de meeste XP (RuneMetrics loopt vaak voor op de hiscores); de rank komt altijd
 van de Ironman-hiscores. QP = som van `questPoints` van voltooide quests uit de questlijst (live of terugval, zie hieronder).
 
+## Ontvangstpunt voor de plugin (dev-server)
+
+De in-game plugin `../plugin/ons-pap-sync` (prototype, zie `../plugin/README.md`) post naar de dev-server. Een kleine
+Vite-plugin in `vite.config.ts` hangt de handler uit `src/server/pluginInbox.ts` (alleen Node, niet in de app-bundel)
+aan de middleware:
+
+| Pad | Wat |
+| --- | --- |
+| `POST /api/plugin/sync` | Controleert `v` (1), `account` en de `skills`-array, schrijft `.plugin/latest.json` en voegt de events toe aan `.plugin/events.jsonl` (een JSON-regel per event). Een bundel zonder quests houdt de laatst ontvangen questlijst. |
+| `GET /api/plugin/latest` | De laatste snapshot (met `receivedAt` en `questsAt`), of 404. |
+
+Andere methodes krijgen een 405, een te grote body een 413, een POST met een `Origin` van een andere site dan
+localhost een 403. `app/.plugin/` staat in `.gitignore`. Het ontvangstpunt bestaat alleen in `npm run dev`.
+
+In de app is de plugin een derde bron naast hiscores en RuneMetrics (`fetchPluginSnapshot` in `src/lib/api.ts`,
+alleen in de dev-server; ontbreekt het endpoint, dan wordt de bron stil overgeslagen). Skills: hoogste XP wint, bron
+`plugin` (sterretje in de Skills-tab). Quests: alleen als de questbron niet live is en de snapshot nieuwer is; dan
+legt de app de status van de plugin over de laatst bekende lijst en is `questsSource.kind` `plugin`. Heeft de plugin
+iets aangevuld, dan staat in de melding "Plugin-snapshot van <tijd>". Komt de XP van de plugin in tienden (zoals bij
+RuneMetrics), dan herkent de app dat aan de levels en deelt hij door 10.
+
 ## Stop van RuneMetrics en de terugval
 
 Jagex zet de RuneMetrics- en Adventurer's Log-API op 10 november 2026 uit (`../research/API en plugins.md`). De
