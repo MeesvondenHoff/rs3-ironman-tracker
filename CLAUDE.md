@@ -18,6 +18,9 @@ Leeswijzer:
 |---|---|
 | `app/` | Vite + React + TypeScript-tracker voor Ons Pap. Start: `npm run dev --prefix app` (poort 5173). De dev-server proxyt `/api/hiscore` naar de RS3-hiscores en `/api/runemetrics` naar RuneMetrics, omdat die API's geen CORS-headers sturen. Tests: `npm test --prefix app` (Vitest). Typecheck: `npm run typecheck --prefix app`. |
 | `plugin/` | Prototype van de in-game plugin "Ons Pap sync" (RS3 Client API, Lua): `plugin/ons-pap-sync/` (`plugin.json`, `main.lua`) stuurt skills, XP, queststatus en level- en questevents van het eigen personage naar de dev-server (`POST /api/plugin/sync`). Niet getest in de game; aannames, laden in de ontwikkelomgeving en publicatie-eisen in `plugin/README.md`. |
+| `app/src/data/bosses.json` | Bosskaarten (Ivar, K'ril, Queen Black Dragon, Vindicta, Araxxor, Helwyr, Twin Furies, Gregorovic) met per boss een `ready`-blok voor de PvM-checklist; alles gecontroleerd op runescape.wiki. |
+| `app/src/lib/pvm.ts`, `app/src/components/PvmView.tsx` | PvM-tab: per boss de eisen (skills en quests automatisch, unlocks en gear handmatig), score en wat nog ontbreekt; vinkjes in `rs3t:pvm`. Zie `app/README.md`, PvM-checklist. |
+| `app/test/pvm.test.ts` | Tests van de PvM-checklist (gereedheid, questlijst ontbreekt, volgorde, validatie, back-up). |
 | `app/src/data/route.json` | De route die de app toont. **Niet met de hand bewerken**: wordt gegenereerd door `research/scripts/build_route.py`. |
 | `research/ROUTE-SCHEMA.md` | Het dataschema van `route.json`: het contract tussen research en app. |
 | `research/Route Ons Pap.md` | De route in leesbare vorm, met fasetabellen die uit dezelfde bron komen als `route.json`. |

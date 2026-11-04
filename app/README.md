@@ -14,7 +14,7 @@ Vanuit Claude Code start `.claude/launch.json` (configuratie `rs3-tracker`) deze
 
 ## Indeling
 
-Vijf tabs (de laatst gekozen tab wordt onthouden; oude waarden `dashboard`, `snapshots` en `history` worden omgezet):
+Zes tabs (de laatst gekozen tab wordt onthouden; oude waarden `dashboard`, `snapshots` en `history` worden omgezet):
 
 - **Vanavond**: de volgende stap als perkamenten opdrachtbrief (soort, actief/AFK, tijd, locatie, wat nog nodig is,
   je eigen notitie, een korte bosskaart als de stap een boss is, afvinken met ongedaan maken), daaronder het
@@ -26,11 +26,12 @@ Vijf tabs (de laatst gekozen tab wordt onthouden; oude waarden `dashboard`, `sna
   contractwaarschuwingen. "Bekijk in de route" op Vanavond springt naar de stap.
 - **Skills**: de skilltabel (stond eerst op het dashboard), met de doelen van de huidige fase bovenaan.
 - **Quests**: zoeken en filteren op status, eisen gehaald en route; per quest een link naar de Quick guide op de RS3-wiki (of de wikipagina).
+- **PvM**: de PvM-klaar-checklist per boss (zie hieronder), met bovenaan de boss die het dichtstbij is.
 - **Logboek**: XP-winst, alle snapshots (voorheen Snapshots en Geschiedenis) en back-up downloaden/terugzetten.
 
 Componenten: `src/components/` (`Dashboard`, `WeekRhythm`, `BossCard`, `RouteTrail`, `RouteView`, `SkillsView`,
-`QuestsView`, `LogbookView`, `HistoryView`, gedeelde stukjes in `ui.tsx`, waaronder `LocationLine` en de lijntekens
-`place`, `note`, `boss` en `week`). Logica in `src/lib/`: `route`, `repeatables`, `bosses`, `storage`, `snapshots`,
+`QuestsView`, `PvmView`, `LogbookView`, `HistoryView`, gedeelde stukjes in `ui.tsx`, waaronder `LocationLine` en de lijntekens
+`place`, `note`, `boss` en `week`). Logica in `src/lib/`: `route`, `repeatables`, `bosses`, `pvm`, `storage`, `snapshots`,
 `skills`, `api`, `questLinks`.
 
 ## Thema
@@ -146,12 +147,28 @@ contractwaarschuwingen (onbekende skill- of questnamen, dubbele id's, onbekende 
   (JSON-string; leeg = sleutel weg). Een stap met notitie krijgt een klein notitieteken; de notitie van de volgende
   stap staat ook op de perkamentkaart.
 - **Bosskaarten**: `src/data/bosses.json` (Ivar p2-09, K'ril Tsutsaroth p6-04, Vindicta p6-07; Queen Black Dragon
-  staat erin met lege `stepIds` omdat die stap is uitgesteld tot Herblore omhoog gaat). Per boss
+  staat erin met lege `stepIds` omdat die stap is uitgesteld tot Herblore omhoog gaat, net als Araxxor, Helwyr,
+  The Twin Furies en Gregorovic, die nog niet in de route zitten). Per boss
   `boss` (id), `name`, `stepIds`, `location`, `checked` (datum van de wikicontrole), `summary`, `requirements`,
   `ironmanGear` (`slot`, `item`, `how`), `mechanics` (maximaal 6), `drops` (`progress`, `useful`, `rest`, elk met
   `item`, optioneel `rate` en `note`), `uncertain` en `sources`. De koppeling loopt via `stepIds`, dus `route.json`
   hoeft niet te veranderen. Onbekende stap-id's verschijnen bij de contractwaarschuwingen in de Route-tab.
   Alles is gecontroleerd op runescape.wiki (nooit OSRS); wat onzeker bleef, staat in `uncertain` en op de kaart.
+
+## PvM-checklist
+
+De tab PvM zet per boss een checklist "klaar voor een eerste kill" neer, uit het blok `ready` in
+`src/data/bosses.json` (`skills`, `quests`, `unlocks`, `gear`; logica in `src/lib/pvm.ts`, scherm in
+`src/components/PvmView.tsx`). Bosses staan op routevolgorde (eerste `stepId` in de route), bosses zonder stap daarna.
+
+- **Automatisch**: `skills` uit de hiscores ("Defence 70 (nu 43)") en `quests` uit de questlijst (exacte wiki-titel,
+  met "(gestart)"). Een unlock of gear-item met een `auto`-blok (`skills` en/of `quests`) vinkt de app ook zelf af,
+  bijvoorbeeld Devotion via One Piercing Note of Deflect Melee via The Temple at Senntisten plus Prayer 71.
+  Ontbreekt de questlijst, dan tellen quest-eisen niet mee en staan ze als niet gecontroleerd.
+- **Handmatig**: de overige `unlocks` (killcount, gebeden) en `gear` vink je zelf aan; de `how`-tekst zegt waar een
+  ironman het vandaan haalt.
+- **Opslag**: de handmatige vinkjes staan onder één sleutel `rs3t:pvm` als `{ "<boss>:<id>": true }` en gaan dus mee
+  in de back-up van het Logboek. `validateBosses` controleert skillnamen, levels en unieke id's binnen een boss.
 
 ## Questgidsen
 

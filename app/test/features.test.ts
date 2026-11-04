@@ -3,7 +3,7 @@ import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { BossCard, checkedText } from "../src/components/BossCard";
 import { beforeEach, describe, expect, it } from "vitest";
-import { BOSSES, bossForStep, bossIndex, MAX_MECHANICS, validateBosses, type Boss } from "../src/lib/bosses";
+import { BOSSES, bossForStep, bossIndex, MAX_MECHANICS, validateBosses, validateReady, type Boss } from "../src/lib/bosses";
 import {
   isDone, isUnlocked, lastReset, nextReset, REPEATABLES, summarize, untilText, type Repeatable,
 } from "../src/lib/repeatables";
@@ -168,6 +168,10 @@ describe("Bosskaarten", () => {
       expect(b.drops.progress.length + b.drops.useful.length).toBeGreaterThan(0);
       expect(b.sources.every((s) => s.url.startsWith("https://runescape.wiki/"))).toBe(true);
       expect(b.checked).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      // PvM-checklist: elke boss heeft een geldig ready-blok met minstens een automatische eis
+      expect(b.ready, b.boss).toBeDefined();
+      expect(validateReady(b)).toEqual([]);
+      expect(Object.keys(b.ready!.skills).length + b.ready!.quests.length).toBeGreaterThan(0);
     }
   });
 

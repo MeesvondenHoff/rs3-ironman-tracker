@@ -790,6 +790,53 @@ tr.goal-met .goal-tag { color: var(--moss); }
 .rep.done .rep-detail, .rep.done .rep-meta { opacity: 0.55; }
 .week-later { color: var(--muted); font-size: var(--t-sm); font-style: italic; }
 
+/* ---------- PvM-checklist ---------- */
+
+.pvm { display: grid; gap: var(--s3); }
+.pvm .page-head { margin-bottom: 0; }
+.pvm-closest { max-width: 72ch; }
+.pvm-closest strong { color: var(--gold); font-weight: 700; }
+.pvm-notices { margin-top: 0; }
+.pvm-list { display: grid; gap: var(--s3); }
+.pvm-boss { padding: var(--s3); display: grid; gap: 14px; }
+.pvm-boss.is-ready { border-color: rgb(147 186 126 / 0.45); }
+.pvm-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(200px, 300px); gap: 10px 24px; align-items: end; }
+.pvm-title { display: grid; gap: 4px; min-width: 0; }
+.pvm-title h3 { font-size: var(--t-xl); color: var(--parchment); display: flex; align-items: center; gap: 10px; }
+.pvm-title h3 .icon { color: var(--gold); width: 18px; height: 18px; }
+.pvm-score { display: grid; gap: 6px; }
+.pvm-score .bar { height: 8px; }
+.pvm-count { color: var(--muted); font-variant-numeric: lining-nums tabular-nums; }
+.pvm-count strong { color: var(--text); font-size: var(--t-lg); font-weight: 700; }
+.pvm-unknown-count { font-size: var(--t-sm); }
+.pvm-missing { max-width: 80ch; padding: 8px 12px; border-left: 3px solid var(--active); background: rgb(229 140 90 / 0.06); border-radius: 0 var(--r-ctl) var(--r-ctl) 0; }
+.pvm-boss.is-ready .pvm-missing { border-left-color: var(--moss); background: rgb(147 186 126 / 0.07); }
+.pvm-missing-label { font-weight: 700; }
+.pvm-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px 28px; }
+.pvm-group { display: grid; gap: 6px; align-content: start; min-width: 0; }
+.pvm-group h4 { margin: 0; font-family: var(--serif); font-size: var(--t-md); color: var(--gold); display: flex; align-items: center; gap: 8px; }
+.pvm-group-count { margin-left: auto; font-family: var(--sans); font-size: var(--t-sm); font-weight: 400; color: var(--muted); font-variant-numeric: lining-nums tabular-nums; }
+.pvm-src { display: inline-flex; align-items: center; gap: 6px; font-size: var(--t-xs); color: var(--muted); font-style: italic; }
+.pvm-src .icon { width: 13px; height: 13px; }
+.pvm-items { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.pvm-item { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 0 10px; padding: 6px 4px; border-radius: 6px; align-items: start; }
+.pvm-item.manual:hover { background: rgb(255 255 255 / 0.025); }
+.pvm-item input { margin-top: 3px; }
+.pvm-item-main { display: grid; gap: 1px; min-width: 0; }
+.pvm-item.manual .pvm-item-main { cursor: pointer; }
+.pvm-label { font-weight: 500; }
+.pvm-how { color: var(--muted); font-size: var(--t-sm); }
+.pvm-detail { color: var(--active); }
+.pvm-auto-tag { color: var(--muted); font-size: var(--t-xs); font-style: italic; }
+.pvm-glyph { width: 20px; text-align: center; color: var(--muted); line-height: 1.5; }
+.pvm-item.auto.open .pvm-label { color: var(--text); }
+.pvm-item.auto.met .pvm-glyph, .pvm-item.auto.met .pvm-label { color: var(--moss); }
+.pvm-item.auto.unknown .pvm-label { color: var(--muted); }
+.pvm-item.manual.met .pvm-label { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--rule-strong); }
+.pvm-foot { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 10px 16px; padding-top: 14px; border-top: 1px solid var(--rule); }
+.pvm-foot .boss-card { margin-left: 0; flex: 1 1 420px; min-width: 0; }
+.pvm-route { flex: none; }
+
 /* ---------- Kleinere schermen ---------- */
 
 @media (max-width: 960px) {
@@ -850,6 +897,10 @@ tr.goal-met .goal-tag { color: var(--moss); }
   .boss-card { margin-left: 0; }
   .boss-gear > div { grid-template-columns: 1fr; }
   .week { padding: 20px 16px; }
+  .pvm-boss { padding: 20px 16px; }
+  .pvm-head { grid-template-columns: 1fr; }
+  .pvm-groups { grid-template-columns: 1fr; }
+  .pvm-foot .boss-card { flex-basis: 100%; }
 
   th:first-child, td:first-child { padding-left: 14px; }
   th:last-child, td:last-child { padding-right: 14px; }

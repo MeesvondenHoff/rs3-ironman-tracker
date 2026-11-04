@@ -9,6 +9,8 @@ import RouteView from "./components/RouteView";
 import SkillsView from "./components/SkillsView";
 import QuestsView from "./components/QuestsView";
 import LogbookView from "./components/LogbookView";
+import PvmView from "./components/PvmView";
+import { loadPvmChecks, savePvmChecks, togglePvmCheck } from "./lib/pvm";
 import { HelmMark, Icon, Notice } from "./components/ui";
 
 const TABS = [
@@ -16,6 +18,7 @@ const TABS = [
   ["route", "Route"],
   ["skills", "Skills"],
   ["quests", "Quests"],
+  ["pvm", "PvM"],
   ["logboek", "Logboek"],
 ] as const;
 type Tab = (typeof TABS)[number][0];
@@ -62,6 +65,7 @@ export default function App() {
   const [info, setInfo] = useState<string | null>(null);
   const [snapshots, setSnapshots] = useState<Snapshot[]>(() => load(KEYS.snapshots, []));
   const [manual, setManual] = useState<Record<string, boolean>>(() => load(KEYS.manual, {}));
+  const [pvmChecks, setPvmChecks] = useState<Record<string, boolean>>(loadPvmChecks);
   const [route, setRoute] = useState<LoadedRoute | null>(null);
   const [routeError, setRouteError] = useState<string | null>(null);
   const [tab, setTab] = useState<Tab>(initialTab);
@@ -70,6 +74,7 @@ export default function App() {
 
   useEffect(() => save(KEYS.tab, tab), [tab]);
   useEffect(() => save(KEYS.manual, manual), [manual]);
+  useEffect(() => savePvmChecks(pvmChecks), [pvmChecks]);
 
   useEffect(() => {
     loadRoute().then(setRoute, (e) => setRouteError(e instanceof Error ? e.message : String(e)));
@@ -123,6 +128,7 @@ export default function App() {
 
   const ctx = useMemo(() => makeContext(data?.skills ?? null, data?.quests ?? null, manual), [data, manual]);
   const toggleManual = (id: string) => setManual((m) => ({ ...m, [id]: !m[id] }));
+  const togglePvm = (key: string) => setPvmChecks((m) => togglePvmCheck(m, key));
 
   const openStep = (id: string, opts?: { boss?: boolean }) => {
     setFocusStep((f) => ({ id, n: (f?.n ?? 0) + 1, boss: opts?.boss }));
@@ -132,6 +138,7 @@ export default function App() {
   const reloadFromStorage = () => {
     setSnapshots(load(KEYS.snapshots, []));
     setManual(load(KEYS.manual, {}));
+    setPvmChecks(loadPvmChecks());
     const acc = load(KEYS.account, DEFAULT_ACCOUNT);
     setAccount(acc);
     setAccountInput(acc);
@@ -268,6 +275,9 @@ export default function App() {
         {tab === "skills" && <SkillsView data={data} route={route} ctx={ctx} snapshots={snapshots} refresh={() => refresh(account)} loading={loading} />}
         {tab === "quests" && (
           <QuestsView quests={data?.quests ?? null} source={data?.questsSource ?? null} route={route?.route ?? null} hasData={!!data} />
+        )}
+        {tab === "pvm" && (
+          <PvmView route={route} ctx={ctx} hasData={!!data} checks={pvmChecks} toggle={togglePvm} openStep={openStep} />
         )}
         {tab === "logboek" && (
           <LogbookView account={account} snapshots={snapshots} setSnapshots={updateSnapshots} onImported={reloadFromStorage} />

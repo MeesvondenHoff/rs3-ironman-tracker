@@ -7,6 +7,8 @@ export const KEYS = {
   snapshots: PREFIX + "snapshots",
   lastData: PREFIX + "lastData",
   tab: PREFIX + "tab",
+  /** Handmatige vinkjes van de PvM-checklist: { "<boss>:<id>": true }. */
+  pvm: PREFIX + "pvm",
 } as const;
 
 // Notities per stap: rs3t:note:<stap-id> = tekst (als JSON-string).
