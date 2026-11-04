@@ -73,7 +73,7 @@
     "name": "K'ril Tsutsaroth",
     "stepIds": ["p6-04"],
     "location": "God Wars Dungeon, Zamorak-gebied",
-    "checked": "2026-11-03",
+    "checked": "2026-11-04",
     "summary": "Zamorak-general met drie minions. Zijn special halveert je prayer; Debilitate en goed staan maken het verschil.",
     "requirements": [
       "Troll Stronghold, voor de weg naar de God Wars Dungeon-ingang",
@@ -85,7 +85,7 @@
     "ironmanGear": [
       { "slot": "Wapens", "item": "T70 Death guard en Skull lantern", "how": "Kili's Knowledge V en de Soul forge (stap p4-08); T80 pas na Kili's Knowledge VI, waarvoor deze kill meetelt" },
       { "slot": "Armour", "item": "T70 Deathwarden-robes", "how": "Kili's Knowledge V, zelf maken (stap p4-08); de tier die de wiki bij 75+ in je stijl aanbeveelt" },
-      { "slot": "Kili-taak", "item": "Spiritbound hammer (uncharged)", "how": "Krijg je van Kili bij Kili's Knowledge VI (Necromancy 80 en Agility, Constitution, Ranged en Strength 70); na een Necromancy-kill gebruik je hem op het altaar van K'ril" },
+      { "slot": "Kili-taak", "item": "Spiritbound hammer (uncharged)", "how": "Krijg je van Kili als je de T80-taak start (stap p6-08: Necromancy 80 en The Spirit of War). Direct na een Necromancy-kill, als de loot verschijnt, gebruik je hem op het altaar van K'ril. De achievement vraagt daarnaast Agility, Ranged en Strength 70 voor de andere drie generaals" },
       { "slot": "Prayers", "item": "Protect from Magic", "how": "Prayer 43; Soul Split en Deflect Magic vragen curses en veel hogere Prayer" },
       { "slot": "Food", "item": "Sharks", "how": "Zelf vissen en koken (stap p6-02)" },
       { "slot": "Potions", "item": "Beste combat-potion (minimaal super) en prayer potions of super restores", "how": "Zelf brouwen; K'ril laat zelf ook super restores en Zamorak brews vallen" },
@@ -137,7 +137,7 @@
       "gear": [
         { "id": "t70-weapons", "label": "T70 Death guard en Skull lantern", "how": "Kili's Knowledge V, smeden bij de Soul forge (stap p4-08)" },
         { "id": "t70-armour", "label": "T70 Deathwarden-robes", "how": "Kili's Knowledge V, zelf maken (stap p4-08)" },
-        { "id": "spiritbound-hammer", "label": "Spiritbound hammer mee", "how": "Van Kili bij Kili's Knowledge VI; gebruik hem na de kill op het altaar" },
+        { "id": "spiritbound-hammer", "label": "Spiritbound hammer mee", "how": "Van Kili bij de start van Kili's Knowledge VI (stap p6-08); gebruik hem direct na de kill op het altaar" },
         { "id": "food", "label": "Sharks en prayer potions of super restores", "how": "Zelf vissen en koken (stap p6-02) en zelf brouwen" }
       ]
     }
@@ -157,7 +157,7 @@
       "Solo-instance: je komt er pas uit na winst, dood of teleport"
     ],
     "ironmanGear": [
-      { "slot": "Wapens", "item": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stap p5-10)" },
+      { "slot": "Wapens", "item": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stappen p6-08 tot p6-14, dan p5-10)" },
       { "slot": "Armour", "item": "T70 Deathwarden-robes", "how": "Kili's Knowledge V (stap p4-08)" },
       { "slot": "Dragonfire", "item": "Antifire voor de gewone adem, anti-dragon shield als wissel voor de muren en de fase 4-adem", "how": "Antifire vraagt Herblore 69, super antifire Herblore 85 (phoenix feather); de shield haal je gratis bij Duke Horacio in Lumbridge na Dragon Slayer. Antifires vallen ook uit elite reward caskets" },
       { "slot": "Prayers", "item": "Protect from Ranged op afstand, Protect from Melee dichtbij", "how": "Prayer 43" },
@@ -213,7 +213,7 @@
       "quests": [],
       "unlocks": [],
       "gear": [
-        { "id": "t80-weapons", "label": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stap p5-10)" },
+        { "id": "t80-weapons", "label": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stappen p6-08 tot p6-14, dan p5-10)" },
         { "id": "t70-armour", "label": "T70 Deathwarden-robes", "how": "Kili's Knowledge V, zelf maken (stap p4-08)" },
         { "id": "antifire", "label": "Antifire-potions", "how": "Zelf brouwen op Herblore 69 (clean lantadyme en dragon scale dust); ook uit elite reward caskets" },
         { "id": "anti-dragon-shield", "label": "Anti-dragon shield", "how": "Gratis bij Duke Horacio in Lumbridge Castle, nadat de Guildmaster je erover vertelde (Dragon Slayer)" },
@@ -236,7 +236,7 @@
       "Solo of met maximaal 50 spelers; hard mode is alleen solo (aanbevolen combat 99, tier 90)"
     ],
     "ironmanGear": [
-      { "slot": "Wapens", "item": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stap p5-10)" },
+      { "slot": "Wapens", "item": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stappen p6-08 tot p6-14, dan p5-10)" },
       { "slot": "Armour", "item": "T70 Deathwarden-robes (de wiki raadt tier 80 aan)", "how": "Kili's Knowledge V (stap p4-08); T80/T90-armour pas op Necromancy 90" },
       { "slot": "Prayers", "item": "Protect from Melee; Deflect Melee als je Ancient Curses hebt", "how": "Prayer 43 voor Protect; Deflect Melee vraagt Prayer 71 en Ancient Curses" },
       { "slot": "Potions", "item": "Super attacks voor de Attack-eis, beste combat-potion, prayer potions of super restores", "how": "Zelf brouwen: super attack op Herblore 45 (irit + eye of newt); super restores vallen ook bij K'ril" },
@@ -300,7 +300,7 @@
         { "id": "kc-zaros", "label": "40 Zarosian-killcount", "how": "Monsters van die factie verslaan; blijft bewaard tot 200. Met 2.000 reputatie of War's Blessing 2 is het 20, met beide 0" }
       ],
       "gear": [
-        { "id": "t80-weapons", "label": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stap p5-10)" },
+        { "id": "t80-weapons", "label": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stappen p6-08 tot p6-14, dan p5-10)" },
         { "id": "t70-armour", "label": "T70 Deathwarden-robes", "how": "Kili's Knowledge V, zelf maken (stap p4-08)" },
         { "id": "super-attack", "label": "Super attacks voor de ingang", "how": "Zelf brouwen op Herblore 45: clean irit en eye of newt; tilt Attack 70 naar 80" },
         { "id": "food", "label": "Sharks en prayer potions of super restores", "how": "Zelf vissen en koken (stap p6-02) en zelf brouwen" }
@@ -397,7 +397,7 @@
       "Hard mode bestaat ook; begin op normal"
     ],
     "ironmanGear": [
-      { "slot": "Wapens", "item": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stap p5-10)" },
+      { "slot": "Wapens", "item": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stappen p6-08 tot p6-14, dan p5-10)" },
       { "slot": "Armour", "item": "T70 Deathwarden-robes (de wiki raadt tier 80 aan)", "how": "Kili's Knowledge V (stap p4-08); T80 vraagt greater ensouled cloth uit subjugation-armour van K'ril" },
       { "slot": "Prayers", "item": "Protect from Melee; Deflect Melee als je Ancient Curses hebt", "how": "Prayer 43; Deflect Melee vraagt Prayer 71 en The Temple at Senntisten" },
       { "slot": "Potions", "item": "Super magic potions voor de ingang, beste combat-potion, super restores", "how": "Zelf brouwen: super magic op Herblore 76 (clean lantadyme en potato cactus)" },
@@ -455,7 +455,7 @@
         { "id": "kc-seren", "label": "40 Seren-killcount", "how": "Monsters van die factie verslaan; blijft bewaard tot 200. Met 2.000 reputatie of War's Blessing 2 is het 20, met beide 0" }
       ],
       "gear": [
-        { "id": "t80-weapons", "label": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stap p5-10)" },
+        { "id": "t80-weapons", "label": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stappen p6-08 tot p6-14, dan p5-10)" },
         { "id": "t70-armour", "label": "T70 Deathwarden-robes", "how": "Kili's Knowledge V, zelf maken (stap p4-08)" },
         { "id": "super-magic", "label": "Super magic potions voor de ingang", "how": "Zelf brouwen op Herblore 76: clean lantadyme en potato cactus; tilt Magic 70 naar 80" },
         { "id": "food", "label": "Sharks en prayer potions of super restores", "how": "Zelf vissen en koken (stap p6-02) en zelf brouwen" }
@@ -476,7 +476,7 @@
       "Hard mode bestaat ook; begin op normal"
     ],
     "ironmanGear": [
-      { "slot": "Wapens", "item": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stap p5-10)" },
+      { "slot": "Wapens", "item": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stappen p6-08 tot p6-14, dan p5-10)" },
       { "slot": "Armour", "item": "T70 Deathwarden-robes (de wiki raadt tier 80 aan)", "how": "Kili's Knowledge V (stap p4-08); T80 vraagt greater ensouled cloth uit subjugation-armour van K'ril" },
       { "slot": "Prayers", "item": "Protect from Melee; Protect from Ranged als Nymora het plafond laat vallen", "how": "Prayer 43; Deflect Melee vraagt Prayer 71 en The Temple at Senntisten" },
       { "slot": "Potions", "item": "Super ranging potions voor de ingang, beste combat-potion, super restores", "how": "Zelf brouwen: super ranging op Herblore 72 (clean dwarf weed en wine of Zamorak); de Furies laten zelf wine of Zamorak vallen" },
@@ -533,7 +533,7 @@
         { "id": "kc-zamorak-gwd2", "label": "40 Zamorak-killcount (GWD2)", "how": "Monsters van die factie verslaan; blijft bewaard tot 200. Met 2.000 reputatie of War's Blessing 2 is het 20, met beide 0" }
       ],
       "gear": [
-        { "id": "t80-weapons", "label": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stap p5-10)" },
+        { "id": "t80-weapons", "label": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stappen p6-08 tot p6-14, dan p5-10)" },
         { "id": "t70-armour", "label": "T70 Deathwarden-robes", "how": "Kili's Knowledge V, zelf maken (stap p4-08)" },
         { "id": "super-ranging", "label": "Super ranging potions voor de ingang", "how": "Zelf brouwen op Herblore 72: clean dwarf weed en wine of Zamorak; tilt Ranged 70 naar 80" },
         { "id": "food", "label": "Sharks en prayer potions of super restores", "how": "Zelf vissen en koken (stap p6-02) en zelf brouwen" }
@@ -555,7 +555,7 @@
       "Hard mode bestaat ook; begin op normal"
     ],
     "ironmanGear": [
-      { "slot": "Wapens", "item": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stap p5-10)" },
+      { "slot": "Wapens", "item": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stappen p6-08 tot p6-14, dan p5-10)" },
       { "slot": "Armour", "item": "T70 Deathwarden-robes (de wiki raadt tier 80 aan)", "how": "Kili's Knowledge V (stap p4-08); T80 vraagt greater ensouled cloth uit subjugation-armour van K'ril" },
       { "slot": "Prayers", "item": "Protect from Ranged; Deflect Ranged als je Ancient Curses hebt", "how": "Prayer 40; Deflect Ranged vraagt Prayer 68 en The Temple at Senntisten" },
       { "slot": "Potions", "item": "Wendlewick ale voor de ingang, beste combat-potion, super restores", "how": "Ale te koop in de Burnt Lobster Tavern in Wendlewick of zelf brouwen (Cooking 27); de ale verlaagt Strength iets" },
@@ -614,7 +614,7 @@
         { "id": "kc-sliske", "label": "40 Sliske-killcount", "how": "Monsters van die factie verslaan; blijft bewaard tot 200. Met 2.000 reputatie of War's Blessing 2 is het 20, met beide 0" }
       ],
       "gear": [
-        { "id": "t80-weapons", "label": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stap p5-10)" },
+        { "id": "t80-weapons", "label": "T80 Death guard en Skull lantern", "how": "Kili's Knowledge VI: Necromancy 80, Agility, Constitution, Ranged en Strength 70, en een Necromancy-kill op alle vier GWD1-generaals (spiritbound hammer); daarna de Soul forge met greater ensouled bars (stappen p6-08 tot p6-14, dan p5-10)" },
         { "id": "t70-armour", "label": "T70 Deathwarden-robes", "how": "Kili's Knowledge V, zelf maken (stap p4-08)" },
         { "id": "wendlewick-ale", "label": "Wendlewick ale voor de ingang", "how": "Burnt Lobster Tavern in Wendlewick, of zelf brouwen (Cooking 27); tilt Prayer 78 naar 80" },
         { "id": "poison", "label": "Venomblood-perk of irit incense sticks", "how": "Venomblood is een Invention-perk in een armour gizmo; irit incense sticks maak je met Firemaking 40" },

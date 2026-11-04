@@ -3,7 +3,7 @@
     "account": "Ons Pap",
     "goal": "Combat-klaar mid game: combat 100+, T70-T80 gear, Slayer en eerste bosses",
     "playstyle": "Afwisselend actief/AFK, 7-15 uur per week",
-    "updated": "2026-11-03",
+    "updated": "2026-11-04",
     "sources": [
       {
         "id": "src-wiki-eipg",
@@ -482,6 +482,90 @@
         "note": "Prioriteit en stoppunt per repeatable, Natural history quiz, burial gauntlets als AFK-Smithing en de Slayer helmet-pagina; getoetst in research/Site-review thersguide.md."
       },
       {
+        "id": "src-wiki-kili-6",
+        "title": "RS Wiki: Kili's Knowledge VI",
+        "url": "https://runescape.wiki/w/Kili%27s_Knowledge_VI",
+        "weight": "hoog",
+        "note": "T80 Necromancy-gear: gevulde soul urn (30 greater communion of 150 Necromancy-kills op Slayer-taken), redberry pie en de spiritbound hammer (charged). Eisen: Kili's Knowledge V, Troll Stronghold (deels), Agility, Constitution, Ranged en Strength 70, Necromancy 80. Gelezen 4 november 2026."
+      },
+      {
+        "id": "src-wiki-spiritbound-hammer",
+        "title": "RS Wiki: Spiritbound hammer (uncharged en charged)",
+        "url": "https://runescape.wiki/w/Spiritbound_hammer_(uncharged)",
+        "weight": "hoog",
+        "note": "Laden: elk van de vier GWD1-generaals verslaan met Necromancy (kill en grootste deel van de schade; Death Mark mag, deathtouched dart niet) en de hammer binnen enkele seconden op het altaar in de kamer gebruiken; instance of niet. Wordt na het vierde altaar vanzelf charged."
+      },
+      {
+        "id": "src-wiki-kili-transcript",
+        "title": "RS Wiki: Transcript van Kili",
+        "url": "https://runescape.wiki/w/Transcript:Kili",
+        "weight": "midden",
+        "note": "Kili geeft de soul urn en de uncharged hammer bij het starten van de T80-taak; als drempel noemt de dialoog alleen het Necromancy-level en The Spirit of War."
+      },
+      {
+        "id": "src-wiki-totem-intimidation",
+        "title": "RS Wiki: Totem of Intimidation",
+        "url": "https://runescape.wiki/w/Totem_of_Intimidation",
+        "weight": "midden",
+        "note": "Slaat de 40 killcount in GWD1 over, maar vraagt effectief Slayer 90 (base-stuk) en voor ironmen Big Game Hunter (middenstuk). War's Blessing 2 (142 CombatScore) doet hetzelfde. Geen van beide is haalbaar in deze route."
+      },
+      {
+        "id": "src-wiki-graardor-strat",
+        "title": "RS Wiki: General Graardor/Strategies",
+        "url": "https://runescape.wiki/w/General_Graardor/Strategies",
+        "weight": "hoog",
+        "note": "Normal mode: combat 75, tier 70-wapen en -armour, Prayer 43 met Protect from Melee; melee tot 3.000, schokgolf op iedereen tot 1.676; Sergeant Steelwill is de gevaarlijkste minion."
+      },
+      {
+        "id": "src-wiki-zilyana-strat",
+        "title": "RS Wiki: Commander Zilyana/Strategies",
+        "url": "https://runescape.wiki/w/Commander_Zilyana/Strategies",
+        "weight": "hoog",
+        "note": "Normal mode: combat 75, tier 70-wapen en -armour, Prayer 43 met Protect from Magic; valt elke 2 ticks aan, magic tot 2.200 en melee tot 1.800."
+      },
+      {
+        "id": "src-wiki-kreearra-strat",
+        "title": "RS Wiki: Kree'arra/Strategies",
+        "url": "https://runescape.wiki/w/Kree%27arra/Strategies",
+        "weight": "hoog",
+        "note": "Normal mode: combat 75, tier 70-wapen en -armour, Prayer 43 met Protect from Ranged; immuun voor melee; wind- en tornado-aanval tot 1.080 die je verplaatst; sta in een hoek."
+      },
+      {
+        "id": "src-wiki-melee-training",
+        "title": "RS Wiki: Pay-to-play melee training",
+        "url": "https://runescape.wiki/w/Pay-to-play_melee_training",
+        "weight": "midden",
+        "note": "Trainingsplekken per levelband (40-70: flesh crawlers, moss giants, ghouls, grotworms, fire giants); deels van voor de Combat Style Modernisation."
+      },
+      {
+        "id": "src-wiki-ranged-training",
+        "title": "RS Wiki: Pay-to-play Ranged training",
+        "url": "https://runescape.wiki/w/Pay-to-play_Ranged_training",
+        "weight": "midden",
+        "note": "Trainingsplekken per levelband en het wekelijkse Big Top Bonanza (Circus) voor Ranged-, Magic- en Agility-XP."
+      },
+      {
+        "id": "src-wiki-ranged-iron",
+        "title": "RS Wiki: Ironman Mode/Guide/Ranged",
+        "url": "https://runescape.wiki/w/Ironman_Mode/Guide/Ranged",
+        "weight": "hoog",
+        "note": "Ranged-wapens zonder GE: Kayle's chargebow (The Blood Pact), shortbows en arrows van Lowe's, rune crossbow bij Valaine; train het liefst tijdens Slayer."
+      },
+      {
+        "id": "src-wiki-hets-oasis",
+        "title": "RS Wiki: Het's Oasis Agility Course",
+        "url": "https://runescape.wiki/w/Het%27s_Oasis_Agility_Course",
+        "weight": "midden",
+        "note": "Agility 65, noordoost van Al Kharid; circa 70.000 XP per uur volgens Agility training; rubble verdwijnt bij Eye of Het I, maar de quest is niet nodig."
+      },
+      {
+        "id": "src-wiki-chaotic-necro",
+        "title": "RS Wiki: Chaotic guard en Chaotic lantern",
+        "url": "https://runescape.wiki/w/Chaotic_guard",
+        "weight": "laag",
+        "note": "T80 Necromancy-wapens voor 150.000 en 50.000 Dungeoneering-tokens; Necromancy 80 en Dungeoneering 70, zonder Kili-taak. Alternatief, niet in de route."
+      },
+      {
         "id": "src-site-rs3ironman",
         "title": "rs3ironman.com: walkthrough voor een verse ironman",
         "url": "https://rs3ironman.com/",
@@ -521,7 +605,7 @@
           "type": "misc",
           "style": "mixed",
           "estHours": 0.5,
-          "detail": "Vaste set na de DailyScape Overhaul (16 maart 2026): **Daily Challenges** alleen als ze passen bij wat je toch doet (de wekelijkse beloningstrack en extend/reroll zijn weg, dus overslaan kost weinig); **Herby Werby** en **Penguin Hide and Seek** (wekelijks, ongewijzigd; Penguin-lampen op Agility tot 56, daarna Herblore); **Troll Invasion** (maandelijks, ongewijzigd); **Rune shop run** één keer per week: winkelvoorraad reset niet meer dagelijks maar bouwt over 7 dagen op tot een hoger maximum (Aubury in Varrock en andere runewinkels). Koop in deze volgorde: **air, water, earth, fire** (Magic-abilities kosten sinds maart 2026 runes), later **blood, soul en astral**. **Thalmund's Wares** elke woensdag in de smithy van City of Um (vraagt Kili Row, heb je): kijk wat hij heeft voor Necromancy en stop met deze check zodra je **4 uncut moonstone** hebt. Reaper-taken komen later (fase 5). Laat Player-Owned Ports en de verdwenen dailies (Travelling Merchant, Vis wax, Wicked hood, Wilderness Flash Events) los.",
+          "detail": "Vaste set na de DailyScape Overhaul (16 maart 2026): **Daily Challenges** alleen als ze passen bij wat je toch doet (de wekelijkse beloningstrack en extend/reroll zijn weg, dus overslaan kost weinig); **Herby Werby** en **Penguin Hide and Seek** (wekelijks, ongewijzigd; Penguin-lampen op Agility tot 70 (Saradomin-gebied in GWD1, p6-11), daarna Herblore); **Troll Invasion** (maandelijks, ongewijzigd); **Rune shop run** één keer per week: winkelvoorraad reset niet meer dagelijks maar bouwt over 7 dagen op tot een hoger maximum (Aubury in Varrock en andere runewinkels). Koop in deze volgorde: **air, water, earth, fire** (Magic-abilities kosten sinds maart 2026 runes), later **blood, soul en astral**. **Thalmund's Wares** elke woensdag in de smithy van City of Um (vraagt Kili Row, heb je): kijk wat hij heeft voor Necromancy en stop met deze check zodra je **4 uncut moonstone** hebt. Reaper-taken komen later (fase 5). Laat Player-Owned Ports en de verdwenen dailies (Travelling Merchant, Vis wax, Wicked hood, Wilderness Flash Events) los.",
           "why": "Beide guides beginnen met repeatables. Sinds de DailyScape Overhaul zijn er minder dagelijkse verplichtingen: weeklies en monthlies zijn ongewijzigd, winkels kun je wekelijks leegkopen en Daily Challenges hebben geen streak-beloning meer. Dat past precies bij 7-15 u/week. De Penguin-lampen op Agility volgen het RS Guy-advies. De rune-volgorde en het moonstone-stoppunt komen uit de repeatables-tracker van thersguide.com; welke runewinkel na de DailyScape-maxima het meest oplevert, is nog onzeker.",
           "sources": [
             "src-wiki-rsguy",
@@ -1606,9 +1690,9 @@
     },
     {
       "id": "p5",
-      "title": "Combat 100+, Slayer rendabel en tier 80-wapens",
-      "summary": "Necromancy en Defence naar 80, Slayer naar 50 met Smoking Kills en de eerste Slayer- en Reaper-unlocks, Prayer en Summoning naar 60 en Agility naar 60 voor de GWD-boulder. Met T80-wapens erbij kom je uit op combat rond 106 en ben je klaar voor de eerste bosses.",
-      "estHours": 50,
+      "title": "Combat 100+ en Slayer rendabel",
+      "summary": "Necromancy en Defence naar 80, Slayer naar 50 met Smoking Kills en de eerste Slayer- en Reaper-unlocks, Prayer en Summoning naar 60, Agility naar 60 voor de GWD-boulder en Smithing naar 75 voor de T80-wapens. Daarmee kom je uit op combat rond 106. De T80-wapens zelf volgen pas in fase 6: Kili's Knowledge VI vraagt een Necromancy-kill op alle vier GWD1-generaals.",
+      "estHours": 47,
       "targets": [
         {
           "skill": "Necromancy",
@@ -1652,7 +1736,7 @@
           "estHours": 9,
           "location": "Noord van Fort Forinthry of Exiled Kalphite Hive",
           "detail": "Bound skeletons (tot circa 180k XP/u AFK), exiled kalphite marauders (circa 147k XP/u met T70) of bloodveds met aggression potions.",
-          "why": "Hoogste AFK-rates uit de trainingspagina; 80 is de eis voor T80-wapens en het grootste deel van je combatlevel.",
+          "why": "Hoogste AFK-rates uit de trainingspagina; 80 is de drempel waarop Kili de T80-taak en de spiritbound hammer geeft (fase 6), en het grootste deel van je combatlevel.",
           "completeWhen": {
             "skills": {
               "Necromancy": 80
@@ -1846,8 +1930,8 @@
           "style": "active",
           "estHours": 5,
           "location": "Anachronia Agility Course, daarna Wilderness Agility Course",
-          "detail": "Penguin-lampen op Agility (tot 56). Courses: Anachronia-course van 30 tot circa 52, daarna de Wilderness Agility Course (52+). Alle courses geven sinds februari en juli 2026 flink meer XP, en op Agility 30 krijg je nu Dive (zonder Succession). Een agility potion (+3, Herblore 34) maakt 57 genoeg voor de boulder. Zodra je Agility 55 hebt: claim de **10.000 Agility-XP in de vierde grot** van Myths of the White Lands (p1-16).",
-          "why": "De GWD1-boulder vraagt Agility 60 of Strength 60, maar Agility is in deze route de keuze (beide boostbaar); Strength komt met Waterfall en Haunted Mine maar rond 40. Courses volgen de EIPG (Agility 56); de Penguin-lampen het RS Guy-advies. Agility is ook nodig voor Plague's End (75) en shortcuts.",
+          "detail": "Penguin-lampen op Agility (tot 70, zie p6-11). Courses: Anachronia-course van 30 tot circa 52, daarna de Wilderness Agility Course (52+). Alle courses geven sinds februari en juli 2026 flink meer XP, en op Agility 30 krijg je nu Dive (zonder Succession). Een agility potion (+3, Herblore 34) maakt 57 genoeg voor de boulder. Zodra je Agility 55 hebt: claim de **10.000 Agility-XP in de vierde grot** van Myths of the White Lands (p1-16).",
+          "why": "De GWD1-boulder vraagt Agility 60 of Strength 60, maar Agility is in deze route de keuze (beide boostbaar); Strength komt met Waterfall en Haunted Mine maar rond 40. Courses volgen de EIPG (Agility 56); de Penguin-lampen het RS Guy-advies. Agility is ook nodig voor Plague's End (75) en shortcuts. Agility 70 volgt in fase 6 (p6-11) voor het Saradomin-gebied en Kili's Knowledge VI.",
           "completeWhen": {
             "skills": {
               "Agility": 60
@@ -1884,39 +1968,27 @@
             "src-wiki-burial",
             "src-site-thersguide"
           ]
-        },
-        {
-          "id": "p5-10",
-          "title": "Tier 80-wapens",
-          "type": "gear",
-          "style": "mixed",
-          "estHours": 2.5,
-          "location": "City of Um, ritual site en Soul forge",
-          "detail": "Kili's Knowledge VI via 30 greater communion, daarna T80 Death guard en Skull lantern bij de Soul forge met greater ensouled bars.",
-          "why": "De strategiegidsen van K'ril en Vindicta noemen T80-wapens als aanbeveling. De ritual-route vermijdt de GWD-hammers die je zonder GWD-ervaring nog niet kunt halen. Armour blijft T70 tot Necromancy 90, zoals de ironmangids adviseert.",
-          "requires": {
-            "skills": {
-              "Necromancy": 80,
-              "Smithing": 75
-            },
-            "quests": [
-              "The Spirit of War"
-            ]
-          },
-          "sources": [
-            "src-wiki-gear-t80",
-            "src-wiki-necro-iron",
-            "src-wiki-vindicta"
-          ]
         }
       ]
     },
     {
       "id": "p6",
-      "title": "Eerste bosses: K'ril en de brug naar Vindicta",
-      "summary": "Voorbereiden (potions, haaien), dan K'ril Tsutsaroth als eerste GWD1-general omdat alleen Constitution 70 nodig is. Daarna de brug naar het PvM-doel: uitzoeken wat Vindicta in GWD2 vraagt en de eerste Zarosian killcount halen. De Queen Black Dragon is uitgesteld tot na fase 1, omdat antifire Herblore 69 vraagt. Afgesloten met een evaluatie en de keuze voor fase 2 van het project.",
-      "estHours": 26,
+      "title": "Eerste bosses: de vier GWD1-generaals, tier 80-wapens en de brug naar Vindicta",
+      "summary": "Voorbereiden (potions, haaien), Kili's Knowledge VI starten en met de uncharged spiritbound hammer K'ril Tsutsaroth doen als eerste GWD1-general, met T70-wapens. De T80-wapens vragen een Necromancy-kill op alle vier generaals, en hun gebieden vragen Strength, Ranged en Agility 70 (niet boostbaar). Die drie skills train je hier, daarna volgen Graardor, Zilyana en Kree'arra en pas dan de T80-wapens. Tot slot de brug naar Vindicta in GWD2 en een evaluatie. De Queen Black Dragon blijft uitgesteld (antifire vraagt Herblore 69).",
+      "estHours": 75,
       "targets": [
+        {
+          "skill": "Strength",
+          "level": 70
+        },
+        {
+          "skill": "Ranged",
+          "level": 70
+        },
+        {
+          "skill": "Agility",
+          "level": 70
+        },
         {
           "skill": "Fishing",
           "level": 76
@@ -1986,18 +2058,44 @@
           ]
         },
         {
+          "id": "p6-08",
+          "title": "Kili's Knowledge VI starten: hammer en soul urn",
+          "type": "unlock",
+          "style": "mixed",
+          "estHours": 2,
+          "location": "City of Um, Kili bij de Soul forge",
+          "detail": "Praat met Kili in City of Um en neem de T80-taak aan; maak de dialoog helemaal af, anders laadt de hammer later niet. Je krijgt de **soul urn (tier 80)** en de **spiritbound hammer (uncharged)**. Inleveren vraagt drie dingen: de gevulde urn, een **redberry pie** (zelf bakken) en de **charged** hammer. **Urn vullen:** 30 greater communion rituals, of 150 kills met Necromancy op Slayer-taken, die je toch al doet. **Hammer laden:** elk van de vier GWD1-generaals verslaan met Necromancy (de kill en het grootste deel van de schade; Death Mark telt mee, de deathtouched dart niet) en de hammer binnen enkele seconden op het altaar in de bosskamer gebruiken. Na het vierde altaar wordt hij vanzelf charged. De hammer blijft bij doodgaan bewaard; kwijt of vernietigd geeft Kili een nieuwe. Reken op 40 killcount per generaal: de Totem of Intimidation vraagt effectief Slayer 90 en voor ironmen Big Game Hunter, en War's Blessing 2 vraagt 142 CombatScore.",
+          "why": "Tot 4 november 2026 stond in de route dat 30 greater communion genoeg was voor T80; dat vult alleen de urn. Zonder hammer op zak telt een generaal-kill niet mee, dus deze stap komt vóór K'ril. De wiki-dialoog noemt Necromancy 80 en The Spirit of War als drempel voor de taak. Of Kili ook de andere 70-eisen van de achievement al controleert bij het uitdelen, staat er niet (onzeker); bij K'ril heb je die nog niet.",
+          "requires": {
+            "skills": {
+              "Necromancy": 80
+            },
+            "quests": [
+              "The Spirit of War"
+            ]
+          },
+          "sources": [
+            "src-wiki-kili-6",
+            "src-wiki-spiritbound-hammer",
+            "src-wiki-kili-transcript",
+            "src-wiki-totem-intimidation",
+            "src-wiki-necro-iron"
+          ]
+        },
+        {
           "id": "p6-04",
           "title": "K'ril Tsutsaroth (GWD1, Zamorak)",
           "type": "misc",
           "style": "active",
           "estHours": 6,
           "location": "God Wars Dungeon (Trollheim), Zamorak-gebied",
-          "detail": "Boulder met Agility 60 (of Strength 60, maar Agility is in deze route de keuze; beide boostbaar), 40 Zamorak-kills voor kill count, Antipoison++ mee. Let op zijn speciale aanval die je prayer halveert. Sinds juli 2026 blijft je killcount bewaard als je de dungeon verlaat (maximaal 200), en bosses kosten geen instance-fee meer: je kunt dus rustig in meerdere korte sessies leren.",
-          "why": "Van de vier generals is Zamorak de enige waarvoor je gebiedseis (Constitution 70) vanzelf haalt met een Necromancy-route; Bandos, Armadyl en Saradomin vragen 70 Strength, Ranged of Agility.",
+          "detail": "Eerste kill met **T70-wapens en T70-armour** (Death guard, Skull lantern en Deathwarden uit p4-08), met de **uncharged spiritbound hammer** in je inventory. Boulder met Agility 60 (of Strength 60; beide boostbaar), Constitution 70 voor het Zamorak-gebied (niet boostbaar). Bij binnenkomst in het Zamorak-gebied valt je prayer naar 0: neem prayer potions mee. Haal 40 Zamorak-killcount, neem Antipoison++ mee en gebruik Protect from Magic. Let op zijn special die je prayer halveert (Debilitate halveert de schade). **Direct na de kill**, zodra de lootstapel verschijnt, gebruik je de hammer op het Zamorak-altaar in de kamer: zet auto-retaliate uit zodat de minions je niet wegtrekken, en raap de loot pas daarna. Doe de kill en het grootste deel van de schade met Necromancy, anders telt hij niet. Sinds juli 2026 blijft je killcount bewaard (maximaal 200) en kosten bosses geen instance-fee meer: leer hem rustig in korte sessies.",
+          "why": "De strategiepagina noemt voor normal mode combat 75 en een tier 70-wapen en -armour; T70 is dus het juiste niveau voor een eerste kill, en T80 kan pas na alle vier generaals. Van de vier is Zamorak de enige waarvoor je de gebiedseis (Constitution 70) vanzelf haalt met een Necromancy-route; Bandos, Armadyl en Saradomin vragen Strength, Ranged of Agility 70, die hierna komen.",
           "requires": {
             "skills": {
               "Agility": 60,
-              "Constitution": 70
+              "Constitution": 70,
+              "Necromancy": 80
             },
             "quests": [
               "Troll Stronghold"
@@ -2005,7 +2103,185 @@
           },
           "sources": [
             "src-wiki-gwd",
+            "src-upd-mid-game",
+            "src-wiki-spiritbound-hammer",
+            "src-wiki-kili-6"
+          ]
+        },
+        {
+          "id": "p6-09",
+          "title": "Strength 30 naar 70 (Bandos-gebied)",
+          "type": "skill",
+          "style": "mixed",
+          "estHours": 15,
+          "location": "Slayer-taken, of Stronghold of Security (flesh crawlers)",
+          "detail": "Melee op Slayer-taken (Mazchna, Sumona) of op vaste plekken uit de wiki-trainingsgids voor 40-70: flesh crawlers (Stronghold of Security, veel monsters tegelijk), ghouls (noord van Canifis), grotworms (Grotworm Lair) en fire giants (Waterfall Dungeon). Zet in de XP-keuze **alleen Strength** aan: die krijgt dan 75% van de combat-XP, Constitution de rest. Met Attack 30 draag je mithril-wapens (zelf smeden). Super strength-potions zelf brouwen. **Keuze:** train je Attack en Strength samen (elk 37,5%), dan duurt het ongeveer twee keer zo lang, maar haal je meteen ook de Attack 70 voor Vindicta (Na fase 1, punt 0) en kun je onderweg betere wapens dragen (adamant op 40, rune op 50).",
+          "why": "Bandos's Stronghold (General Graardor) vraagt Strength 70 en die is niet te boosten; Kili's Knowledge VI noemt Strength 70 ook als eis. Ons Pap staat op 30 (Waterfall Quest). Slayer-taken met melee houden Slayer, charms en botten op gang. **Onzeker:** de XP per uur voor een Necromancy-speler met lage Attack en mithril-wapens; de schatting gaat uit van alleen Strength.",
+          "completeWhen": {
+            "skills": {
+              "Strength": 70
+            }
+          },
+          "sources": [
+            "src-wiki-gwd",
+            "src-wiki-kili-6",
+            "src-wiki-melee-training",
+            "src-wiki-combat-xp",
+            "src-wiki-slayer-iron"
+          ]
+        },
+        {
+          "id": "p6-10",
+          "title": "Ranged naar 70 (Armadyl-gebied)",
+          "type": "skill",
+          "style": "mixed",
+          "estHours": 16,
+          "location": "Slayer-taken; Varrock (Lowe's) en Champions' Guild (Valaine)",
+          "detail": "Train Ranged tijdens Slayer-taken, met in de XP-keuze **alleen Ranged** (75%). Wapens zonder GE (ironmangids Ranged): **Kayle's chargebow** (The Blood Pact, heb je al; geen ammo) tot 20, daarna een willow shortbow (20) en maple shortbow (40) met mithril en adamant arrows van **Lowe's Archery Emporium** (Varrock), en op 50 de **rune crossbow** met off-hand en rune bolts bij **Valaine** (Champions' Guild). Blue d'hide koop je bij Valaine of Oziach. Ranging potions zelf brouwen. Wekelijks: **Balthazar Beauregard's Big Top Bonanza** (Circus) geeft in een paar minuten Ranged-, Magic- en Agility-XP; zet hem in je weekritme.",
+          "why": "Armadyl's Eyrie (Kree'arra) vraagt Ranged 70 en die is niet te boosten; Kili's Knowledge VI noemt Ranged 70 ook als eis. Ons Pap staat op 17. De ironmangids raadt aan Ranged te trainen terwijl je Slayer doet. **Onzeker:** de XP per uur met winkelwapens tot T50; de schatting is ruim.",
+          "completeWhen": {
+            "skills": {
+              "Ranged": 70
+            }
+          },
+          "sources": [
+            "src-wiki-gwd",
+            "src-wiki-kili-6",
+            "src-wiki-ranged-iron",
+            "src-wiki-ranged-training",
+            "src-wiki-combat-xp"
+          ]
+        },
+        {
+          "id": "p6-11",
+          "title": "Agility 60 naar 70 (Saradomin-gebied)",
+          "type": "skill",
+          "style": "active",
+          "estHours": 6,
+          "location": "Wilderness Agility Course, daarna Het's Oasis",
+          "detail": "Wilderness Agility Course tot 65, of de Werewolf Agility Course (circa 60.000 XP per uur; vraagt Creature of Fenkenstrain voor de ring of charos). Vanaf 65 de **Het's Oasis Agility Course** (noordoost van Al Kharid, circa 70.000 XP per uur; de quest Eye of Het I is niet nodig). Penguin-punten blijven op Agility (p1-01) en het wekelijkse Big Top Bonanza geeft ook Agility-XP. Let op: het Saradomin-gebied laat geen Agility-boosts toe, dus je hebt echt 70 nodig.",
+          "why": "Saradomin's Encampment (Commander Zilyana) vraagt Agility 70 en die is niet te boosten; Kili's Knowledge VI noemt Agility 70 ook als eis. De XP-rates komen uit de wiki-tabel Agility training; sinds februari en juli 2026 geven courses meer XP, dus de schatting is aan de ruime kant. Agility 70 helpt ook richting Plague's End (75).",
+          "requires": {
+            "skills": {
+              "Agility": 60
+            }
+          },
+          "completeWhen": {
+            "skills": {
+              "Agility": 70
+            }
+          },
+          "sources": [
+            "src-wiki-gwd",
+            "src-wiki-kili-6",
+            "src-wiki-agility-training",
+            "src-wiki-hets-oasis",
             "src-upd-mid-game"
+          ]
+        },
+        {
+          "id": "p6-12",
+          "title": "General Graardor (GWD1, Bandos)",
+          "type": "misc",
+          "style": "active",
+          "estHours": 3,
+          "location": "God Wars Dungeon (Trollheim), Bandos's Stronghold",
+          "detail": "Bandos's Stronghold vraagt **Strength 70** (niet boostbaar); sla met een hammer (tool belt is genoeg) op de gong om binnen te komen. Haal 40 Bandos-killcount in het gebied zelf (goblins, orks en andere Bandos-volgelingen). Wiki voor normal mode: combat 75, tier 70-wapen en -armour, Prayer 43 met **Protect from Melee**. Zijn melee raakt tot 3.000, zijn schokgolf raakt iedereen in de kamer tot 1.676. **Sergeant Steelwill** is de gevaarlijkste minion: sta vóór de spawn tegen de noordmuur, dan merkt hij je soms niet op. Dood Graardor eerst, daarna Steelwill. Minions laten haaien vallen. Direct na Graardors dood de hammer op het Bandos-altaar.",
+          "why": "Tweede generaal voor de hammer. Graardor is bijna immuun voor Ranged, maar daar heeft een Necromancy-speler geen last van.",
+          "requires": {
+            "skills": {
+              "Strength": 70,
+              "Necromancy": 80
+            },
+            "quests": [
+              "Troll Stronghold"
+            ]
+          },
+          "sources": [
+            "src-wiki-graardor-strat",
+            "src-wiki-gwd",
+            "src-wiki-spiritbound-hammer"
+          ]
+        },
+        {
+          "id": "p6-13",
+          "title": "Commander Zilyana (GWD1, Saradomin)",
+          "type": "misc",
+          "style": "active",
+          "estHours": 3,
+          "location": "God Wars Dungeon (Trollheim), Saradomin's Encampment",
+          "detail": "Saradomin's Encampment vraagt **Agility 70** (niet boostbaar). Haal 40 Saradomin-killcount in het kamp (knights of Saradomin, priests en spiritual monsters; er lopen ook Zamorak-monsters rond). Wiki voor normal mode: combat 75, tier 70-wapen en -armour, Prayer 43 met **Protect from Magic**. Zilyana valt elke 2 ticks aan: magic (bliksem) tot 2.200 en melee tot 1.800. Bodyguards Starlight, Growler en Bree; dood Zilyana eerst. Minions laten monkfish en summer pies vallen. Direct na haar dood de hammer op het Saradomin-altaar.",
+          "why": "Derde generaal voor de hammer. De wiki noemt haar hoge aanvalssnelheid als het lastige deel; Protect from Magic vangt haar magic-aanval op.",
+          "requires": {
+            "skills": {
+              "Agility": 70,
+              "Necromancy": 80
+            },
+            "quests": [
+              "Troll Stronghold"
+            ]
+          },
+          "sources": [
+            "src-wiki-zilyana-strat",
+            "src-wiki-gwd",
+            "src-wiki-spiritbound-hammer"
+          ]
+        },
+        {
+          "id": "p6-14",
+          "title": "Kree'arra (GWD1, Armadyl)",
+          "type": "misc",
+          "style": "active",
+          "estHours": 3,
+          "location": "God Wars Dungeon (Trollheim), Armadyl's Eyrie",
+          "detail": "Armadyl's Eyrie vraagt **Ranged 70** (niet boostbaar). Haal 40 Armadyl-killcount (aviansie; die zijn niet met melee te raken, met Necromancy wel). Wiki voor normal mode: combat 75, tier 70-wapen en -armour, Prayer 43 met **Protect from Ranged**. Kree'arra is immuun voor melee. Zijn wind- en tornado-aanval raken tot 1.080 en **verplaatsen je**, wat channelled abilities onderbreekt: sta in een hoek of op de tegel vóór de deur. Zijn melee raakt tot 1.676. Minions in volgorde Wingman Skree, Flockleader Geerin, Flight Kilisa; ze laten manta rays vallen. Direct na zijn dood de hammer op het Armadyl-altaar; na het vierde altaar is de hammer charged.",
+          "why": "Vierde generaal voor de hammer. Kree'arra is de enige die je wegduwt; met de juiste plek is dat geen probleem.",
+          "requires": {
+            "skills": {
+              "Ranged": 70,
+              "Agility": 60,
+              "Necromancy": 80
+            },
+            "quests": [
+              "Troll Stronghold"
+            ]
+          },
+          "sources": [
+            "src-wiki-kreearra-strat",
+            "src-wiki-gwd",
+            "src-wiki-spiritbound-hammer"
+          ]
+        },
+        {
+          "id": "p5-10",
+          "title": "Tier 80-wapens",
+          "type": "gear",
+          "style": "mixed",
+          "estHours": 1,
+          "location": "City of Um, Kili en de Soul forge",
+          "detail": "Lever bij Kili de gevulde soul urn, een redberry pie en de **charged** spiritbound hammer in; daarmee is Kili's Knowledge VI af. Smeed daarna de T80 Death guard en Skull lantern bij de Soul forge met greater ensouled bars.",
+          "why": "Pas hier, na alle vier GWD1-generaals: Kili's Knowledge VI vraagt de charged hammer en Agility, Constitution, Ranged en Strength 70 plus Necromancy 80. Tot 4 november 2026 stond deze stap in fase 5 met alleen 30 greater communion; dat vult alleen de urn. Armour blijft T70 tot Necromancy 90, zoals de ironmangids adviseert. Alternatief buiten de route: de chaotic guard en chaotic lantern (Dungeoneering 70 en 200.000 tokens, zonder Kili-taak), op 3 november 2026 afgewezen toen T80 nog goedkoop leek.",
+          "requires": {
+            "skills": {
+              "Necromancy": 80,
+              "Smithing": 75,
+              "Agility": 70,
+              "Constitution": 70,
+              "Ranged": 70,
+              "Strength": 70
+            },
+            "quests": [
+              "The Spirit of War",
+              "Troll Stronghold"
+            ]
+          },
+          "sources": [
+            "src-wiki-gear-t80",
+            "src-wiki-kili-6",
+            "src-wiki-spiritbound-hammer",
+            "src-wiki-necro-iron",
+            "src-wiki-vindicta",
+            "src-wiki-chaotic-necro"
           ]
         },
         {
@@ -2015,7 +2291,7 @@
           "style": "active",
           "estHours": 3,
           "location": "Heart of Gielinor (west van Nardah), Zaros's Bastion",
-          "detail": "**Toegang.** De Heart of Gielinor (GWD2) ligt ten westen van Nardah; het hoofdgebied heeft geen eisen. Vindicta & Gorvek zitten in **Zaros's Bastion** (zuidwest), dat **Attack 80 (boostbaar)** vraagt. Elke instance kost **40 Zarosian killcount**; met 2.000 Zaros-reputatie of War's Blessing 2 wordt dat 20, met beide 0. Killcount blijft bewaard tot 200. **Aanbevolen voor een eerste kill (wiki, normal mode):** combat 80, Defence 80, tier 80-wapen en -armour, overloads, Prayer 71 met Ancient Curses (Deflect Melee) en een damage-familiar. Zonder curses: Protect from Melee. **Wat Ons Pap nog mist:** Attack staat na Waterfall Quest rond 30; met een super attack (2 + 12%, Herblore 45) heb je **Attack 70** nodig, met een extreme attack (Herblore 88) 67. De route traint Attack niet, dus dit is de grootste kloof. Verder: T80-armour (je hebt T70 Deathwarden), Prayer 71 en curses (je hebt 60), overloads (Herblore 96). **Wat je nu al doet:** lees Vindicta & Gorvek/Strategies, loop naar de Heart (bandit camp-lodestone of Nardah) en dood Zarosian volgelingen (ancient warriors, mages en rangers, level 108; blood reavers 115) met je T80-wapens tot je 40 killcount hebt. Ze zijn agressief zolang je geen Zaros-insignia draagt: kom met eten en Protect from Melee. Ingression fragments uit die kills geven reputatie. **Optioneel:** de miniquest Tales of the God Wars (Constitution 70, Strength of Agility 60; vraagt een K'ril-kill, de Barrows-kist, grotworms en wisps in Isafdar) geeft 25 Heart-teleports, een anima crystal (+500 reputatie) en een lamp van 30.000 XP. Vink deze stap handmatig af.",
+          "detail": "**Toegang.** De Heart of Gielinor (GWD2) ligt ten westen van Nardah; het hoofdgebied heeft geen eisen. Vindicta & Gorvek zitten in **Zaros's Bastion** (zuidwest), dat **Attack 80 (boostbaar)** vraagt. Elke instance kost **40 Zarosian killcount**; met 2.000 Zaros-reputatie of War's Blessing 2 wordt dat 20, met beide 0. Killcount blijft bewaard tot 200. **Aanbevolen voor een eerste kill (wiki, normal mode):** combat 80, Defence 80, tier 80-wapen en -armour, overloads, Prayer 71 met Ancient Curses (Deflect Melee) en een damage-familiar. Zonder curses: Protect from Melee. **Wat Ons Pap nog mist:** Attack staat na Waterfall Quest rond 30; met een super attack (2 + 12%, Herblore 45) heb je **Attack 70** nodig, met een extreme attack (Herblore 88) 67. De route traint Attack niet, dus dit is de grootste kloof. Verder: de T80-wapens als p5-10 nog niet af is (die vragen eerst alle vier GWD1-generaals), T80-armour (je hebt T70 Deathwarden), Prayer 71 en curses (je hebt 60), overloads (Herblore 96). **Wat je nu al doet:** lees Vindicta & Gorvek/Strategies, loop naar de Heart (bandit camp-lodestone of Nardah) en dood Zarosian volgelingen (ancient warriors, mages en rangers, level 108; blood reavers 115) met je beste Necromancy-wapens (T80 zodra p5-10 af is, anders T70) tot je 40 killcount hebt. Ze zijn agressief zolang je geen Zaros-insignia draagt: kom met eten en Protect from Melee. Ingression fragments uit die kills geven reputatie. **Optioneel:** de miniquest Tales of the God Wars (Constitution 70, Strength of Agility 60; vraagt een K'ril-kill, de Barrows-kist, grotworms en wisps in Isafdar) geeft 25 Heart-teleports, een anima crystal (+500 reputatie) en een lamp van 30.000 XP. Vink deze stap handmatig af.",
           "why": "Vindicta is het PvM-doel dat Mees noemt; deze stap maakt de weg ernaartoe concreet zonder de route te forceren. GWD2 heeft geen Necromancy-ingang: elke general vraagt 80 in Attack (Vindicta), Ranged (Twin Furies), Magic (Helwyr) of Prayer (Gregorovic), allemaal boostbaar. Vindicta is ook voor de Necromancy-lijn nuttig: tijdens Kili's Knowledge VII (T90) laat ze necromantic seals vallen, en ze dropt dragon bones (Prayer). Killcount opsparen kan al nu en blijft bewaard. **Onzeker:** of Tales of the God Wars voor Ons Pap toegankelijk is (Isafdar en fairy rings vragen eigen quests), en hoe hard een eerste kill met T70-armour en Necromancy gaat, want de strategiepagina heeft geen Necromancy-preset.",
           "requires": {
             "skills": {
@@ -2038,7 +2314,7 @@
           "type": "misc",
           "style": "mixed",
           "estHours": 1,
-          "detail": "Kies het volgende blok: Invention (Crafting, Divination, Smithing 80), Plague's End en Prifddinas (tien skills op 75), The Arc (Impressing the Locals), Necromancy 90 met T90, Dungeoneering voor Bonecrusher en Charming imp (sinds de remaster in mei 2026 sneller tokens, en ironmen mogen met anderen dungeonen), een vaste bossfarm (Vindicta voor dragon bones, zie p6-07; vraagt eerst Attack 70 met super attacks), of de uitgestelde Queen Black Dragon zodra Herblore 69 haalbaar is (zie 'Na fase 1'). Toets ook de Late-Game Rebalance en de MTX-verwijdering die voor november 2026 zijn aangekondigd.",
+          "detail": "Kies het volgende blok: Attack 70 voor Vindicta (Na fase 1, punt 0; korter als je in p6-09 Attack hebt meegetraind), Invention (Crafting, Divination, Smithing 80), Plague's End en Prifddinas (tien skills op 75), The Arc (Impressing the Locals), Necromancy 90 met T90, Dungeoneering voor Bonecrusher en Charming imp (sinds de remaster in mei 2026 sneller tokens, en ironmen mogen met anderen dungeonen), een vaste bossfarm (Vindicta voor dragon bones, zie p6-07; vraagt eerst Attack 70 met super attacks), of de uitgestelde Queen Black Dragon zodra Herblore 69 haalbaar is (zie 'Na fase 1'). Toets ook de Late-Game Rebalance en de MTX-verwijdering die voor november 2026 zijn aangekondigd.",
           "why": "Deze unlocks zijn waardevol maar te groot voor fase 1; EIPG zet ze in deel 4 tot 6.",
           "sources": [
             "src-wiki-eipg",

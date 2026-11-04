@@ -220,3 +220,24 @@ describe("Weergave", () => {
     expect(checkedText("2026-11-03")).toBe("3 november 2026");
   });
 });
+
+describe("Route: T80-wapens na de vier GWD1-generaals (Kili's Knowledge VI, besluit 2026-11-04)", () => {
+  const steps = real.phases.flatMap((p) => p.steps.map((s) => ({ ...s, phase: p.id })));
+  const at = (id: string) => steps.findIndex((s) => s.id === id);
+
+  it("zet de hammer-taak vóór K'ril en de T80-stap ná alle vier generaals, in fase 6", () => {
+    const t80 = steps[at("p5-10")];
+    expect(t80.phase).toBe("p6");
+    expect(at("p6-08")).toBeLessThan(at("p6-04"));
+    for (const general of ["p6-04", "p6-12", "p6-13", "p6-14"]) expect(at(general)).toBeLessThan(at("p5-10"));
+    for (const skill of ["p6-09", "p6-10", "p6-11"]) expect(at(skill)).toBeLessThan(at("p5-10"));
+  });
+
+  it("de T80-stap en de generaals dragen de gebiedseisen als requires", () => {
+    expect(steps[at("p5-10")].requires?.skills).toMatchObject({ Necromancy: 80, Agility: 70, Constitution: 70, Ranged: 70, Strength: 70 });
+    expect(steps[at("p6-04")].requires?.skills).toMatchObject({ Constitution: 70 });
+    expect(steps[at("p6-12")].requires?.skills).toMatchObject({ Strength: 70 });
+    expect(steps[at("p6-13")].requires?.skills).toMatchObject({ Agility: 70 });
+    expect(steps[at("p6-14")].requires?.skills).toMatchObject({ Ranged: 70 });
+  });
+});

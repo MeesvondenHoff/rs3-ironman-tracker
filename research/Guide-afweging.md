@@ -58,7 +58,7 @@ URL's: https://runescape.wiki/w/Ironman_Mode/Strategies/Necromancy en https://ru
 Gewicht: hoog.
 
 - Combinatie van rituals en combat. Upgrade wapens elke 10 levels. Underworld Grimoire zo vroeg mogelijk (banken van ashes in de Abyss).
-- Kili's Knowledge-taken per tier hebben steeds een ritual-alternatief: T60 = 10 greater communion, T70 = 20 greater communion (of 100 dragon souls), T80 = 30 greater communion (of 150 Slayer souls), T90 = 50 powerful communion.
+- Kili's Knowledge-taken per tier hebben steeds een ritual-alternatief: T60 = 10 greater communion, T70 = 20 greater communion (of 100 dragon souls), T80 = 30 greater communion (of 150 Slayer souls) voor de soul urn, maar daarnaast altijd de spiritbound hammer (Necromancy-kill op alle vier GWD1-generaals; gecontroleerd 2026-11-04), T90 = 50 powerful communion.
 - Trainingsplekken: troll cave in City of Um (30-40), Ankou en ghouls (40-50), ghouls/bandits/fetid zombies (50-60), armoured zombies, bound skeletons, bloodveds, exiled kalphite marauders (60-80, AFK; bound skeletons tot circa 180k XP/u).
 - The Spirit of War: Necromancy 65, Vessel of the Harbinger (Necromancy 46, Prayer 40, Rune Mythos, Ghosts Ahoy) en 3.000 vessel souls; levert een lamp van 45k Necromancy XP en is verplicht voor T70-T90.
 
@@ -191,7 +191,7 @@ Bronnen: `Site-review thersguide.md` en `Site-review rs3ironman.md` (deel c); do
 - **Rested XP** (p2-08): bij Aster inruilen voor bonus-XP op Herblore of Prayer, de duurste skills voor een ironman. Bron: https://runescape.wiki/w/Town_Hall_(Fort_Forinthry)
 - **Locaties per stap**: het schema heeft een optioneel veld `location`; 53 van de 65 stappen hebben er een, getoetst aan de wiki. Daarbij bleken twee startpunten in p1-18 fout: Recruitment Drive start bij Sir Amik Varze in het White Knights' Castle en Missing, Presumed Death bij Brother Samwell in Silvarea.
 
-**Bewust niet overgenomen**: het Dungeoneering-spoor naar chaotic weapons en Flesh-hatcher Mhekarnahz (thersguide 5 en 6); Kili's Knowledge VI blijft de route naar T80. Ook de soul obelisks in Menaphos (rs3ironman 3) niet: reputatie is geen doel van deze route.
+**Bewust niet overgenomen**: het Dungeoneering-spoor naar chaotic weapons en Flesh-hatcher Mhekarnahz (thersguide 5 en 6); Kili's Knowledge VI blijft de route naar T80, al bleek op 2026-11-04 dat die de vier GWD1-generaals en Agility, Ranged en Strength 70 vraagt (zie Route Ons Pap.md, Besluiten); chaotic guard en lantern (Dungeoneering 70, 200.000 tokens) staan sindsdien als alternatief bij stap p5-10. Ook de soul obelisks in Menaphos (rs3ironman 3) niet: reputatie is geen doel van deze route.
 
 Effect op de uren: fase 1 gaat van 20 naar 22 uur, het totaal van 193 naar 195 uur.
 

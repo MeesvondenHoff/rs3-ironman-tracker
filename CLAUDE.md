@@ -54,7 +54,7 @@ Leeswijzer:
 - **Rol van Claude tijdens het gamen**: quick guide voor snelle vragen. Kort antwoorden, altijd eerst de RS3-wiki raadplegen (nooit uit het hoofd bij eisen, drops, mechanics of getallen), elke tip door de ironman-toets (hoofdstuk 3) halen, en bij een boss altijd eisen, aanbevolen gear voor een ironman en de kernmechanics geven.
 - **Blijft ironman**: Mees wil hoe dan ook ironman blijven (2026-11-03). De-ironing, Group Ironman of Hardcore komen nooit als optie in route of advies; stap p1-15 zet de de-iron-wachttijd bij Mr Ex op 90 dagen als slot op de deur.
 - **Route-keuze**: Necromancy als hoofdstijl. Zie `Route Ons Pap.md` voor de onderbouwing.
-- **Bossvolgorde** (besluit 2026-11-03): K'ril is de eerste boss; de Queen Black Dragon is uitgesteld tot Herblore omhoog gaat (antifire vraagt Herblore 69 met een anti-dragon shield, super antifire Herblore 85). Na fase 1 volgt de brug naar Vindicta (stap p6-07); Zaros's Bastion in GWD2 vraagt Attack 80 (boostbaar). Besluit Mees 2026-11-03: Attack 30 naar 70 (plus super attack, Herblore 45) is de eerste stap ná combat-klaar, als voorwaarde voor Vindicta; zie 'Na fase 1' in Route Ons Pap.md.
+- **Bossvolgorde** (besluit 2026-11-03): K'ril is de eerste boss; de Queen Black Dragon is uitgesteld tot Herblore omhoog gaat (antifire vraagt Herblore 69 met een anti-dragon shield, super antifire Herblore 85). Na fase 1 volgt de brug naar Vindicta (stap p6-07); Zaros's Bastion in GWD2 vraagt Attack 80 (boostbaar). Besluit Mees 2026-11-03: Attack 30 naar 70 (plus super attack, Herblore 45) is de eerste stap ná combat-klaar, als voorwaarde voor Vindicta; zie 'Na fase 1' in Route Ons Pap.md. Inzicht 2026-11-04: T80-wapens (Kili's Knowledge VI) vragen een charged spiritbound hammer, dus een Necromancy-kill op alle vier GWD1-generaals plus Agility, Ranged en Strength 70 (niet boostbaar); de eerste K'ril-kill gaat daarom met T70-wapens en de uncharged hammer, en T80 (stap p5-10) staat in fase 6 ná Graardor, Zilyana en Kree'arra (p6-08 tot p6-14).
 
 ### Werkregels
 
@@ -385,7 +385,7 @@ Uitgangspunt van de ironman-guides: smithen en craften voor tank-gear, boss-drop
 |---|---|---|---|
 | 20-60 | Zelf maken via Kili's Knowledge-taken; per 10 levels opwaarderen met ensouled bars en ink uit rituals | Necromancy-level (niet boostable) plus de taak per tier | Ironman Mode/Guide/Necromancy |
 | 70 | Kili's Knowledge V. Tank: United Barrows necroplasm + 100 dragon souls of 20 greater communion rituals. Power: 5 hideous moleskin (Giant mole) + 5 royal chitin (Kalphite Queen). | **The Spirit of War**; Smithing 65 voor het wapen, Crafting 65 en Defence 70 voor armour (projectbronnen) | Ironman Mode/Guide/Necromancy |
-| 80 | Kili's Knowledge VI. Tank: Spiritbound hammer (vier GWD1-generals) + 150 Slayer-souls of 30 greater communion rituals. Power: Zaryte fragments (Nex) + tortured soul essence (QBD). | Necromancy 80, Smithing 75 (projectbronnen) | Ironman Mode/Guide/Necromancy |
+| 80 | Kili's Knowledge VI. Tank: Spiritbound hammer (vier GWD1-generals) + 150 Slayer-souls of 30 greater communion rituals. Power: Zaryte fragments (Nex) + tortured soul essence (QBD). | Necromancy 80, Smithing 75, plus Agility, Constitution, Ranged en Strength 70 (niet boostbaar, gebiedseisen GWD1) en Troll Stronghold; gecontroleerd 2026-11-04 | Ironman Mode/Guide/Necromancy, Kili's Knowledge VI |
 | - | Wekelijks Thalmund's Wares (woensdag, City of Um) voor greater ensouled cloth, powerful ink, impure essence en moonstone | | Ironman Mode/Guide/Necromancy |
 
 **Melee**
