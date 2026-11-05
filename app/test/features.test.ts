@@ -241,3 +241,24 @@ describe("Route: T80-wapens na de vier GWD1-generaals (Kili's Knowledge VI, besl
     expect(steps[at("p6-14")].requires?.skills).toMatchObject({ Ranged: 70 });
   });
 });
+
+describe("Route: Dungeoneering-blok tot 57 (besluit 2026-11-04)", () => {
+  const steps = real.phases.flatMap((p) => p.steps.map((s) => ({ ...s, phase: p.id })));
+  const at = (id: string) => steps.findIndex((s) => s.id === id);
+
+  it("staat vóór de Slayer-stap p5-03 en vinkt zichzelf af op Dungeoneering", () => {
+    const dg = steps[at("p3-10")];
+    expect(dg.phase).toBe("p3");
+    expect(at("p3-10")).toBeLessThan(at("p5-03"));
+    expect(dg.completeWhen?.skills?.Dungeoneering).toBe(57);
+    expect(dg.style).toBe("active");
+  });
+
+  it("de aankoop van Bonecrusher en imp vraagt Dungeoneering 41, komt na het blok en vinkt handmatig af", () => {
+    const buy = steps[at("p3-11")];
+    expect(at("p3-11")).toBeGreaterThan(at("p3-10"));
+    expect(at("p3-11")).toBeLessThan(at("p5-03"));
+    expect(buy.requires?.skills).toMatchObject({ Dungeoneering: 41, Prayer: 21, Summoning: 21 });
+    expect(buy.completeWhen).toBeUndefined();
+  });
+});
