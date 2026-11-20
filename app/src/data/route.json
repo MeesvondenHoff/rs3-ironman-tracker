@@ -3,7 +3,7 @@
     "account": "Ons Pap",
     "goal": "Combat-klaar mid game: combat 100+, T70-T80 gear, Slayer en eerste bosses",
     "playstyle": "Afwisselend actief/AFK, 7-15 uur per week",
-    "updated": "2026-11-04",
+    "updated": "2026-11-20",
     "sources": [
       {
         "id": "src-wiki-eipg",
@@ -608,6 +608,34 @@
         "note": "Grimoire 1 stuurt gedropte bones en big bones naar de focus storage (uit te zetten) en gaat daarbij vóór de Bonecrusher; opgeraapte ashes gaan naar de bank."
       },
       {
+        "id": "src-wiki-fishing-train",
+        "title": "RS Wiki: Pay-to-play Fishing training",
+        "url": "https://runescape.wiki/w/Pay-to-play_Fishing_training",
+        "weight": "hoog",
+        "note": "Crayfish 1-20 (circa 11.500 XP/u), fly fishing trout en salmon vanaf 20 (17.000-36.000 XP/u tot 40)."
+      },
+      {
+        "id": "src-wiki-cooking-iron",
+        "title": "RS Wiki: Ironman-strategie Cooking",
+        "url": "https://runescape.wiki/w/Ironman_Mode/Guide/Cooking",
+        "weight": "hoog",
+        "note": "Ironmen vangen hun eigen vis; zelfgebouwde bonfire geeft 10% meer XP dan een range; Rogues' Den als vaste vuurplek."
+      },
+      {
+        "id": "src-wiki-food-iron",
+        "title": "RS Wiki: Ironman Mode/Guide, sectie Food",
+        "url": "https://runescape.wiki/w/Ironman_Mode/Guide#Food",
+        "weight": "hoog",
+        "note": "Ironman-eten per level: cake (Bakery Stall), tuna, lobster, swordfish, gnome food (Gianne's), cooked eeligator, shark, rocktail; necklace of gluttony +100 LP."
+      },
+      {
+        "id": "src-wiki-shrimp-parrot",
+        "title": "RS Wiki: The Shrimp and Parrot en Gianne's Restaurant",
+        "url": "https://runescape.wiki/w/The_Shrimp_and_Parrot",
+        "weight": "hoog",
+        "note": "Brimhaven: lobster 268, swordfish 400, cooked karambwan 460 coins (10 op voorraad). Gianne's (Grand Tree): premade ttl en choc bomb 450 coins, 1.500 LP."
+      },
+      {
         "id": "src-site-rs3ironman",
         "title": "rs3ironman.com: walkthrough voor een verse ironman",
         "url": "https://rs3ironman.com/",
@@ -1070,7 +1098,7 @@
       "id": "p2",
       "title": "Necromancy 50, Prayer 43 en Defence 50",
       "summary": "Necromancy gaat van 32 naar 50 op AFK-plekken, Defence loopt mee door XP met Necromancy te delen, en Prayer gaat naar 43 (Ectofuntus of Fort-altaar) voor protect-prayers, Vessel of the Harbinger en een eerste boss-oefening bij Ivar, King of Bones. Na deze fase heb je je eerste stuk Necromancy-questketen af en een veilige basis voor Slayer.",
-      "estHours": 23,
+      "estHours": 26,
       "targets": [
         {
           "skill": "Necromancy",
@@ -1087,6 +1115,14 @@
         {
           "skill": "Slayer",
           "level": 20
+        },
+        {
+          "skill": "Fishing",
+          "level": 40
+        },
+        {
+          "skill": "Cooking",
+          "level": 40
         }
       ],
       "steps": [
@@ -1203,6 +1239,28 @@
             "src-wiki-fort",
             "src-wiki-eipg",
             "src-upd-early-game"
+          ]
+        },
+        {
+          "id": "p2-10",
+          "title": "Fishing 6 naar 40 en Cooking 19 naar 40",
+          "type": "skill",
+          "style": "afk",
+          "estHours": 2.5,
+          "location": "Lumbridge (winkel, crayfish en River Lum)",
+          "detail": "Koop in **Lumbridge Fishing Supplies** een crayfish cage (20), een fly fishing rod (5) en circa 600 feathers (6 per stuk). **Fishing 6-20**: crayfish oost van de kerk in Lumbridge (circa 20 minuten). **Fishing 20-40**: fly fishing ('Lure') op trout en vanaf 30 ook salmon aan de River Lum, 17.000 tot 36.000 XP per uur. **Cooking**: bak alles wat je vangt op een zelfgemaakt vuur (10% meer XP dan een range) of op het vaste vuur in Rogues' Den; circa 550 trout en salmon brengen Cooking vanzelf voorbij 40. Bewaar de salmon (625 LP) als Slayer-eten. **Tot je eigen vis hebt**, voor Ivar en questbosses: cake stelen bij de Bakery Stall (999 LP in drie happen, gratis), cooked karambwan kopen in The Shrimp and Parrot in Brimhaven (750 LP, 460 coins, kost geen adrenaline), of premade ttl en choc bomb bij Gianne's in de Grand Tree (1.500 LP, 450 coins).",
+          "why": "Ons Pap had op 4 november Fishing 6 en Cooking 19, te laag voor het harpoenwerk van p3-06 (tuna vraagt Fishing 35, lobster 40). Fly fishing is de wiki-methode voor 20-40 en levert genoeg vis om Cooking mee te laten lopen. Winkelvoedsel overbrugt de periode tot je eigen eten hebt; prijzen en voorraad komen van de winkelpagina's (gecontroleerd 2026-11-20).",
+          "completeWhen": {
+            "skills": {
+              "Fishing": 40,
+              "Cooking": 40
+            }
+          },
+          "sources": [
+            "src-wiki-fishing-train",
+            "src-wiki-cooking-iron",
+            "src-wiki-food-iron",
+            "src-wiki-shrimp-parrot"
           ]
         },
         {
@@ -1506,12 +1564,12 @@
         },
         {
           "id": "p3-06",
-          "title": "Fishing en Cooking naar 55",
+          "title": "Fishing en Cooking 40 naar 55",
           "type": "skill",
           "style": "afk",
           "estHours": 5,
           "location": "Catherby of Musa Point",
-          "detail": "Harpoenen op tonijn en zwaardvis (Catherby of Musa Point), bakken op een range. Bouw een voorraad van een paar honderd stuks.",
+          "detail": "Vervolg op p2-10. Kooien op lobster (1.200 LP) en vanaf Fishing 50 harpoenen op zwaardvis (1.400 LP), in Catherby of Musa Point; bakken op een zelfgemaakt vuur of een range. Bouw een voorraad van een paar honderd stuks.",
           "why": "Ironmen moeten zelf eten maken. Zwaardvis is voldoende voor Slayer en de eerste GWD-pogingen; haaien volgen in fase 6.",
           "completeWhen": {
             "skills": {
